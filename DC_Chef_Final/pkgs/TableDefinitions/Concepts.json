@@ -22,6 +22,11 @@
     "TableName": "ulchef_concept",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1774917\\\"\",\"savedqueryid\":\"561a9846-6bc0-4bea-81d9-4bb5d3134051\",\"name\":\"Concept Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"1774929\\\"\",\"savedqueryid\":\"a6cc79d3-42a3-4e1c-9267-6e842550c677\",\"name\":\"Concept Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1774941\\\"\",\"savedqueryid\":\"95a845f2-2e4c-4e65-b770-7bdb365b0571\",\"name\":\"Concept Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"1774905\\\"\",\"savedqueryid\":\"3d47ba62-083b-45a3-a065-b1e5b74b3aa7\",\"name\":\"Inactive Concepts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1774893\\\"\",\"savedqueryid\":\"68237ae5-0819-4b8c-a393-bcd6d84c3796\",\"name\":\"Active Concepts\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

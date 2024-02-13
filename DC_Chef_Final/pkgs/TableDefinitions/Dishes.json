@@ -22,6 +22,11 @@
     "TableName": "ulchef_dish",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1781166\\\"\",\"savedqueryid\":\"47a76867-efac-4f1a-83a0-5f0eba80055a\",\"name\":\"Inactive Dishes\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1781190\\\"\",\"savedqueryid\":\"5c0a58df-29b5-4ccb-8fa9-689798759e15\",\"name\":\"Dish Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1781178\\\"\",\"savedqueryid\":\"986e8f24-07c9-4c5a-8772-6ade12a90ca9\",\"name\":\"Dish Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"1781154\\\"\",\"savedqueryid\":\"18f3eee2-b238-43b5-8f17-9c57957998f1\",\"name\":\"Active Dishes\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1781202\\\"\",\"savedqueryid\":\"a4bb4f69-4c00-4849-9343-de0f3b32b07b\",\"name\":\"Dish Advanced Find View\",\"querytype\":1}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

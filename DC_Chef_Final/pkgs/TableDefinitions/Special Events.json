@@ -22,6 +22,11 @@
     "TableName": "ulchef_specialevent",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2357947\\\"\",\"savedqueryid\":\"fdb2abd2-4aa3-457c-96ea-25fec9402081\",\"name\":\"Active Special Events\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2357983\\\"\",\"savedqueryid\":\"965be5f5-ad6a-41b6-9388-4faad235e4a5\",\"name\":\"Special Event Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2357995\\\"\",\"savedqueryid\":\"25a8d6fe-b51c-48e3-ac4a-64feee1d509b\",\"name\":\"Special Event Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2357971\\\"\",\"savedqueryid\":\"a0697b61-a1c9-4c3c-9dcf-be398e48dca6\",\"name\":\"Special Event Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"2357959\\\"\",\"savedqueryid\":\"b98c05d0-a0d8-49e7-9f7a-fa77460f6d2b\",\"name\":\"Inactive Special Events\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

@@ -3,10 +3,6 @@
   "EntityName": "Bulk Delete Failures",
   "environmentVariableName": "",
   "InstanceUrl": "https://org9213e845.crm11.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "bulkdeletefailures",
-    "logicalName": "bulkdeletefailure"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('bulkdeletefailure')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
@@ -22,6 +18,11 @@
     "TableName": "bulkdeletefailure",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1733375\\\"\",\"savedqueryid\":\"75612f8c-0a2e-4942-a6d8-1b8d9bcacef9\",\"name\":\"BulkDelete Failures Associated View\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

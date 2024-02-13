@@ -259,7 +259,7 @@
                                     RadiusBottomRight: =4
                                     RadiusTopLeft: =4
                                     RadiusTopRight: =4
-                                    Width: =Parent.TemplateWidth-10
+                                    Width: =Parent.TemplateWidth-12
                                     X: =3
                                     ZIndex: =1
 
@@ -901,7 +901,7 @@
                                         DisabledColor: =RGBA(166, 166, 166, 1)
                                         Height: =22
                                         Size: =10
-                                        Text: ="Mother Group"
+                                        Text: ="Mother Group"&LookUp(Contacts,Email = "").'Address 1'
                                         Width: =Parent.Width-10
                                         ZIndex: =10
 

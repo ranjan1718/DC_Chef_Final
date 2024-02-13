@@ -22,6 +22,11 @@
     "TableName": "ulchef_mothergroup",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1769274\\\"\",\"savedqueryid\":\"05ea2de1-7af4-47ec-9dfa-1b244eb0d0f8\",\"name\":\"Mother Group Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"1769286\\\"\",\"savedqueryid\":\"4c425bcf-df52-48bb-a6ae-32f85089fd00\",\"name\":\"Mother Group Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1769262\\\"\",\"savedqueryid\":\"f345022e-1983-40ae-86f5-691b94b6f2d1\",\"name\":\"Inactive Mother Groups\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1769298\\\"\",\"savedqueryid\":\"04f5697b-ba73-4ef7-afaf-79e87c952ade\",\"name\":\"Mother Group Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"1769250\\\"\",\"savedqueryid\":\"ceaed73c-ddbd-498b-a959-e5c290c67078\",\"name\":\"Active Mother Groups\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

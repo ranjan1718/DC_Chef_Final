@@ -22,6 +22,11 @@
     "TableName": "ulchef_promotionfiles",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2903802\\\"\",\"savedqueryid\":\"2ce587e5-79c3-4c62-9037-1366bd46c2d8\",\"name\":\"Promotion Files Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2903778\\\"\",\"savedqueryid\":\"ad845817-4c09-4219-a3b4-93a5c85bd840\",\"name\":\"Promotion Files Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"2903790\\\"\",\"savedqueryid\":\"107dc9a3-9517-44ae-858b-af50081804b4\",\"name\":\"Promotion Files Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2903766\\\"\",\"savedqueryid\":\"ef4cf787-82ad-4d0a-8a38-aff8dd597027\",\"name\":\"Inactive Promotion Files\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2903754\\\"\",\"savedqueryid\":\"d7bb124c-1e7a-4c9b-9072-f5ce7bd14585\",\"name\":\"Active Promotion Files\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

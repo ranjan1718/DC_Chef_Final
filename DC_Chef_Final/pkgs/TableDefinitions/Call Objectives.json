@@ -22,6 +22,11 @@
     "TableName": "ulchef_callobjective",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2639577\\\"\",\"savedqueryid\":\"fe7628e8-b0ec-4f40-96f7-3e49db50b628\",\"name\":\"Inactive Call Objectives\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2639601\\\"\",\"savedqueryid\":\"46831d38-73e0-4b4b-82b0-768ed7d156da\",\"name\":\"Call Objective Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2639565\\\"\",\"savedqueryid\":\"2c5adfaa-3612-4638-b98a-83623363b662\",\"name\":\"Active Call Objectives\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2639613\\\"\",\"savedqueryid\":\"2fed73b0-949e-4036-8405-a274c793bb06\",\"name\":\"Call Objective Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2639589\\\"\",\"savedqueryid\":\"16ac263a-7e2a-4d39-897a-d08a32604464\",\"name\":\"Call Objective Associated View\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {},
+  "UnusedDataSources": {
+    "Contacts_1": {
+      "entitySetName": "ulchef_contacts",
+      "logicalName": "ulchef_contact"
+    }
+  },
   "webApiVersion": "v9.0"
 }

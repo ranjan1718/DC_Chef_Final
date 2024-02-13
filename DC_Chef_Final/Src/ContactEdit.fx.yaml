@@ -253,21 +253,6 @@
                                         Width: =37
                                         ZIndex: =3
 
-                                        Toggle1_8 As toggleSwitch:
-                                            BorderColor: =RGBA(255, 255, 255, 1)
-                                            Color: =RGBA(247, 15, 15, 1)
-                                            FalseFill: =RGBA(139, 154, 159, 1)
-                                            FillPortions: =1
-                                            HandleFill: =RGBA(255, 255, 255, 1)
-                                            Height: =Parent.Height
-                                            LayoutMinHeight: =0
-                                            ShowLabel: =false
-                                            Size: =13
-                                            TrueFill: =RGBA(240, 98, 15, 1)
-                                            Visible: =false
-                                            Width: =Parent.Width
-                                            ZIndex: =1
-
                                     Icon6_9 As icon.Edit:
                                         BorderColor: =RGBA(131, 24, 75, 1)
                                         Color: =RGBA(255, 255, 255, 1)
@@ -4508,23 +4493,6 @@
                                                     Text: ="Invoice to"
                                                     Width: =Parent.Width/2.4
                                                     ZIndex: =1
-
-                                                TextInput6_20 As text:
-                                                    BorderColor: =RGBA(131, 24, 75, 1)
-                                                    BorderThickness: =2
-                                                    Color: =RGBA(0, 0, 0, 1)
-                                                    Default: ="Text input"
-                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                                    DisabledFill: =RGBA(244, 244, 244, 1)
-                                                    FillPortions: =1
-                                                    FocusedBorderThickness: =4
-                                                    Height: =Parent.Height
-                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
-                                                    HoverColor: =RGBA(0, 0, 0, 1)
-                                                    HoverFill: =RGBA(255, 211, 205, 1)
-                                                    Size: =13
-                                                    ZIndex: =2
 
                                             Container35_25 As groupContainer.horizontalAutoLayoutContainer:
                                                 AlignInContainer: =AlignInContainer.SetByContainer
