@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "ulchef_cart",
+    "MaxGetRowsCount": 2000,
     "Name": "Carts",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
