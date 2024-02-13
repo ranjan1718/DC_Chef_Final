@@ -1872,3 +1872,1221 @@
                                         RadiusTopRight: =4
                                         ZIndex: =2
 
+                                        Account_Behaviour_Container_6 As groupContainer.verticalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            BorderColor: =RGBA(139, 154, 159, 1)
+                                            BorderThickness: =0.5
+                                            DropShadow: =DropShadow.Semibold
+                                            FillPortions: =0
+                                            Height: |-
+                                                =//If(_V_show_Account_Sales="o1", Parent.Height/2.4, Parent.Height/2.1/10)
+                                                Parent.Height
+                                            LayoutDirection: =LayoutDirection.Vertical
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =10
+                                            RadiusBottomRight: =10
+                                            RadiusTopLeft: =10
+                                            RadiusTopRight: =10
+                                            Visible: =var_Account
+                                            Width: |-
+                                                =//Parent.Width/1.04
+                                                Parent.Width
+                                            ZIndex: =1
+
+                                            Header_16 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                DropShadow: =DropShadow.Light
+                                                Fill: |-
+                                                    =//RGBA(204, 72, 0, 1)
+                                                    var_ModuleBodyColor
+                                                FillPortions: =1.5
+                                                Height: =Parent.Height*1.5/13
+                                                LayoutGap: =3
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingRight: =6
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                                Label8_26 As label:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Customer_Edit_1.Height
+                                                    PaddingLeft: =10
+                                                    Size: =11
+                                                    Text: ="Account Behaviour"
+                                                    Width: =Parent.Width-60
+                                                    ZIndex: =1
+
+                                                AC_Behaviour_Edit_22 As icon.Edit:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                                    Height: |-
+                                                        =//Customer_Edit_1.Height
+                                                        Parent.Height-2
+                                                    Icon: =Icon.Edit
+                                                    OnSelect: |
+                                                        =Set(var_editCustomerInfo, true);
+                                                        Set(var_editAccountBehaviour, true);
+                                                        Navigate(ContactEditScreen, ScreenTransition.Fade, {
+                                                            _V_Customer_New: false
+                                                        });
+                                                    Visible: =_V_SelectedCustomer.Status='Status (Customers)'.Active
+                                                    Width: =Self.Height
+                                                    ZIndex: =2
+
+                                                AC_Behaviour_Edit_23 As icon.Edit:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                                    Height: =Customer_Edit_1.Height
+                                                    Icon: =If(_V_show_Account_Sales = "o1", Icon.ChevronUp, Icon.ChevronDown)
+                                                    OnSelect: |-
+                                                        =/*Set(
+                                                            _V_show_Account_Sales, If(_V_show_Account_Sales in ["c1", "c2", "o2"], "o1", _V_show_Account_Sales in ["o1", "c2", "o2"], "c1")
+                                                        )
+                                                        */
+                                                    Visible: =false
+                                                    Width: =Self.Height
+                                                    ZIndex: =3
+
+                                            Separator_31 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =RGBA(224, 86, 6, 1)
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =3
+                                                PaddingLeft: =10
+                                                Size: =11
+                                                Text: =""
+                                                Width: =Parent.Width
+                                                ZIndex: =3
+
+                                            AC_Behaviour_Records_Container_14 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                FillPortions: =10
+                                                Height: |
+                                                    =Parent.Height
+                                                LayoutDirection: =LayoutDirection.Vertical
+                                                LayoutMinHeight: =100
+                                                LayoutMinWidth: =0
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =10
+                                                PaddingTop: =5
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =_V_show_Account_Sales = "o1"
+                                                Width: =Parent.Width
+                                                ZIndex: =4
+
+                                                TypeOfEngagement_Container_14 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =1
+
+                                                    TypeOfEngagement_13 As label:
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Type of Engagement"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    TypeOfEngagement_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_typeofengagement
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Ordering_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =2
+
+                                                    Ordering_6 As label:
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Ordering"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Ordering_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_ordering
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                InvoiceTo_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =3
+
+                                                    Invoice_To_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Invoice to"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Invoice_To_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_invoiceto
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Delivery_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =4
+
+                                                    Delivery_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Delivery"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Delivery_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_delivery
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Approval_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =5
+
+                                                    Approval_6 As label:
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Approval"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Approval_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_approval
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Separator_32 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    Height: =Parent.Height/22
+                                                    LayoutMinHeight: =0
+                                                    PaddingLeft: =1
+                                                    Size: =13
+                                                    Text: =""
+                                                    Width: =Parent.Width
+                                                    ZIndex: =6
+
+                                                Average_Monthly_Sales_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =7
+
+                                                    Average_Monthly_Sales_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Average Monthly Sales"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Average_Monthly_Sales_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_averagemonthlysales
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Seating_Capacity_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =8
+
+                                                    Seating_Capacity_6 As label:
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Seating Capacity"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Seating_Capacity_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_seatingcapacity
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'#_of_chairs_Container_6' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =9
+
+                                                    "'#_of_chairs_6' As label":
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: |-
+                                                            ="# of Chairs"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'#_of_chairs_Label_6' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_ofchairs
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'#_of_tables_Container_6' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =10
+
+                                                    "'#_of_tables_6' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: |-
+                                                            ="# of Tables"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'#_of_tables_Label_6' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_oftables
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Operating_Hours_Container_6 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =11
+
+                                                    OperatingHours_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Operating Hours"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    OperatingHours_Label_6 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_operatinghours
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'No.of_takeaway_food_Container_13' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =12
+
+                                                    "'No.of_takeaway_food_6' As label":
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: |-
+                                                            ="# of takeaway food per day"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'No.of_takeaway_food_Label_6' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_oftakeawayfoodperday
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                        Account_Behaviour_Container_7 As groupContainer.verticalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            BorderColor: =RGBA(139, 154, 159, 1)
+                                            BorderThickness: =0.5
+                                            DropShadow: =DropShadow.Semibold
+                                            FillPortions: =0
+                                            Height: |-
+                                                =//If(_V_show_Account_Sales="o2", Parent.Height/2.4, Parent.Height/2.1/10)
+                                                Parent.Height
+                                            LayoutDirection: =LayoutDirection.Vertical
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =10
+                                            RadiusBottomRight: =10
+                                            RadiusTopLeft: =10
+                                            RadiusTopRight: =10
+                                            Visible: =var_Sales
+                                            Width: |-
+                                                =//Parent.Width/1.04
+                                                Parent.Width
+                                            ZIndex: =2
+
+                                            Header_17 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                DropShadow: =DropShadow.Light
+                                                Fill: |-
+                                                    =//RGBA(204, 72, 0, 1)
+                                                    var_ModuleBodyColor
+                                                FillPortions: =1.5
+                                                Height: =Parent.Height*1.5/13
+                                                LayoutGap: =3
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingRight: =6
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                                Label8_27 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingLeft: =10
+                                                    Size: =11
+                                                    Text: ="Sales History"
+                                                    Width: =Parent.Width-60
+                                                    ZIndex: =1
+
+                                                AC_Behaviour_Edit_24 As icon.Edit:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                                    Height: =Parent.Height-5
+                                                    Icon: =Icon.Edit
+                                                    OnSelect: |-
+                                                        =Set(var_editCustomerInfo, true);
+                                                        Set(var_editAccountBehaviour, true);
+                                                        Navigate(ContactEditScreen, ScreenTransition.Fade, {
+                                                            _V_Customer_New: false
+                                                        });
+                                                    Visible: =false
+                                                    Width: =Self.Height
+                                                    ZIndex: =2
+
+                                                AC_Behaviour_Edit_25 As icon.Edit:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                                    Height: =Customer_Edit.Height
+                                                    Icon: =If(_V_show_Account_Sales = "o2", Icon.ChevronUp, Icon.ChevronDown)
+                                                    OnSelect: |-
+                                                        =/*Set(
+                                                            _V_show_Account_Sales, If(_V_show_Account_Sales in ["c1", "c2", "o1"], "o2", _V_show_Account_Sales in ["o1", "c1", "o2"], "c2")
+                                                        )
+                                                        */
+                                                    Visible: =false
+                                                    Width: =Self.Height
+                                                    ZIndex: =3
+
+                                            Separator_33 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =RGBA(224, 86, 6, 1)
+                                                FontWeight: =FontWeight.Bold
+                                                Height: =3
+                                                PaddingLeft: =10
+                                                Size: =11
+                                                Text: =""
+                                                Width: =Parent.Width
+                                                ZIndex: =3
+
+                                            AC_Behaviour_Records_Container_15 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                FillPortions: =10
+                                                Height: |
+                                                    =Parent.Height
+                                                LayoutDirection: =LayoutDirection.Vertical
+                                                LayoutMinHeight: =100
+                                                LayoutMinWidth: =0
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =10
+                                                PaddingTop: =5
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: |-
+                                                    =//_V_show_Account_Sales = "o2"
+                                                    true
+                                                Width: =Parent.Width
+                                                ZIndex: =4
+
+                                                Average_Monthly_Sales_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =1
+
+                                                    Average_Monthly_Sales_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Average Monthly Sales"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Average_Monthly_Sales_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_averagemonthlysales
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Seating_Capacity_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =2
+
+                                                    Seating_Capacity_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: |-
+                                                            ="Average Count # of SKUs"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Seating_Capacity_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_seatingcapacity
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'#_of_chairs_Container_7' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =3
+
+                                                    "'#_of_chairs_7' As label":
+                                                        AlignInContainer: =AlignInContainer.Start
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Customer SKUs"
+                                                        VerticalAlign: =VerticalAlign.Top
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'#_of_chairs_Label_7' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_ofchairs
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'#_of_tables_Container_7' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =4
+
+                                                    "'#_of_tables_7' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'#_of_tables_Label_7' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Operating_Hours_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =5
+
+                                                    OperatingHours_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    OperatingHours_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                "'No.of_takeaway_food_Container_14' As groupContainer.horizontalAutoLayoutContainer":
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Width: =Parent.Width
+                                                    ZIndex: =6
+
+                                                    "'No.of_takeaway_food_7' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    "'No.of_takeaway_food_Label_7' As label":
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =""
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                TypeOfEngagement_Container_15 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =7
+
+                                                    TypeOfEngagement_14 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height/10
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Type of Engagement"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    TypeOfEngagement_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_typeofengagement
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Ordering_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =8
+
+                                                    Ordering_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Ordering"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Ordering_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_ordering
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                InvoiceTo_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =9
+
+                                                    Invoice_To_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Invoice to"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Invoice_To_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_invoiceto
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Delivery_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =10
+
+                                                    Delivery_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Delivery"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Delivery_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_delivery
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Approval_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    Height: =Parent.Height/14
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =0
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =4
+                                                    RadiusBottomRight: =4
+                                                    RadiusTopLeft: =4
+                                                    RadiusTopRight: =4
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =11
+
+                                                    Approval_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: ="Approval"
+                                                        Width: =Parent.Width/2
+                                                        ZIndex: =1
+
+                                                    Approval_Label_7 As label:
+                                                        AutoHeight: =true
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(0, 0, 0, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        DisplayMode: =DisplayMode.View
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Semibold
+                                                        Height: =Parent.Height
+                                                        LayoutMinWidth: =0
+                                                        PaddingLeft: =15
+                                                        Size: =10
+                                                        Text: =_V_SelectedCustomer.ulchef_approval
+                                                        Width: =Parent.Width/3
+                                                        ZIndex: =2
+
+                                                Separator_34 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    Height: =Parent.Height/22
+                                                    LayoutMinHeight: =0
+                                                    PaddingLeft: =1
+                                                    Size: =13
+                                                    Text: =""
+                                                    Visible: =false
+                                                    Width: =Parent.Width
+                                                    ZIndex: =12
+
