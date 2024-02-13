@@ -39105,6 +39105,252 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 47,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account.Accountbtm.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account.Accountbtm.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 70,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Account.Accountbtm"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 43,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales.Salesbtm.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales.Salesbtm.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 66,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Sales.Salesbtm"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 81,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary.primaryContanctbtm.Fill"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary.primaryContanctbtm.Fill",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 84,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Fill",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.LowerContainer.MainBottomContainer.HeaderContainer.Primary.primaryContanctbtm"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Boolean",
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Component1_22.Container14_6.Container21_6.TextInput2_6.AccessibleLabel"
                 }
               ],

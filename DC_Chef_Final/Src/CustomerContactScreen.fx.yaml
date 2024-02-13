@@ -1727,3 +1727,137 @@
                                     Width: =Parent.Width-10
                                     ZIndex: =1
 
+                                    HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
+                                        DropShadow: =DropShadow.Light
+                                        FillPortions: =0
+                                        Height: =Parent.Height/6
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width
+                                        ZIndex: =1
+
+                                        Account As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            DropShadow: =DropShadow.Light
+                                            Fill: |-
+                                                =//RGBA(0, 0, 0, 0)
+                                                If(var_Account||var_Account="",Color.DarkGray,var_ModuleBodyColor)
+                                            FillPortions: =0
+                                            Height: =Parent.Height
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width/3
+                                            ZIndex: =4
+
+                                            Accountbtm As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                Fill: |-
+                                                    =//RGBA(211, 66, 9, 1)
+                                                    //RGBA(0, 0, 0, 0)
+                                                    If(var_Account||var_Account="",Color.DarkGray,var_ModuleBodyColor)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                OnSelect: |-
+                                                    =Set(var_Account,true);
+                                                    Set(var_Sales,false);
+                                                    Set(var_primaryContact,false);
+                                                Size: =15
+                                                Text: ="Account Behavior"
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                        Sales As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            DropShadow: =DropShadow.Light
+                                            Fill: |-
+                                                =//RGBA(0, 0, 0, 0)
+                                                If(var_Sales||var_Sales="",Color.DarkGray,var_ModuleBodyColor)
+                                            FillPortions: =0
+                                            Height: =Parent.Height
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width/3
+                                            ZIndex: =5
+
+                                            Salesbtm As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                Fill: |-
+                                                    =//RGBA(211, 66, 9, 1)
+                                                    //RGBA(0, 0, 0, 0)
+                                                    If(var_Sales||var_Sales="",Color.DarkGray,var_ModuleBodyColor)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                OnSelect: |-
+                                                    =
+                                                    Set(var_primaryContact,false);
+                                                    Set(var_Sales,true);
+                                                    Set(var_Account,false);
+                                                Size: =15
+                                                Text: ="Sales History"
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                        Primary As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            DropShadow: =DropShadow.Light
+                                            Fill: |-
+                                                =//RGBA(0, 0, 0, 0)
+                                                //RGBA(0, 0, 0, 0)
+                                                If(var_primaryContact||var_primaryContact="",Color.DarkGray,var_ModuleBodyColor)
+                                            FillPortions: =0
+                                            Height: =Parent.Height
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width/3
+                                            ZIndex: =6
+
+                                            primaryContanctbtm As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                Fill: |-
+                                                    =//RGBA(211, 66, 9, 1)
+                                                    //RGBA(0, 0, 0, 0)
+                                                    If(var_primaryContact||var_primaryContact="",Color.DarkGray,var_ModuleBodyColor)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                OnSelect: |-
+                                                    =
+                                                    Set(var_primaryContact,true);
+                                                    Set(var_Sales,false);
+                                                    Set(var_Account,false);
+                                                Size: =15
+                                                Text: ="Primary Contact"
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
