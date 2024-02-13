@@ -1901,7 +1901,7 @@
                                                 Fill: |-
                                                     =//RGBA(204, 72, 0, 1)
                                                     var_ModuleBodyColor
-                                                FillPortions: =1.5
+                                                FillPortions: =0
                                                 Height: =Parent.Height*1.5/13
                                                 LayoutGap: =3
                                                 LayoutMinHeight: =0
@@ -1994,7 +1994,9 @@
                                                 RadiusBottomRight: =4
                                                 RadiusTopLeft: =4
                                                 RadiusTopRight: =4
-                                                Visible: =_V_show_Account_Sales = "o1"
+                                                Visible: |-
+                                                    =//_V_show_Account_Sales = "o1"
+                                                    true
                                                 Width: =Parent.Width
                                                 ZIndex: =4
 
@@ -3089,4 +3091,922 @@
                                                     Visible: =false
                                                     Width: =Parent.Width
                                                     ZIndex: =12
+
+                                        BodyPrimariContactCont As groupContainer.verticalAutoLayoutContainer:
+                                            DropShadow: =DropShadow.Light
+                                            LayoutDirection: =LayoutDirection.Vertical
+                                            LayoutGap: =5
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            LayoutOverflowX: =LayoutOverflow.Scroll
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            ZIndex: =3
+
+                                            PrimaryContainer As groupContainer.verticalAutoLayoutContainer:
+                                                DropShadow: =DropShadow.Light
+                                                LayoutDirection: =LayoutDirection.Vertical
+                                                LayoutGap: =5
+                                                LayoutMinHeight: =100
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                ZIndex: =1
+
+                                                Heading_PC_7 As groupContainer.verticalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    DropShadow: =DropShadow.Semilight
+                                                    Fill: |-
+                                                        =//RGBA(204, 72, 0, 1)
+                                                        var_ModuleBodyColor
+                                                    FillPortions: =0
+                                                    Height: =40
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =250
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =10
+                                                    RadiusBottomRight: =10
+                                                    RadiusTopLeft: =10
+                                                    RadiusTopRight: =10
+                                                    Width: =Parent.Width 
+                                                    ZIndex: =1
+
+                                                    PrimaryContactContainer_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        Height: =Parent.Height
+                                                        LayoutDirection: =LayoutDirection.Vertical
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =0
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        RadiusBottomLeft: =4
+                                                        RadiusBottomRight: =4
+                                                        RadiusTopLeft: =4
+                                                        RadiusTopRight: =4
+                                                        Width: =Parent.Width
+                                                        ZIndex: =1
+
+                                                        Label7_245 As label:
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                                            FillPortions: =1
+                                                            FontWeight: =FontWeight.Bold
+                                                            Height: =Parent.Height
+                                                            LayoutMinHeight: =0
+                                                            PaddingLeft: =15
+                                                            Size: =10
+                                                            Text: ="Primary Contact"
+                                                            Width: =Parent.Width
+                                                            ZIndex: =1
+
+                                                    Blank_Container_14 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        Height: =Parent.Height
+                                                        LayoutDirection: =LayoutDirection.Vertical
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =0
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        RadiusBottomLeft: =4
+                                                        RadiusBottomRight: =4
+                                                        RadiusTopLeft: =4
+                                                        RadiusTopRight: =4
+                                                        Width: =Parent.Width
+                                                        ZIndex: =2
+
+                                                        Label7_246 As label:
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                                            FontWeight: =FontWeight.Bold
+                                                            Height: =Parent.Height
+                                                            PaddingLeft: =15
+                                                            Size: =10
+                                                            Text: =""
+                                                            Width: =Parent.Width
+                                                            ZIndex: =1
+
+                                                    Blank_Container_15 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        Height: =Parent.Height
+                                                        LayoutDirection: =LayoutDirection.Vertical
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =0
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        RadiusBottomLeft: =4
+                                                        RadiusBottomRight: =4
+                                                        RadiusTopLeft: =4
+                                                        RadiusTopRight: =4
+                                                        Width: =Parent.Width
+                                                        ZIndex: =3
+
+                                                        Label7_247 As label:
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                                            FontWeight: =FontWeight.Bold
+                                                            Height: =Parent.Height
+                                                            PaddingLeft: =15
+                                                            Size: =10
+                                                            Text: =""
+                                                            Width: =Parent.Width
+                                                            ZIndex: =1
+
+                                                    Icons_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        FillPortions: =0
+                                                        Height: =Parent.Height
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =0
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        PaddingRight: =8
+                                                        PaddingTop: =7
+                                                        RadiusBottomLeft: =4
+                                                        RadiusBottomRight: =4
+                                                        RadiusTopLeft: =4
+                                                        RadiusTopRight: =4
+                                                        Width: =Parent.Width*1.2/10
+                                                        ZIndex: =4
+
+                                                        "'PrimaryContact_Edit Icon_7' As icon.Add":
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                            DisabledColor: =RGBA(244, 244, 244, 1)
+                                                            FillPortions: =1
+                                                            Height: =30
+                                                            Icon: =Icon.Edit
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            OnSelect: |-
+                                                                =//false
+                                                                UpdateContext(
+                                                                    {
+                                                                        _V_Contact_Edit_Or_New: "View"
+                                                                    }
+                                                                );
+                                                                Set(_V_Contact_New, false);
+                                                                Set(_V_SelectedContact, _V_PrimaryContact);
+                                                                Set(var_enableEdit, true);
+                                                                Reset('ContactName Input_3');
+                                                                Reset('Position Input_3');
+                                                                Reset('Email Input_3');
+                                                                Reset('Mobile Number Input_3');
+                                                                Reset('Phone Input_3');
+                                                                Reset('Remarks Input_3');
+                                                                Reset('Facebook Input_3');
+                                                                Reset('IG Input_3');
+                                                                Reset('LinkedIn Input_3');
+                                                            PaddingBottom: =3
+                                                            PaddingLeft: =3
+                                                            PaddingRight: =3
+                                                            PaddingTop: =3
+                                                            Visible: |-
+                                                                =//_V_Contact_Edit_Or_New in ["Open2", ""]
+                                                                true
+                                                            Width: =25
+                                                            X: =1281
+                                                            Y: =108
+                                                            ZIndex: =1
+
+                                                        DownArrow_7 As icon.Add:
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                            DisabledColor: =RGBA(244, 244, 244, 1)
+                                                            FillPortions: =1
+                                                            Height: =30
+                                                            Icon: =If(_V_Contact_Edit_Or_New in ["View", "View1", "View2", "Open1"], Icon.ChevronDown, _V_Contact_Edit_Or_New in ["Open2", ""], Icon.ChevronUp)
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            OnSelect: |-
+                                                                =UpdateContext(
+                                                                    {
+                                                                        _V_Contact_Edit_Or_New: If(_V_Contact_Edit_Or_New="Open2", "View2", "Open2")
+                                                                    }
+                                                                )
+                                                            PaddingBottom: =3
+                                                            PaddingLeft: =3
+                                                            PaddingRight: =3
+                                                            PaddingTop: =3
+                                                            Visible: |-
+                                                                =//_V_Contact_Edit_Or_New<>""
+                                                                false
+                                                            Width: =25
+                                                            X: =1281
+                                                            Y: =108
+                                                            ZIndex: =2
+
+                                                Container23_10 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    DropShadow: =DropShadow.Light
+                                                    Fill: =RGBA(247, 116, 38, 1)
+                                                    FillPortions: =0
+                                                    Height: =Parent.Height*1.5/8+5
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =250
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    RadiusBottomLeft: =8
+                                                    RadiusBottomRight: =8
+                                                    RadiusTopLeft: =8
+                                                    RadiusTopRight: =8
+                                                    Visible: |-
+                                                        =//_V_Contact_Edit_Or_New in ["", "Open2"]
+                                                        false
+                                                    ZIndex: =2
+
+                                                    Label8_29 As label:
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(255, 255, 255, 1)
+                                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                                        FillPortions: =1
+                                                        FontWeight: =FontWeight.Bold
+                                                        Height: =Parent.Height
+                                                        PaddingLeft: =10
+                                                        Size: =13
+                                                        Text: ="Primary Contact"
+                                                        Width: =Parent.Width-60
+                                                        ZIndex: =1
+
+                                                    Icon5_13 As icon.Edit:
+                                                        AlignInContainer: =AlignInContainer.Center
+                                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                                        Color: =RGBA(255, 255, 255, 1)
+                                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                        DisabledColor: =RGBA(244, 244, 244, 1)
+                                                        Height: =Parent.Height
+                                                        Icon: =Icon.Edit
+                                                        PaddingBottom: =4
+                                                        PaddingRight: =10
+                                                        PaddingTop: =4
+                                                        Width: =Self.Height
+                                                        ZIndex: =2
+
+                                                PrimaryContact_Details_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                                    BorderStyle: =BorderStyle.None
+                                                    Fill: =RGBA(255, 90, 0, 1)
+                                                    Height: =Parent.Height/1.7
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =250
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    PaddingLeft: =10
+                                                    PaddingTop: =10
+                                                    RadiusBottomLeft: =5
+                                                    RadiusBottomRight: =5
+                                                    RadiusTopLeft: =5
+                                                    RadiusTopRight: =5
+                                                    Visible: |-
+                                                        =//_V_Contact_Edit_Or_New in ["", "Open2"]
+                                                        true
+                                                    Width: =Parent.Width-40
+                                                    ZIndex: =3
+
+                                                    PriContact_Image_7 As image:
+                                                        BorderColor: =RGBA(255, 255, 255, 1)
+                                                        BorderThickness: =3
+                                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                                        Fill: =RGBA(255, 255, 255, 1)
+                                                        Height: =Parent.Height-20
+                                                        Image: =customer
+                                                        ImagePosition: =ImagePosition.Stretch
+                                                        RadiusBottomLeft: =10
+                                                        RadiusBottomRight: =10
+                                                        RadiusTopLeft: =10
+                                                        RadiusTopRight: =10
+                                                        Width: =Self.Height
+                                                        ZIndex: =1
+
+                                                    Deatils_Container_7 As groupContainer.verticalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        FillPortions: =0
+                                                        Height: =Parent.Height-20
+                                                        LayoutDirection: =LayoutDirection.Vertical
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =250
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        PaddingBottom: =5
+                                                        PaddingLeft: =10
+                                                        PaddingTop: =5
+                                                        RadiusBottomLeft: =4
+                                                        RadiusBottomRight: =4
+                                                        RadiusTopLeft: =4
+                                                        RadiusTopRight: =4
+                                                        Width: =Parent.Width-PriContact_Image_7.Width-10
+                                                        ZIndex: =2
+
+                                                        Name_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            BorderStyle: =BorderStyle.None
+                                                            Height: =Parent.Height/4.5
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =250
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width-30
+                                                            ZIndex: =1
+
+                                                            PriContact_Name_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Semibold
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: ="Name"
+                                                                Width: =Parent.Width/2.8
+                                                                ZIndex: =1
+
+                                                            PriContact_Label_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: =_V_PrimaryContact.Name
+                                                                Width: =Parent.Width-PriContact_Name_7.Width-5
+                                                                ZIndex: =2
+
+                                                        Position_7 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            BorderStyle: =BorderStyle.None
+                                                            Height: =Parent.Height/4.5
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =250
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width-30
+                                                            ZIndex: =2
+
+                                                            PriContact_Position_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Semibold
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: ="Position"
+                                                                Width: =Parent.Width/2.8
+                                                                ZIndex: =1
+
+                                                            PriContact_Position_Label_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: =_V_PrimaryContact.Position
+                                                                Width: =Parent.Width-PriContact_Position_7.Width-5
+                                                                ZIndex: =2
+
+                                                        "'Mobile Number_7' As groupContainer.horizontalAutoLayoutContainer":
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            BorderStyle: =BorderStyle.None
+                                                            Height: =Parent.Height/4.5
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =250
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width-30
+                                                            ZIndex: =3
+
+                                                            PriContact_MobileNumber_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Semibold
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: ="Mobile Number"
+                                                                Width: =Parent.Width/2.8
+                                                                ZIndex: =1
+
+                                                            PriContact_MobileNumber_Label_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: =_V_PrimaryContact.'Mobile Number'
+                                                                Width: =Parent.Width-PriContact_MobileNumber_7.Width-5
+                                                                ZIndex: =2
+
+                                                        Email_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            BorderStyle: =BorderStyle.None
+                                                            Height: =Parent.Height/4.5
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =250
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width-30
+                                                            ZIndex: =4
+
+                                                            PriContact_Email_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Semibold
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: ="Email"
+                                                                Width: =Parent.Width/2.8
+                                                                ZIndex: =1
+
+                                                            PriContact_Email_Label_7 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                Height: =Parent.Height
+                                                                Size: =10
+                                                                Text: =_V_PrimaryContact.Email
+                                                                Width: =Parent.Width-PriContact_Email_7.Width-5
+                                                                ZIndex: =2
+
+                                            Contact_Detail_Container As groupContainer.verticalAutoLayoutContainer:
+                                                DropShadow: =DropShadow.Light
+                                                LayoutDirection: =LayoutDirection.Vertical
+                                                LayoutMinHeight: =100
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                ZIndex: =2
+
+                                                Primary_Contact_Container_8 As groupContainer.verticalAutoLayoutContainer:
+                                                    AlignInContainer: =AlignInContainer.Start
+                                                    BorderColor: =RGBA(139, 154, 159, 1)
+                                                    BorderThickness: =0.5
+                                                    DropShadow: =DropShadow.Regular
+                                                    Fill: =RGBA(255, 255, 255, 1)
+                                                    FillPortions: =0
+                                                    Height: |-
+                                                        =//Parent.Height/If(_V_Contact_Edit_Or_New in ["Open2", ""], 2.8, _V_Contact_Edit_Or_New="View2", 10, 10)
+                                                        Parent.Height/1.9
+                                                    LayoutDirection: =LayoutDirection.Vertical
+                                                    LayoutGap: =3
+                                                    LayoutMinHeight: =0
+                                                    LayoutMinWidth: =250
+                                                    LayoutMode: =LayoutMode.Auto
+                                                    PaddingBottom: =10
+                                                    PaddingLeft: =
+                                                    PaddingRight: =20
+                                                    PaddingTop: =
+                                                    RadiusBottomLeft: =10
+                                                    RadiusBottomRight: =10
+                                                    RadiusTopLeft: =10
+                                                    RadiusTopRight: =10
+                                                    Width: =Parent.Width-20
+                                                    ZIndex: =1
+
+                                                    Heading_PC_8 As groupContainer.verticalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        DropShadow: =DropShadow.Semilight
+                                                        Fill: |-
+                                                            =//RGBA(204, 72, 0, 1)
+                                                            var_ModuleBodyColor
+                                                        FillPortions: =0
+                                                        Height: =Parent.Height/4.5
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =250
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        RadiusBottomLeft: =10
+                                                        RadiusBottomRight: =10
+                                                        RadiusTopLeft: =10
+                                                        RadiusTopRight: =10
+                                                        Width: =Parent.Width
+                                                        ZIndex: =1
+
+                                                        PrimaryContactContainer_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            Height: =Parent.Height
+                                                            LayoutDirection: =LayoutDirection.Vertical
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width
+                                                            ZIndex: =1
+
+                                                            Label7_248 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FillPortions: =1
+                                                                FontWeight: =FontWeight.Bold
+                                                                Height: =Parent.Height
+                                                                LayoutMinHeight: =0
+                                                                PaddingLeft: =15
+                                                                Size: =10
+                                                                Text: ="Primary Contact"
+                                                                Width: =Parent.Width
+                                                                ZIndex: =1
+
+                                                        Blank_Container_16 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            Height: =Parent.Height
+                                                            LayoutDirection: =LayoutDirection.Vertical
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width
+                                                            ZIndex: =2
+
+                                                            Label7_249 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Bold
+                                                                Height: =Parent.Height
+                                                                PaddingLeft: =15
+                                                                Size: =10
+                                                                Text: =""
+                                                                Width: =Parent.Width
+                                                                ZIndex: =1
+
+                                                        Blank_Container_17 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            Height: =Parent.Height
+                                                            LayoutDirection: =LayoutDirection.Vertical
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width
+                                                            ZIndex: =3
+
+                                                            Label7_250 As label:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                FontWeight: =FontWeight.Bold
+                                                                Height: =Parent.Height
+                                                                PaddingLeft: =15
+                                                                Size: =10
+                                                                Text: =""
+                                                                Width: =Parent.Width
+                                                                ZIndex: =1
+
+                                                        Icons_Container_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            FillPortions: =0
+                                                            Height: =Parent.Height
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =0
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            PaddingRight: =8
+                                                            PaddingTop: =7
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width*1.2/10
+                                                            ZIndex: =4
+
+                                                            "'PrimaryContact_Edit Icon_8' As icon.Add":
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                                DisabledColor: =RGBA(244, 244, 244, 1)
+                                                                FillPortions: =1
+                                                                Height: =Customer_Edit_1.Height
+                                                                Icon: =Icon.Edit
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =0
+                                                                OnSelect: |-
+                                                                    =//false
+                                                                    UpdateContext(
+                                                                        {
+                                                                            _V_Contact_Edit_Or_New: "View"
+                                                                        }
+                                                                    );
+                                                                    Set(_V_Contact_New, false);
+                                                                    Set(_V_SelectedContact, _V_PrimaryContact);
+                                                                    Set(var_enableEdit, true);
+                                                                    Reset('ContactName Input_3');
+                                                                    Reset('Position Input_3');
+                                                                    Reset('Email Input_3');
+                                                                    Reset('Mobile Number Input_3');
+                                                                    Reset('Phone Input_3');
+                                                                    Reset('Remarks Input_3');
+                                                                    Reset('Facebook Input_3');
+                                                                    Reset('IG Input_3');
+                                                                    Reset('LinkedIn Input_3');
+                                                                PaddingBottom: =3
+                                                                PaddingLeft: =3
+                                                                PaddingRight: =3
+                                                                PaddingTop: =3
+                                                                Visible: =_V_Contact_Edit_Or_New in ["Open2", ""] && _V_SelectedCustomer.Status='Status (Customers)'.Active
+                                                                Width: =25
+                                                                X: =1281
+                                                                Y: =108
+                                                                ZIndex: =1
+
+                                                            DownArrow_8 As icon.Add:
+                                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                                Color: =RGBA(255, 255, 255, 1)
+                                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                                DisabledColor: =RGBA(244, 244, 244, 1)
+                                                                FillPortions: =1
+                                                                Height: =Customer_Edit_1.Height
+                                                                Icon: =If(_V_Contact_Edit_Or_New in ["View", "View1", "View2", "Open1"], Icon.ChevronDown, _V_Contact_Edit_Or_New in ["Open2", ""], Icon.ChevronUp)
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =0
+                                                                OnSelect: |-
+                                                                    =UpdateContext(
+                                                                        {
+                                                                            _V_Contact_Edit_Or_New: If(_V_Contact_Edit_Or_New="Open2", "View2", "Open2")
+                                                                        }
+                                                                    )
+                                                                PaddingBottom: =3
+                                                                PaddingLeft: =3
+                                                                PaddingRight: =3
+                                                                PaddingTop: =3
+                                                                Visible: =_V_Contact_Edit_Or_New<>""
+                                                                Width: =25
+                                                                X: =1281
+                                                                Y: =108
+                                                                ZIndex: =2
+
+                                                    Container23_11 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        DropShadow: =DropShadow.Light
+                                                        Fill: =RGBA(247, 116, 38, 1)
+                                                        FillPortions: =0
+                                                        Height: =Parent.Height*1.5/8+5
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =250
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        RadiusBottomLeft: =8
+                                                        RadiusBottomRight: =8
+                                                        RadiusTopLeft: =8
+                                                        RadiusTopRight: =8
+                                                        Visible: |
+                                                            =//_V_Contact_Edit_Or_New in ["", "Open2"]
+                                                            false
+                                                        ZIndex: =2
+
+                                                        Label8_30 As label:
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                                            FillPortions: =1
+                                                            FontWeight: =FontWeight.Bold
+                                                            Height: =Parent.Height
+                                                            PaddingLeft: =10
+                                                            Size: =13
+                                                            Text: ="Primary Contact"
+                                                            Width: =Parent.Width-60
+                                                            ZIndex: =1
+
+                                                        Icon5_15 As icon.Edit:
+                                                            AlignInContainer: =AlignInContainer.Center
+                                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                                            Color: =RGBA(255, 255, 255, 1)
+                                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                            DisabledColor: =RGBA(244, 244, 244, 1)
+                                                            Height: =Parent.Height
+                                                            Icon: =Icon.Edit
+                                                            PaddingBottom: =4
+                                                            PaddingRight: =10
+                                                            PaddingTop: =4
+                                                            Width: =Self.Height
+                                                            ZIndex: =2
+
+                                                    PrimaryContact_Details_Container_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                                        BorderStyle: =BorderStyle.None
+                                                        Fill: =RGBA(255, 90, 0, 1)
+                                                        Height: =Parent.Height/1.7
+                                                        LayoutMinHeight: =0
+                                                        LayoutMinWidth: =250
+                                                        LayoutMode: =LayoutMode.Auto
+                                                        PaddingLeft: =10
+                                                        PaddingTop: =10
+                                                        RadiusBottomLeft: =5
+                                                        RadiusBottomRight: =5
+                                                        RadiusTopLeft: =5
+                                                        RadiusTopRight: =5
+                                                        Visible: |-
+                                                            =//_V_Contact_Edit_Or_New in ["", "Open2"]
+                                                            true
+                                                        Width: =Parent.Width
+                                                        ZIndex: =3
+
+                                                        PriContact_Image_8 As image:
+                                                            BorderColor: =RGBA(255, 255, 255, 1)
+                                                            BorderThickness: =3
+                                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                            DisabledFill: =RGBA(244, 244, 244, 1)
+                                                            Fill: =RGBA(255, 255, 255, 1)
+                                                            Height: =Parent.Height-20
+                                                            Image: =_V_PrimaryContact.Image
+                                                            ImagePosition: =ImagePosition.Stretch
+                                                            RadiusBottomLeft: =10
+                                                            RadiusBottomRight: =10
+                                                            RadiusTopLeft: =10
+                                                            RadiusTopRight: =10
+                                                            Width: =Self.Height
+                                                            ZIndex: =1
+
+                                                        Deatils_Container_8 As groupContainer.verticalAutoLayoutContainer:
+                                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                                            FillPortions: =0
+                                                            Height: =Parent.Height-20
+                                                            LayoutDirection: =LayoutDirection.Vertical
+                                                            LayoutMinHeight: =0
+                                                            LayoutMinWidth: =250
+                                                            LayoutMode: =LayoutMode.Auto
+                                                            PaddingBottom: =5
+                                                            PaddingLeft: =10
+                                                            PaddingTop: =5
+                                                            RadiusBottomLeft: =4
+                                                            RadiusBottomRight: =4
+                                                            RadiusTopLeft: =4
+                                                            RadiusTopRight: =4
+                                                            Width: =Parent.Width-PriContact_Image_8.Width-10
+                                                            ZIndex: =2
+
+                                                            Name_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                                BorderStyle: =BorderStyle.None
+                                                                Height: =Parent.Height/4.5
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =250
+                                                                LayoutMode: =LayoutMode.Auto
+                                                                RadiusBottomLeft: =4
+                                                                RadiusBottomRight: =4
+                                                                RadiusTopLeft: =4
+                                                                RadiusTopRight: =4
+                                                                Width: =Parent.Width-30
+                                                                ZIndex: =1
+
+                                                                PriContact_Name_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    FontWeight: =FontWeight.Semibold
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: ="Name"
+                                                                    Width: =Parent.Width/2.8
+                                                                    ZIndex: =1
+
+                                                                PriContact_Label_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: =_V_PrimaryContact.Name
+                                                                    Width: =Parent.Width-PriContact_Name_8.Width-5
+                                                                    ZIndex: =2
+
+                                                            Position_8 As groupContainer.horizontalAutoLayoutContainer:
+                                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                                BorderStyle: =BorderStyle.None
+                                                                Height: =Parent.Height/4.5
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =250
+                                                                LayoutMode: =LayoutMode.Auto
+                                                                RadiusBottomLeft: =4
+                                                                RadiusBottomRight: =4
+                                                                RadiusTopLeft: =4
+                                                                RadiusTopRight: =4
+                                                                Width: =Parent.Width-30
+                                                                ZIndex: =2
+
+                                                                PriContact_Position_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    FontWeight: =FontWeight.Semibold
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: ="Position"
+                                                                    Width: =Parent.Width/2.8
+                                                                    ZIndex: =1
+
+                                                                PriContact_Position_Label_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: =_V_PrimaryContact.Position
+                                                                    Width: =Parent.Width-PriContact_Position_8.Width-5
+                                                                    ZIndex: =2
+
+                                                            "'Mobile Number_8' As groupContainer.horizontalAutoLayoutContainer":
+                                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                                BorderStyle: =BorderStyle.None
+                                                                Height: =Parent.Height/4.5
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =250
+                                                                LayoutMode: =LayoutMode.Auto
+                                                                RadiusBottomLeft: =4
+                                                                RadiusBottomRight: =4
+                                                                RadiusTopLeft: =4
+                                                                RadiusTopRight: =4
+                                                                Width: =Parent.Width-30
+                                                                ZIndex: =3
+
+                                                                PriContact_MobileNumber_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    FontWeight: =FontWeight.Semibold
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: ="Mobile Number"
+                                                                    Width: =Parent.Width/2.8
+                                                                    ZIndex: =1
+
+                                                                PriContact_MobileNumber_Label_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: =_V_PrimaryContact.'Mobile Number'
+                                                                    Width: =Parent.Width-PriContact_MobileNumber_8.Width-5
+                                                                    ZIndex: =2
+
+                                                            Email_9 As groupContainer.horizontalAutoLayoutContainer:
+                                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                                BorderStyle: =BorderStyle.None
+                                                                FillPortions: =1.5
+                                                                Height: =Parent.Height/4.5
+                                                                LayoutMinHeight: =0
+                                                                LayoutMinWidth: =250
+                                                                LayoutMode: =LayoutMode.Auto
+                                                                RadiusBottomLeft: =4
+                                                                RadiusBottomRight: =4
+                                                                RadiusTopLeft: =4
+                                                                RadiusTopRight: =4
+                                                                Width: =Parent.Width-30
+                                                                ZIndex: =4
+
+                                                                PriContact_Email_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    FontWeight: =FontWeight.Semibold
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: ="Email"
+                                                                    Width: =Parent.Width/2.8
+                                                                    ZIndex: =1
+
+                                                                PriContact_Email_Label_8 As label:
+                                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                                    Color: =RGBA(255, 255, 255, 1)
+                                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                                    Height: =Parent.Height
+                                                                    Size: =10
+                                                                    Text: =_V_PrimaryContact.Email
+                                                                    Width: =Parent.Width-PriContact_Email_8.Width-5
+                                                                    ZIndex: =2
+
+                                                Contact_Details_Heading_3 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height/9
+                                                    PaddingBottom: =0
+                                                    Size: =12
+                                                    Text: ="Contact Details"
+                                                    Width: =Parent.Width
+                                                    ZIndex: =2
 
