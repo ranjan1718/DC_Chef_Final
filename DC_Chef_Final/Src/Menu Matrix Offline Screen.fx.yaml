@@ -10554,7 +10554,7 @@
                         OnSelect: |
                             =/*If(
                                 Connection.Connected,
-                                Remove(Contacts_1,_V_SelectedContact);
+                                Remove(Contacts,_V_SelectedContact);
                                 Set(var_enableEdit,false);
                                 UpdateContext(
                                     {
@@ -10574,7 +10574,7 @@
                                     Set(_V_PrimaryContact, Blank())
                                 );
                                 Refresh(Customers);
-                                Refresh(Contacts_1);
+                                Refresh(Contacts);
                                 Select(btn_ClearData_customer);
                                 Select(btn_SaveData_customer);
                                 ,

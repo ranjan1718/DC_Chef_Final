@@ -1879,6 +1879,7 @@
                                         RadiusBottomRight: =4
                                         RadiusTopLeft: =4
                                         RadiusTopRight: =4
+                                        Width: =Parent.Width
                                         ZIndex: =2
 
                                         Account_Behaviour_Container_6 As groupContainer.verticalAutoLayoutContainer:
@@ -3102,8 +3103,9 @@
                                                     ZIndex: =12
 
                                         BodyPrimariContactCont As groupContainer.verticalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.Start
                                             DropShadow: =DropShadow.Light
-                                            FillPortions: =0
+                                            Height: =Parent.Height+300
                                             LayoutDirection: =LayoutDirection.Vertical
                                             LayoutGap: =5
                                             LayoutMinHeight: =100
@@ -3124,6 +3126,7 @@
                                             ZIndex: =3
 
                                             PrimaryContainer As groupContainer.verticalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
                                                 DropShadow: =DropShadow.Light
                                                 LayoutDirection: =LayoutDirection.Vertical
                                                 LayoutGap: =5
@@ -3564,6 +3567,7 @@
                                                                 ZIndex: =2
 
                                             Contact_Detail_Container As groupContainer.verticalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
                                                 DropShadow: =DropShadow.Light
                                                 LayoutDirection: =LayoutDirection.Vertical
                                                 LayoutGap: =5
@@ -3578,6 +3582,7 @@
                                                 RadiusBottomRight: =4
                                                 RadiusTopLeft: =4
                                                 RadiusTopRight: =4
+                                                Width: =Parent.Width-10
                                                 ZIndex: =2
 
                                                 Primary_Contact_Container_8 As groupContainer.verticalAutoLayoutContainer:
@@ -4423,6 +4428,7 @@
                                                     ZIndex: =5
 
                                             ContactDetailContainer As groupContainer.verticalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
                                                 DropShadow: =DropShadow.Light
                                                 LayoutDirection: =LayoutDirection.Vertical
                                                 LayoutGap: =5
@@ -5003,7 +5009,7 @@
                                                                 HoverFill: =RGBA(255, 255, 255, 1)
                                                                 IsSearchable: =false
                                                                 Items: |-
-                                                                    =//Filter(Contacts_1, 'Decision Level' = ComboBox2.SelectedItems)
+                                                                    =//Filter(Contacts, 'Decision Level' = ComboBox2.SelectedItems)
                                                                     Choices('Decision Level Choices')
                                                                 LayoutMinWidth: =0
                                                                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -5077,7 +5083,7 @@
                                                                 HoverFill: =RGBA(255, 255, 255, 1)
                                                                 IsSearchable: =false
                                                                 Items: |-
-                                                                    =//Filter(Contacts_1, 'Decision Level' = ComboBox2.SelectedItems)
+                                                                    =//Filter(Contacts, 'Decision Level' = ComboBox2.SelectedItems)
                                                                     Choices('Level of Influence')
                                                                 LayoutMinWidth: =0
                                                                 PressedColor: =RGBA(255, 255, 255, 1)
@@ -5647,8 +5653,8 @@
                                                                         Set(
                                                                             _V_SelectedContact,
                                                                             Patch(
-                                                                                Contacts_1,
-                                                                                Defaults(Contacts_1),
+                                                                                Contacts,
+                                                                                Defaults(Contacts),
                                                                                 {
                                                                                     IsPrimaryContact: Toggle1_9.Value,
                                                                                     Name: 'ContactName Input_3'.Text,
@@ -5673,7 +5679,7 @@
                                                                                 If(
                                                                                     (!IsBlankOrError(_V_SelectedCustomer.'Primary Contact'.Contact)) && _V_SelectedCustomer.'Primary Contact'.Contact <> _V_SelectedContact.Contact,
                                                                                     Patch(
-                                                                                        Contacts_1,
+                                                                                        Contacts,
                                                                                         {Contact: _V_SelectedCustomer.'Primary Contact'.Contact},
                                                                                         {
                                                                                             IsPrimaryContact: false
@@ -5700,7 +5706,7 @@
                                                                             
                                                                             //list
                                                                             Patch(
-                                                                                Contacts_1,
+                                                                                Contacts,
                                                                                 {Contact: _V_SelectedContact.Contact},
                                                                                 {
                                                                                     IsPrimaryContact: Toggle1_9.Value,
@@ -5725,7 +5731,7 @@
                                                                                 If(
                                                                                     (!IsBlankOrError(_V_SelectedCustomer.'Primary Contact'.Contact)) && _V_SelectedCustomer.'Primary Contact'.Contact <> _V_SelectedContact.Contact,
                                                                                     Patch(
-                                                                                        Contacts_1,
+                                                                                        Contacts,
                                                                                         {Contact: _V_SelectedCustomer.'Primary Contact'.Contact},
                                                                                         {
                                                                                             IsPrimaryContact: false
@@ -5749,7 +5755,7 @@
                                                                     );
                                                                     
                                                                     
-                                                                            Refresh(Contacts_1);
+                                                                            Refresh(Contacts);
                                                                             Refresh(Customers);
                                                                     
                                                                     
@@ -6194,7 +6200,7 @@
                                 );
                                 
                                 Refresh(Customers);
-                                Refresh(Contacts_1);
+                                Refresh(Contacts);
                                 Select(btn_ClearData_customer_1);
                                 Select(btn_SaveData_customer_1);
                                 ,
@@ -6325,7 +6331,7 @@
                     AddColumns(
                         AddColumns(
                             AddColumns(
-                                Contacts_1,
+                                Contacts,
                                 "createofflineRequired",
                                 false
                             ),
@@ -6582,7 +6588,7 @@
                         OnSelect: |+
                             =If(
                                 Connection.Connected,
-                                Remove(Contacts_1,_V_SelectedContact);
+                                Remove(Contacts,_V_SelectedContact);
                                 Set(var_enableEdit,false);
                                 UpdateContext(
                                     {
@@ -6602,7 +6608,7 @@
                                     Set(_V_PrimaryContact, Blank())
                                 );
                                 Refresh(Customers);
-                                Refresh(Contacts_1);
+                                Refresh(Contacts);
                                 Select(btn_ClearData_customer_1);
                                 Select(btn_SaveData_customer_1);
                                 ,

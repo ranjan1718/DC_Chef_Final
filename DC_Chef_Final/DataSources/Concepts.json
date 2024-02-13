@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "ulchef_concept",
-    "MaxGetRowsCount": 2000,
     "Name": "Concepts",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

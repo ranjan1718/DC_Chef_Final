@@ -4792,7 +4792,7 @@ CustomerScreen As screen:
                                             HoverFill: =RGBA(255, 211, 205, 1)
                                             IsSearchable: =false
                                             Items: |-
-                                                =//Filter(Contacts_1, 'Decision Level' = ComboBox2.SelectedItems)
+                                                =//Filter(Contacts, 'Decision Level' = ComboBox2.SelectedItems)
                                                 Choices('Decision Level Choices')
                                             LayoutMinWidth: =0
                                             PressedColor: =RGBA(255, 255, 255, 1)
@@ -4864,7 +4864,7 @@ CustomerScreen As screen:
                                             HoverFill: =RGBA(255, 211, 205, 1)
                                             IsSearchable: =false
                                             Items: |-
-                                                =//Filter(Contacts_1, 'Decision Level' = ComboBox2.SelectedItems)
+                                                =//Filter(Contacts, 'Decision Level' = ComboBox2.SelectedItems)
                                                 Choices('Level of Influence')
                                             LayoutMinWidth: =0
                                             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5449,8 +5449,8 @@ CustomerScreen As screen:
                                                     Set(
                                                         _V_SelectedContact,
                                                         Patch(
-                                                            Contacts_1,
-                                                            Defaults(Contacts_1),
+                                                            Contacts,
+                                                            Defaults(Contacts),
                                                             {
                                                                 IsPrimaryContact: Toggle1_1.Value,
                                                                 Name: 'ContactName Input'.Text,
@@ -5475,7 +5475,7 @@ CustomerScreen As screen:
                                                             If(
                                                                 (!IsBlankOrError(_V_SelectedCustomer.'Primary Contact'.Contact)) && _V_SelectedCustomer.'Primary Contact'.Contact <> _V_SelectedContact.Contact,
                                                                 Patch(
-                                                                    Contacts_1,
+                                                                    Contacts,
                                                                     {Contact: _V_SelectedCustomer.'Primary Contact'.Contact},
                                                                     {
                                                                         IsPrimaryContact: false
@@ -5502,7 +5502,7 @@ CustomerScreen As screen:
                                                         
                                                         //list
                                                         Patch(
-                                                            Contacts_1,
+                                                            Contacts,
                                                             {Contact: _V_SelectedContact.Contact},
                                                             {
                                                                 IsPrimaryContact: Toggle1_1.Value,
@@ -5527,7 +5527,7 @@ CustomerScreen As screen:
                                                             If(
                                                                 (!IsBlankOrError(_V_SelectedCustomer.'Primary Contact'.Contact)) && _V_SelectedCustomer.'Primary Contact'.Contact <> _V_SelectedContact.Contact,
                                                                 Patch(
-                                                                    Contacts_1,
+                                                                    Contacts,
                                                                     {Contact: _V_SelectedCustomer.'Primary Contact'.Contact},
                                                                     {
                                                                         IsPrimaryContact: false
@@ -5551,7 +5551,7 @@ CustomerScreen As screen:
                                                 );
                                                 
                                                 
-                                                        Refresh(Contacts_1);
+                                                        Refresh(Contacts);
                                                         Refresh(Customers);
                                                 
                                                 
@@ -5907,7 +5907,7 @@ CustomerScreen As screen:
                         OnSelect: |+
                             =If(
                                 Connection.Connected,
-                                Remove(Contacts_1,_V_SelectedContact);
+                                Remove(Contacts,_V_SelectedContact);
                                 Set(var_enableEdit,false);
                                 UpdateContext(
                                     {
@@ -5927,7 +5927,7 @@ CustomerScreen As screen:
                                     Set(_V_PrimaryContact, Blank())
                                 );
                                 Refresh(Customers);
-                                Refresh(Contacts_1);
+                                Refresh(Contacts);
                                 Select(btn_ClearData_customer);
                                 Select(btn_SaveData_customer);
                                 ,
@@ -6007,7 +6007,7 @@ CustomerScreen As screen:
                     AddColumns(
                         AddColumns(
                             AddColumns(
-                                Contacts_1,
+                                Contacts,
                                 "createofflineRequired",
                                 false
                             ),
@@ -6416,7 +6416,7 @@ CustomerScreen As screen:
                                 );
                                 
                                 Refresh(Customers);
-                                Refresh(Contacts_1);
+                                Refresh(Contacts);
                                 Select(btn_ClearData_customer);
                                 Select(btn_SaveData_customer);
                                 ,

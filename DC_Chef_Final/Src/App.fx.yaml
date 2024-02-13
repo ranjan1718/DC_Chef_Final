@@ -70,7 +70,7 @@ App As appinfo:
                 ),
                 ClearCollect(
                     _C_Contacts,
-                    Contacts_1
+                    Contacts
                 ),
                 ClearCollect(
                     _C_Dishes,

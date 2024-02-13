@@ -2560,7 +2560,10 @@
                                                             Parent.Height
                                                         HoverColor: =RGBA(255, 255, 255, 1)
                                                         HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
-                                                        OnSelect: =//Select(Parent)
+                                                        OnSelect: |-
+                                                            =//Select(Parent)
+                                                            Set(var_routeIconItem,ThisItem);
+                                                            Navigate('In Call Screen',ScreenTransition.Fade,{lclPreviousScreen: App.ActiveScreen})
                                                         Size: =10
                                                         Text: =ThisItem.Name
                                                         Width: =If(ThisItem.'Call Status'=444670002,Parent.Width,Parent.Width/1.26)
@@ -2578,6 +2581,12 @@
                                                             Parent.Height-5
                                                         Icon: =Icon.Edit
                                                         LayoutMinWidth: =0
+                                                        OnSelect: |-
+                                                            =
+                                                            //Set(var_weekdate,ThisItem.'Scheduled Call Date');
+                                                            //Set(var_Callstatus,ThisItem.'Call Status');
+                                                            Set(var_routeIconItem,ThisItem);
+                                                            Navigate('In Call Screen',ScreenTransition.Fade,{lclPreviousScreen: App.ActiveScreen})
                                                         Visible: =ThisItem.'Call Status'=444670004
                                                         Width: =Parent.Width/5
                                                         ZIndex: =2
@@ -2591,6 +2600,9 @@
                                                         Image: ='icons8-play-100 (2)'
                                                         LayoutMinHeight: =0
                                                         LayoutMinWidth: =0
+                                                        OnSelect: |-
+                                                            =Set(var_routeIconItem,ThisItem);
+                                                            Navigate('In Call Screen',ScreenTransition.Fade,{lclPreviousScreen: App.ActiveScreen})
                                                         Visible: =ThisItem.'Call Status'=444670000
                                                         Width: =Parent.Width/5
                                                         ZIndex: =3
@@ -3304,6 +3316,10 @@
                                                         Icon: =Icon.Edit
                                                         LayoutMinHeight: =0
                                                         LayoutMinWidth: =0
+                                                        OnSelect: |-
+                                                            =
+                                                            Set(var_routeIconItem,ThisItem);
+                                                            Navigate('In Call Screen',ScreenTransition.Fade,{lclPreviousScreen: App.ActiveScreen})
                                                         Width: =Parent.Width
                                                         ZIndex: =1
 
@@ -3334,6 +3350,9 @@
                                                         Icon: =Icon.Send
                                                         LayoutMinHeight: =0
                                                         LayoutMinWidth: =0
+                                                        OnSelect: |-
+                                                            =Set(var_routeIconItem,ThisItem);
+                                                            Navigate('In Call Screen',ScreenTransition.Fade,{lclPreviousScreen: App.ActiveScreen})
                                                         Visible: =false
                                                         Width: =Parent.Width
                                                         ZIndex: =1

@@ -195,7 +195,7 @@
                     ),
                     ClearCollect(
                         _C_Contacts,
-                        AddColumns(AddColumns(AddColumns(Contacts_1, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
+                        AddColumns(AddColumns(AddColumns(Contacts, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
                     ),
                     ClearCollect(
                         _C_Concepts,
@@ -329,8 +329,8 @@
                         ForAll(
                             Filter(_C_Contacts, createofflineRequired),
                             Patch(
-                                Contacts_1,
-                                Defaults(Contacts_1),
+                                Contacts,
+                                Defaults(Contacts),
                                 DropColumns(ThisRecord, "createofflineRequired", "updateofflineRequired", "removeofflineRequired")
                             )
                         )
@@ -364,7 +364,7 @@
                         ForAll(
                             Filter(_C_Contacts, createofflineRequired),
                             Patch(
-                                Contacts_1,
+                                Contacts,
                                 {Contact: ThisRecord.Contact},
                                 DropColumns(ThisRecord, "createofflineRequired", "updateofflineRequired", "removeofflineRequired")
                             )
@@ -393,7 +393,7 @@
                     
                         ForAll(
                             Filter(_C_Contacts, createofflineRequired),
-                            RemoveIf(Contacts_1, Contact=ThisRecord.Contact)
+                            RemoveIf(Contacts, Contact=ThisRecord.Contact)
                         )
                     
                 )
@@ -559,7 +559,7 @@
                             AddColumns(
                                 AddColumns(
                                     AddColumns(
-                                        Contacts_1,
+                                        Contacts,
                                         "createofflineRequired",
                                         false
                                     ),
@@ -614,8 +614,8 @@
                             ForAll(
                                 Filter(_C_Contacts, createofflineRequired),
                                 Patch(
-                                    Contacts_1,
-                                    Defaults(Contacts_1),
+                                    Contacts,
+                                    Defaults(Contacts),
                                     DropColumns(ThisRecord, "createofflineRequired", "updateofflineRequired", "removeofflineRequired")
                                 )
                             )
@@ -651,7 +651,7 @@
                             ForAll(
                                 Filter(_C_Contacts, updateofflineRequired),
                                 Patch(
-                                    Contacts_1,
+                                    Contacts,
                                     {Contact: ThisRecord.Contact},
                                     DropColumns(ThisRecord, "createofflineRequired", "updateofflineRequired", "removeofflineRequired")
                                 )
@@ -683,12 +683,12 @@
                         If( CountRows(Filter(_C_Contacts, removeofflineRequired))>0,
                             ForAll(
                                 Filter(_C_Contacts, removeofflineRequired),
-                                RemoveIf(Contacts_1, Contact=ThisRecord.Contact)
+                                RemoveIf(Contacts, Contact=ThisRecord.Contact)
                             )
                         )
                     );
                     Refresh(Customers);
-                    Refresh(Contacts_1);
+                    Refresh(Contacts);
                     Refresh(Concepts);
             
                     Set(
@@ -713,7 +713,7 @@
                             AddColumns(
                                 AddColumns(
                                     AddColumns(
-                                        Contacts_1,
+                                        Contacts,
                                         "createofflineRequired",
                                         false
                                     ),
@@ -817,7 +817,7 @@
                     AddColumns(
                         AddColumns(
                             AddColumns(
-                                Contacts_1,
+                                Contacts,
                                 "createofflineRequired",
                                 false
                             ),

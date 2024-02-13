@@ -2166,7 +2166,7 @@
                                         HoverFill: =RGBA(255, 255, 255, 1)
                                         InputTextPlaceholder: ="Find items"
                                         IsSearchable: =false
-                                        Items: =Contacts_1
+                                        Items: =Contacts
                                         LayoutMinWidth: =0
                                         PaddingLeft: =12
                                         PressedColor: =RGBA(255, 255, 255, 1)
@@ -3989,7 +3989,7 @@
                                         HoverFill: =RGBA(255, 211, 205, 1)
                                         InputTextPlaceholder: ="Find items"
                                         IsSearchable: =false
-                                        Items: =Contacts_1
+                                        Items: =Contacts
                                         LayoutMinWidth: =0
                                         PaddingLeft: =12
                                         PressedColor: =RGBA(255, 255, 255, 1)
@@ -6047,7 +6047,7 @@
                                                     ),
                                                     ClearCollect(
                                                         _C_Contacts,
-                                                        AddColumns(AddColumns(AddColumns(Contacts_1, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
+                                                        AddColumns(AddColumns(AddColumns(Contacts, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
                                                     ),
                                                     ClearCollect(
                                                         _C_Concepts,
