@@ -153,3 +153,194 @@
                         Width: =Parent.Width
                         ZIndex: =2
 
+                        Customer_List_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            Height: =Parent.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingTop: =5
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width*1.5/10
+                            ZIndex: =1
+
+                            SearchBar_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                FillPortions: =0
+                                Height: =Parent.Height/15
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =0
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                Component1_26 As Component1_24:
+                                    Height: =Parent.Height/1
+                                    HintText: ="Search"
+                                    LayoutMinHeight: =640
+                                    LayoutMinWidth: =0
+                                    Visible: =true
+                                    Width: =Parent.Width-10
+
+                            Container2_18 As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                Height: =Parent.Height*14/15
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =0
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                                Customers_Gallery_7 As gallery.variableTemplateHeightGallery:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DelayItemLoading: =true
+                                    Items: |-
+                                        =Filter(_C_Customers, Component1_1.TypedText in Name || Component1_1.TypedText in 'Mother Group (ulchef_mothergroupslt)')
+                                        //Customers
+                                    Layout: =Layout.Vertical
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =0
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    OnSelect: |-
+                                        =
+                                        //ClearCollect(_V_SelectedCustomer,ThisItem);
+                                    TemplatePadding: =8
+                                    TemplateSize: =280
+                                    ZIndex: =1
+
+                                    Template_Container_7 As groupContainer.horizontalAutoLayoutContainer:
+                                        DropShadow: =DropShadow.Semilight
+                                        Fill: |+
+                                            =//If(ThisItem.Status='Status (Customers)'.Inactive, Color.DarkGray, var_whiteColor)
+                                            If(ThisItem.IsSelected=true, Color.DarkGray, var_whiteColor)
+                                            
+                                            
+                                        Height: =Customer_Name_7.Height+'Customer Name_7'.Height+1
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =4
+                                        PaddingTop: =4
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.TemplateWidth-6
+                                        X: =3
+                                        ZIndex: =1
+
+                                        "'Customer Name_7' As label":
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =19
+                                            OnSelect: |
+                                                =Set(
+                                                    _V_SelectedCustomer, ThisItem
+                                                );
+                                                Set(
+                                                    _V_PrimaryContact,
+                                                    LookUp(
+                                                        _C_Contacts, Contact=ThisItem.'Primary Contact'.Contact
+                                                    )
+                                                )
+                                                //Refresh(Concepts);
+                                            Size: =10
+                                            Text: =ThisItem.Name
+                                            Width: =Parent.Width
+                                            ZIndex: =1
+
+                                        Customer_Name_7 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            OnSelect: |
+                                                =Set(
+                                                    _V_SelectedCustomer, ThisItem
+                                                );
+                                                Set(
+                                                    _V_PrimaryContact,
+                                                    LookUp(
+                                                        _C_Contacts, Contact=ThisItem.'Primary Contact'.Contact
+                                                    )
+                                                )
+                                                //Refresh(Concepts);
+                                            PaddingTop: =0
+                                            Size: =10
+                                            Text: =ThisItem.ulchef_mothergroupslt
+                                            VerticalAlign: =VerticalAlign.Top
+                                            Width: =Parent.Width
+                                            ZIndex: =2
+
+                            "'Add_Customer Container_3' As groupContainer.horizontalAutoLayoutContainer":
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                FillPortions: =0
+                                Height: =Parent.Height/15
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMinHeight: =0
+                                LayoutMinWidth: =0
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.Width
+                                ZIndex: =3
+
+                                AddCust_Button_5 As button:
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Fill: |-
+                                        =//RGBA(204, 72, 0, 1)
+                                        var_SaveColor
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =30
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                    OnSelect: |-
+                                        =Set(var_editCustomerInfo, true);
+                                        Set(var_editAccountBehaviour, true);
+                                        Navigate(ContactEditScreen, ScreenTransition.Fade, {
+                                            _V_Customer_New: true
+                                        });
+                                    Size: =11
+                                    Text: =" Add Customer"
+                                    Width: =161
+                                    X: =200
+                                    Y: =730
+                                    ZIndex: =1
+
+                        ContainerWithoutCustomerList As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            Height: =Parent.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =10
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width/1.19
+                            ZIndex: =2
+
