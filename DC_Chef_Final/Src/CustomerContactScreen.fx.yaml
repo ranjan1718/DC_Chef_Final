@@ -1,6 +1,15 @@
 "CustomerContactScreen As screen.'layout_Offline_ver1.0'":
     Fill: =RGBA(255,255,255,1)
     LoadingSpinnerColor: =RGBA(211, 66, 9, 1)
+    OnVisible: |-
+        =//Select(Parent)
+        UpdateContext(
+            {
+                _V_Contact_Edit_Or_New: ""
+            }
+        );
+        Set(var_increment,1);
+        Set(_V_show_Account_Sales, "o1");
 
     ScreenContainer9 As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
