@@ -1,6 +1,13 @@
 "ContactEdit As screen.'layout_Offline_ver1.0'":
     Fill: =RGBA(255,255,255,1)
     LoadingSpinnerColor: =RGBA(211, 66, 9, 1)
+    OnVisible: |-
+        =Reset(AddMediaButton1_2);
+        Reset(AddMediaButton1_4);
+        Reset(AddMediaButton1_5);
+        Reset(AddMediaButton1_6);
+        Reset(AddMediaButton1_7);
+        Reset(AddMediaButton1_8)
 
     ScreenContainer10 As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
@@ -4085,4 +4092,2080 @@
                                         Size: =10
                                         Visible: =var_editCustomerInfo
                                         ZIndex: =4
+
+                        Right_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Light
+                            Height: =Parent.Height+300
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =0
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width*8/20
+                            ZIndex: =2
+
+                            Inner_Container__1 As groupContainer.verticalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                BorderColor: =RGBA(255, 255, 255, 1)
+                                BorderStyle: =BorderStyle.None
+                                Height: =Parent.Height
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutGap: =15
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =0
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                PaddingTop: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =2
+
+                                Account_Behaviour_Details_Container_1 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(106, 122, 127, 1)
+                                    BorderThickness: =0.5
+                                    DropShadow: =DropShadow.Semilight
+                                    FillPortions: =0
+                                    Height: =Parent.Height-300
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutGap: =5
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =10
+                                    RadiusBottomLeft: =10
+                                    RadiusBottomRight: =10
+                                    RadiusTopLeft: =10
+                                    RadiusTopRight: =10
+                                    Width: =Parent.Width-20
+                                    ZIndex: =1
+
+                                    Acc_Behaviour_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        DropShadow: =DropShadow.Light
+                                        Fill: |-
+                                            =//RGBA(204, 72, 0, 1)
+                                            var_ModuleBodyColor
+                                        FillPortions: =0
+                                        Height: =Parent.Height/11
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =0
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingRight: =10
+                                        PaddingTop: =5
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width
+                                        ZIndex: =1
+
+                                        Label6_21 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(255, 255, 255, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Fill: |-
+                                                =//RGBA(204, 72, 0, 1)
+                                                var_ModuleBodyColor
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height-5
+                                            LayoutMinWidth: =0
+                                            PaddingBottom: =0
+                                            PaddingLeft: =15
+                                            PaddingTop: =0
+                                            Size: =12
+                                            Text: ="Account Behaviour"
+                                            Width: =Parent.Width
+                                            ZIndex: =1
+
+                                        Container29_12 As groupContainer.verticalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            BorderColor: =RGBA(255, 255, 255, 1)
+                                            BorderThickness: =2
+                                            FillPortions: =0
+                                            Height: =20
+                                            LayoutAlignItems: =LayoutAlignItems.Center
+                                            LayoutDirection: =LayoutDirection.Vertical
+                                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =15
+                                            RadiusBottomRight: =15
+                                            RadiusTopLeft: =15
+                                            RadiusTopRight: =15
+                                            Visible: =false
+                                            Width: =37
+                                            ZIndex: =3
+
+                                            Toggle1_12 As toggleSwitch:
+                                                BorderColor: =RGBA(255, 255, 255, 1)
+                                                Color: =RGBA(247, 15, 15, 1)
+                                                FalseFill: =RGBA(139, 154, 159, 1)
+                                                FillPortions: =1
+                                                HandleFill: =RGBA(255, 255, 255, 1)
+                                                Height: =Parent.Height
+                                                LayoutMinHeight: =0
+                                                ShowLabel: =false
+                                                Size: =13
+                                                TrueFill: =RGBA(240, 98, 15, 1)
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                        Icon6_11 As icon.Edit:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(255, 255, 255, 1)
+                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                            DisabledColor: =RGBA(244, 244, 244, 1)
+                                            Height: =Self.Width
+                                            Icon: =Icon.Edit
+                                            OnSelect: |-
+                                                =//false
+                                                Set(var_editAccountBehaviour, true);
+                                                Set(var_editCustomerInfo, false);
+                                            PaddingBottom: =8
+                                            PaddingLeft: =8
+                                            PaddingRight: =10
+                                            PaddingTop: =10
+                                            Visible: =!var_editAccountBehaviour
+                                            Width: =Parent.Width/14
+                                            ZIndex: =4
+
+                                    Container22_12 As groupContainer.horizontalAutoLayoutContainer:
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        FillPortions: =0
+                                        Height: =Parent.Height/9
+                                        LayoutGap: =5
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingLeft: =10
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Visible: =false
+                                        ZIndex: =3
+
+                                        Icon3_5 As icon.Add:
+                                            AlignInContainer: =AlignInContainer.Center
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            BorderStyle: =BorderStyle.None
+                                            Color: =RGBA(224, 86, 6, 1)
+                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                            DisabledColor: =RGBA(244, 244, 244, 1)
+                                            Height: =Parent.Height-10
+                                            Icon: =Icon.Add
+                                            PaddingBottom: =5
+                                            PaddingTop: =5
+                                            Width: =Self.Height
+                                            ZIndex: =2
+
+                                    Acc_behaiour_records_container_1 As groupContainer.verticalAutoLayoutContainer:
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingRight: =15
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width
+                                        ZIndex: =4
+
+                                        Container28_10 As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            FillPortions: =0
+                                            Height: =Parent.Height/8.5
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            PaddingLeft: =15
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Visible: =false
+                                            Width: =Parent.Width
+                                            ZIndex: =1
+
+                                            Label6_22 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FontWeight: =FontWeight.Bold
+                                                LayoutMinWidth: =0
+                                                Size: =12
+                                                Text: ="Contact 1"
+                                                Width: =Parent.Width/4
+                                                ZIndex: =1
+
+                                            Label11_7 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: =""
+                                                ZIndex: =3
+
+                                        AccBehaviourFieldsContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            BorderStyle: =BorderStyle.None
+                                            LayoutDirection: =LayoutDirection.Vertical
+                                            LayoutGap: =3
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            PaddingRight: =10
+                                            PaddingTop: =10
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width
+                                            ZIndex: =3
+
+                                            TypeofEngagement_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                                Label13_140 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Type of Engagement"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_93 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_typeofengagement
+                                                    Visible: |
+                                                        =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                TextInput3_73 As text:
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                "'Type of Engagement ComboBox_1' As combobox":
+                                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                                    BorderThickness: =1
+                                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronFill: =RGBA(0, 0, 0, 1)
+                                                    ChevronHoverBackground: =Color.DarkGray
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DefaultSelectedItems: =If(!_V_Customer_New,[_V_SelectedCustomer.ulchef_typeofengagement])
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    DisplayFields: =["Value"]
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                                    InputTextPlaceholder: ="Find items"
+                                                    IsSearchable: =false
+                                                    Items: =Choices('Customer Approval')
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                                    SearchFields: =["Value"]
+                                                    SearchItems: =[]
+                                                    SelectionFill: =Color.DarkGray
+                                                    SelectMultiple: =false
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =4
+
+                                            Container35_16 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =2
+
+                                                Label16_22 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="Ordering
+                                                        "
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                ComboBox1_52 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =10
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_52.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_24 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                DropShadow: =DropShadow.Light
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =0
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =3
+
+                                                Label16_23 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderStyle: =BorderStyle.None
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Invoice to"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_20 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_25 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                BorderStyle: =BorderStyle.None
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =4
+
+                                                Label16_28 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Delivery"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_21 As text:
+                                                    BorderColor: =RGBA(255, 255, 255, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_26 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =0
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingRight: =20
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =5
+
+                                                Label16_29 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Approval"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_23 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_27 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =7
+
+                                                Label16_30 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Average Monthly Sales"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_24 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_28 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =8
+
+                                                Label16_31 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="Seating Capacity
+                                                        "
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_25 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_29 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =9
+
+                                                Label16_32 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="# of Chairs"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_26 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_30 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =10
+
+                                                Label16_33 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="# of Tables"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_27 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_31 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =11
+
+                                                Label16_34 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Operating Hours"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_28 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            Container35_32 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =12
+
+                                                Label16_35 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Semibold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Number of takeaway food per day"
+                                                    Width: =Parent.Width/2.4
+                                                    ZIndex: =1
+
+                                                TextInput6_29 As text:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    BorderThickness: =2
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: ="Text input"
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height
+                                                    HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Size: =13
+                                                    ZIndex: =2
+
+                                            ordering_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =13
+
+                                                Label13_141 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Ordering"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_94 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_ordering
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                TextInput3_74 As text:
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                "'Ordering ComboBox_1' As combobox":
+                                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                                    BorderThickness: =1
+                                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronFill: =RGBA(0, 0, 0, 1)
+                                                    ChevronHoverBackground: =Color.DarkGray
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DefaultSelectedItems: =If(!_V_Customer_New,[_V_SelectedCustomer.ulchef_ordering])
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    DisplayFields: =["Value"]
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                                    InputTextPlaceholder: ="Find items"
+                                                    Items: =Choices('Customer Approval')
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                                    SearchFields: =["Value"]
+                                                    SearchItems: =Choices('Customer Approval','Ordering ComboBox_1'.SearchText)
+                                                    SelectionFill: =Color.DarkGray
+                                                    SelectMultiple: =false
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =4
+
+                                            InvoiveTo_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =14
+
+                                                Label13_142 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Invoice to"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_95 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_invoiceto
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                TextInput3_75 As text:
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                "'Invoice To ComboBox_1' As combobox":
+                                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                                    BorderThickness: =1
+                                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronFill: =RGBA(0, 0, 0, 1)
+                                                    ChevronHoverBackground: =Color.DarkGray
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DefaultSelectedItems: =If(!_V_Customer_New,[_V_SelectedCustomer.ulchef_invoiceto])
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    DisplayFields: =["Value"]
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                                    InputTextPlaceholder: ="Find items"
+                                                    Items: =Choices('Customer Approval')
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                                    SearchFields: =["Value"]
+                                                    SearchItems: =Choices('Customer Approval','Invoice To ComboBox_1'.SearchText)
+                                                    SelectionFill: =Color.DarkGray
+                                                    SelectMultiple: =false
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =4
+
+                                            Delivery__Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =15
+
+                                                Label13_143 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Delivery"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_107 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_delivery
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                TextInput3_76 As text:
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                "'Delivery ComboBox_1' As combobox":
+                                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                                    BorderThickness: =1
+                                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronFill: =RGBA(0, 0, 0, 1)
+                                                    ChevronHoverBackground: =Color.DarkGray
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DefaultSelectedItems: =If(!_V_Customer_New,[_V_SelectedCustomer.ulchef_delivery])
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    DisplayFields: =["Value"]
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                                    InputTextPlaceholder: ="Find items"
+                                                    Items: =Choices('Customer Approval')
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                                    SearchFields: =["Value"]
+                                                    SearchItems: =Choices('Customer Approval','Delivery ComboBox_1'.SearchText)
+                                                    SelectionFill: =Color.DarkGray
+                                                    SelectMultiple: =false
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =4
+
+                                            approval_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =16
+
+                                                Label13_144 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Approval"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_108 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_approval
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                TextInput3_77 As text:
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                "'Approval ComboBox_1' As combobox":
+                                                    BorderColor: =RGBA(0, 0, 0, 1)
+                                                    BorderThickness: =1
+                                                    ChevronBackground: =RGBA(255, 255, 255, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronFill: =RGBA(0, 0, 0, 1)
+                                                    ChevronHoverBackground: =Color.DarkGray
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DefaultSelectedItems: =If(!_V_Customer_New,[_V_SelectedCustomer.ulchef_approval])
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    DisplayFields: =["Value"]
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                                    InputTextPlaceholder: ="Find items"
+                                                    Items: =Choices('Customer Approval')
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                                    SearchFields: =["Value"]
+                                                    SearchItems: =Choices('Customer Approval','Approval ComboBox_1'.SearchText)
+                                                    SelectionFill: =Color.DarkGray
+                                                    SelectMultiple: =false
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =4
+
+                                            AverageMonthlySales_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =17
+
+                                                Label13_145 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Average Monthly Sales"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_109 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_averagemonthlysales
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'Average Monthly Sales Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_averagemonthlysales)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_62 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_62.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            Seatingcapacity_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =18
+
+                                                Label13_146 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Seating Capacity"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_110 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_seatingcapacity
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'Seating Capacity Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_seatingcapacity)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: |-
+                                                        =//RGBA(204, 72, 0, 0.65)
+                                                        Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_63 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_63.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            NoofChairs_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =19
+
+                                                Label13_147 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="# of chairs"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_111 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_ofchairs
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'# of Chairs Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_ofchairs)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_64 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_64.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            NoofTables_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =20
+
+                                                Label13_148 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="# of tables"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_112 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_oftables
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'# of Tables Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_oftables)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_67 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_67.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            OperatingHours_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =21
+
+                                                Label13_149 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: ="Operating Hours"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_113 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_operatinghours
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'Operating Hours Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_operatinghours)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_68 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_68.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            NoofTakeawayFood_Container_1 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =2
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Width: =Parent.Width
+                                                ZIndex: =22
+
+                                                Label13_150 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    Size: =10
+                                                    Text: |-
+                                                        ="# of takeaway food per day"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_114 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: =_V_SelectedCustomer.ulchef_oftakeawayfoodperday
+                                                    Visible: =!var_editAccountBehaviour
+                                                    ZIndex: =2
+
+                                                "'# of takeaway food per Input_1' As text":
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    Default: =If(_V_Customer_New,"",_V_SelectedCustomer.ulchef_oftakeawayfoodperday)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Format: =TextFormat.Number
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =Color.DarkGray
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =var_editAccountBehaviour
+                                                    ZIndex: =3
+
+                                                ComboBox1_73 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-5
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_73.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =13
+                                                    Visible: =false
+                                                    ZIndex: =4
+
+                                            Container31_75 As groupContainer.horizontalAutoLayoutContainer:
+                                                AlignInContainer: =AlignInContainer.SetByContainer
+                                                Height: =Parent.Height/13
+                                                LayoutMinHeight: =0
+                                                LayoutMinWidth: =250
+                                                LayoutMode: =LayoutMode.Auto
+                                                PaddingBottom: =2
+                                                PaddingLeft: =10
+                                                PaddingRight: =10
+                                                PaddingTop: =7
+                                                RadiusBottomLeft: =4
+                                                RadiusBottomRight: =4
+                                                RadiusTopLeft: =4
+                                                RadiusTopRight: =4
+                                                Visible: =false
+                                                Width: =Parent.Width
+                                                ZIndex: =23
+
+                                                Label13_151 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FontWeight: =FontWeight.Bold
+                                                    Height: =Parent.Height
+                                                    PaddingBottom: =15
+                                                    Size: =10
+                                                    Text: ="Menu"
+                                                    Width: =Parent.Width/2.8
+                                                    ZIndex: =1
+
+                                                Label14_115 As label:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    Color: =RGBA(0, 0, 0, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height
+                                                    LayoutMinWidth: =0
+                                                    Size: =13
+                                                    Text: ="..."
+                                                    Visible: =
+                                                    ZIndex: =2
+
+                                                TextInput3_80 As text:
+                                                    AlignInContainer: =AlignInContainer.Center
+                                                    BorderColor: =RGBA(204, 72, 0, 1)
+                                                    BorderThickness: =0
+                                                    Color: =RGBA(255, 255, 255, 1)
+                                                    Default: ="..."
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    Fill: =RGBA(204, 72, 0, 1)
+                                                    FillPortions: =1
+                                                    FocusedBorderThickness: =4
+                                                    Height: =Parent.Height-5
+                                                    HoverBorderColor: =RGBA(255, 255, 255, 1)
+                                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                                    HoverFill: =RGBA(204, 72, 0, 0.65)
+                                                    LayoutMinWidth: =0
+                                                    Size: =10
+                                                    Visible: =false
+                                                    ZIndex: =3
+
+                                                ComboBox1_74 As combobox:
+                                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                                    ChevronBackground: =RGBA(211, 66, 9, 1)
+                                                    ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                                                    ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                                                    ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                    ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                                    FillPortions: =1
+                                                    Height: =Parent.Height-12
+                                                    HoverColor: =RGBA(0, 0, 0, 1)
+                                                    HoverFill: =RGBA(255, 211, 205, 1)
+                                                    Items: =ComboBoxSample
+                                                    LayoutMinWidth: =0
+                                                    PaddingLeft: =12
+                                                    PressedColor: =RGBA(255, 255, 255, 1)
+                                                    PressedFill: =RGBA(131, 24, 75, 1)
+                                                    SearchItems: =Search(ComboBoxSample,ComboBox1_74.SearchText,"Value1")
+                                                    SelectionFill: =RGBA(211, 66, 9, 1)
+                                                    Size: =10
+                                                    ZIndex: =4
+
+                                        Container35_33 As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            FillPortions: =0
+                                            Height: =Parent.Height/15
+                                            LayoutGap: =15
+                                            LayoutJustifyContent: =LayoutJustifyContent.End
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =Parent.Width
+                                            LayoutMode: =LayoutMode.Auto
+                                            PaddingLeft: =15
+                                            PaddingRight: =35
+                                            PaddingTop: =10
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Visible: =false
+                                            ZIndex: =4
+
+                                            Button3_2 As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =15
+                                                Text: ="Cancel "
+                                                Width: =Parent.Width/5
+                                                ZIndex: =1
+
+                                            Button4_2 As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =15
+                                                Text: ="Save"
+                                                Width: =Parent.Width/5
+                                                ZIndex: =2
+
+                                ButtonContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    Height: =Parent.Height/15
+                                    LayoutAlignItems: =LayoutAlignItems.End
+                                    LayoutGap: =5
+                                    LayoutJustifyContent: =LayoutJustifyContent.End
+                                    LayoutMinHeight: =0
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =10
+                                    PaddingLeft: =10
+                                    PaddingRight: =18
+                                    PaddingTop: =10
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width-30
+                                    ZIndex: =2
+
+                                    Label15_12 As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FillPortions: =1
+                                        Height: =Parent.Height
+                                        LayoutMinWidth: =0
+                                        Size: =13
+                                        Text: =""
+                                        ZIndex: =1
+
+                                    Cancel1_1 As button:
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Fill: |-
+                                            =//RGBA(79, 90, 94, 1)
+                                            var_CancelColor
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =50
+                                        HoverColor: =RGBA(255, 255, 255, 1)
+                                        HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                        LayoutMinWidth: =0
+                                        OnSelect: |-
+                                            =//false
+                                            Set(var_editCustomerInfo,false);
+                                            Set(var_editAccountBehaviour,false);
+                                            Navigate(CustomerScreen_1);
+                                        PaddingBottom: =10
+                                        PaddingTop: =10
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
+                                        Size: =12
+                                        Text: ="Cancel"
+                                        Width: =Parent.Width/6
+                                        ZIndex: =2
+
+                                    Save1_1 As button:
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Fill: |-
+                                            =//RGBA(204, 72, 0, 1)
+                                            var_SaveColor
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =50
+                                        HoverColor: =RGBA(255, 255, 255, 1)
+                                        HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                        LayoutMinWidth: =0
+                                        OnSelect: |
+                                            =//false
+                                            Set(
+                                                var_editCustomerInfo,
+                                                false
+                                            );
+                                            //UpdateContext( { Name: "var_CustomerGallerySelectedID", Value: Customers_Gallery.Selected.Customer });
+                                            
+                                            If(
+                                                Connection.Connected,
+                                            
+                                                //Online 
+                                                If(
+                                                    _V_Customer_New,
+                                                    Collect(
+                                                        _C_Customers,
+                                            
+                                                        Patch(
+                                                            Customers,
+                                                            Defaults(Customers),
+                                                            {
+                                                                'Profile Image': UploadedImage1_2.Image,
+                                                                Name: 'Customer Name Input'.Text,
+                                                                'Customer Code': 'Customer Code Input'.Text,
+                                                                'Armstrong Code': 'Armstrong Code Input'.Text,
+                                                                Area: 'Area ComboBox'.Selected.Value,
+                                                                City: 'City Input'.Text,
+                                                                'LE City': 'LE City Input'.Text,
+                                                                'LE Address': 'LE Address Input'.Text,
+                                                                Distributor: Distributor_ComboBox.Selected,
+                                                                'Mother Group (ulchef_mothergroupslt)':TextInput3_91.Text,
+                                                                //DC Chef Teritory
+                                                                'Primary Contact': 'Primary Contact ComboBox'.Selected,
+                                                                //Menu:Menu
+                                                                'Type of Engagement': 'Type of Engagement ComboBox_1'.Selected.Value,
+                                                                Ordering: 'Ordering ComboBox_1'.Selected.Value,
+                                                                'Invoice To': 'Invoice To ComboBox_1'.Selected.Value,
+                                                                Delivery: 'Delivery ComboBox_1'.Selected.Value,
+                                                                Approval: 'Approval ComboBox_1'.Selected.Value,
+                                                                'Average Monthly Sales': Value('Average Monthly Sales Input_1'.Text),
+                                                                'Seating Capacity': Value('Seating Capacity Input_1'.Text),
+                                                                '# of Chairs': Value('# of Chairs Input_1'.Text),
+                                                                '# of Tables': Value('# of Tables Input_1'.Text),
+                                                                'Operating Hours': Value('Operating Hours Input_1'.Text),
+                                                                '# of takeaway food per day': Value('# of takeaway food per Input_1'.Text),
+                                                                'Manu Image 1': MenuImage1.Image,
+                                                                'Manu Image 2': MenuImage2.Image,
+                                                                'Manu Image 3': MenuImage3.Image,
+                                                                'Manu Image 4': MenuImage4.Image,
+                                                                'Manu Image 5': MenuImage5.Image
+                                                            }
+                                                        )
+                                                    );
+                                                    ,
+                                                    Set(
+                                                        _V_SelectedCustomer,
+                                                        Patch(
+                                                            Customers,
+                                                            {Customer: _V_SelectedCustomer.Customer},
+                                                            {
+                                                                'Profile Image': UploadedImage1_2.Image,
+                                                                Name: 'Customer Name Input'.Text,
+                                                                'Customer Code': 'Customer Code Input'.Text,
+                                                                'Armstrong Code': 'Armstrong Code Input'.Text,
+                                                                Area: 'Area ComboBox'.Selected.Value,
+                                                                City: 'City Input'.Text,
+                                                                'LE City': 'LE City Input'.Text,
+                                                                'LE Address': 'LE Address Input'.Text,
+                                                                Distributor: Distributor_ComboBox.Selected,
+                                                                'Mother Group (ulchef_mothergroupslt)':TextInput3_91.Text,
+                                                                //DC Chef Teritory
+                                                                'Primary Contact': 'Primary Contact ComboBox'.Selected,
+                                                                //Menu:Menu
+                                                                'Type of Engagement': 'Type of Engagement ComboBox_1'.Selected.Value,
+                                                                Ordering: 'Ordering ComboBox_1'.Selected.Value,
+                                                                'Invoice To': 'Invoice To ComboBox_1'.Selected.Value,
+                                                                Delivery: 'Delivery ComboBox_1'.Selected.Value,
+                                                                Approval: 'Approval ComboBox_1'.Selected.Value,
+                                                                'Average Monthly Sales': Value('Average Monthly Sales Input_1'.Text),
+                                                                'Seating Capacity': Value('Seating Capacity Input_1'.Text),
+                                                                '# of Chairs': Value('# of Chairs Input_1'.Text),
+                                                                '# of Tables': Value('# of Tables Input_1'.Text),
+                                                                'Operating Hours': Value('Operating Hours Input_1'.Text),
+                                                                '# of takeaway food per day': Value('# of takeaway food per Input_1'.Text),
+                                                                'Manu Image 1': MenuImage1.Image,
+                                                                'Manu Image 2': MenuImage2.Image,
+                                                                'Manu Image 3': MenuImage3.Image,
+                                                                'Manu Image 4': MenuImage4.Image,
+                                                                'Manu Image 5': MenuImage5.Image
+                                                            }
+                                                        )
+                                                    );
+                                                    Patch(
+                                                        _C_Customers,
+                                                        {Customer:_V_SelectedCustomer.Customer},
+                                                        _V_SelectedCustomer
+                                                    )
+                                                );
+                                                Refresh(Customers);
+                                                Concurrent(
+                                                    ClearCollect(
+                                                        _C_Customers,
+                                                        AddColumns(AddColumns(Customers, "createofflineRequired", false), "updateofflineRequired", false)
+                                                    ),
+                                                    ClearCollect(
+                                                        _C_Contacts,
+                                                        AddColumns(AddColumns(AddColumns(Contacts_1, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
+                                                    ),
+                                                    ClearCollect(
+                                                        _C_Concepts,
+                                                        AddColumns(AddColumns(AddColumns(Concepts, "createofflineRequired", false), "updateofflineRequired", false), "removeofflineRequired", false)
+                                                    )
+                                                );
+                                                
+                                                ClearData("_Offline_Concept");
+                                                ClearData("_Offline_Contact");
+                                                ClearData("_Offline_Customer");
+                                            
+                                                SaveData(_C_Concepts, "_Offline_Concept");
+                                                SaveData(_C_Contacts, "_Offline_Contact");
+                                                SaveData(_C_Customers, "_Offline_Customer");
+                                                ,
+                                                //OffLine
+                                            
+                                                If(
+                                                    _V_Customer_New,
+                                                    
+                                                        Patch(
+                                                            _C_Customers,
+                                                            Defaults(_C_Customers),
+                                                            {
+                                                                'Profile Image': UploadedImage1_2.Image,
+                                                                Name: 'Customer Name Input'.Text,
+                                                                'Customer Code': 'Customer Code Input'.Text,
+                                                                'Armstrong Code': 'Armstrong Code Input'.Text,
+                                                                Area: 'Area ComboBox'.Selected.Value,
+                                                                City: 'City Input'.Text,
+                                                                'LE City': 'LE City Input'.Text,
+                                                                'LE Address': 'LE Address Input'.Text,
+                                                                Distributor: Distributor_ComboBox.Selected,
+                                                                'Mother Group (ulchef_mothergroupslt)':TextInput3_91.Text,
+                                                                //DC Chef Teritory
+                                                                'Primary Contact': 'Primary Contact ComboBox'.Selected,
+                                                                //Menu:Menu
+                                                                'Type of Engagement': 'Type of Engagement ComboBox_1'.Selected.Value,
+                                                                Ordering: 'Ordering ComboBox_1'.Selected.Value,
+                                                                'Invoice To': 'Invoice To ComboBox_1'.Selected.Value,
+                                                                Delivery: 'Delivery ComboBox_1'.Selected.Value,
+                                                                Approval: 'Approval ComboBox_1'.Selected.Value,
+                                                                'Average Monthly Sales': Value('Average Monthly Sales Input_1'.Text),
+                                                                'Seating Capacity': Value('Seating Capacity Input_1'.Text),
+                                                                '# of Chairs': Value('# of Chairs Input_1'.Text),
+                                                                '# of Tables': Value('# of Tables Input_1'.Text),
+                                                                'Operating Hours': Value('Operating Hours Input_1'.Text),
+                                                                '# of takeaway food per day': Value('# of takeaway food per Input_1'.Text),
+                                                                
+                                                                'Manu Image 1': MenuImage1.Image,
+                                                                'Manu Image 2': MenuImage2.Image,
+                                                                'Manu Image 3': MenuImage3.Image,
+                                                                'Manu Image 4': MenuImage4.Image,
+                                                                'Manu Image 5': MenuImage5.Image,
+                                                                createofflineRequired:true
+                                                            }
+                                                        )
+                                                    ;
+                                                    ,
+                                                    Set(
+                                                        _V_SelectedCustomer,
+                                                        Patch(
+                                                            _C_Customers,
+                                                            {Customer: _V_SelectedCustomer.Customer},
+                                                            {
+                                                                'Profile Image': UploadedImage1_2.Image,
+                                                                Name: 'Customer Name Input'.Text,
+                                                                'Customer Code': 'Customer Code Input'.Text,
+                                                                'Armstrong Code': 'Armstrong Code Input'.Text,
+                                                                Area: 'Area ComboBox'.Selected.Value,
+                                                                City: 'City Input'.Text,
+                                                                'LE City': 'LE City Input'.Text,
+                                                                'LE Address': 'LE Address Input'.Text,
+                                                                Distributor: Distributor_ComboBox.Selected,
+                                                                'Mother Group (ulchef_mothergroupslt)':TextInput3_91.Text,
+                                                                //DC Chef Teritory
+                                                                'Primary Contact': 'Primary Contact ComboBox'.Selected,
+                                                                //Menu:Menu
+                                                                'Type of Engagement': 'Type of Engagement ComboBox_1'.Selected.Value,
+                                                                Ordering: 'Ordering ComboBox_1'.Selected.Value,
+                                                                'Invoice To': 'Invoice To ComboBox_1'.Selected.Value,
+                                                                Delivery: 'Delivery ComboBox_1'.Selected.Value,
+                                                                Approval: 'Approval ComboBox_1'.Selected.Value,
+                                                                'Average Monthly Sales': Value('Average Monthly Sales Input_1'.Text),
+                                                                'Seating Capacity': Value('Seating Capacity Input_1'.Text),
+                                                                '# of Chairs': Value('# of Chairs Input_1'.Text),
+                                                                '# of Tables': Value('# of Tables Input_1'.Text),
+                                                                'Operating Hours': Value('Operating Hours Input_1'.Text),
+                                                                '# of takeaway food per day': Value('# of takeaway food per Input_1'.Text),
+                                                                'Manu Image 1': MenuImage1.Image,
+                                                                'Manu Image 2': MenuImage2.Image,
+                                                                'Manu Image 3': MenuImage3.Image,
+                                                                'Manu Image 4': MenuImage4.Image,
+                                                                'Manu Image 5': MenuImage5.Image,
+                                                                updateofflineRequired:true
+                                                            }
+                                                        )
+                                                    );
+                                                );
+                                                ClearData("_Offline_Concept");
+                                                ClearData("_Offline_Contact");
+                                                ClearData("_Offline_Customer");
+                                            
+                                                SaveData(_C_Concepts, "_Offline_Concept");
+                                                SaveData(_C_Contacts, "_Offline_Contact");
+                                                SaveData(_C_Customers, "_Offline_Customer");
+                                            );
+                                            
+                                            
+                                            Navigate(CustomerScreen);
+                                        PaddingBottom: =10
+                                        PaddingTop: =10
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
+                                        Size: =12
+                                        Text: ="Save"
+                                        Width: =Parent.Width/7.5
+                                        ZIndex: =3
 

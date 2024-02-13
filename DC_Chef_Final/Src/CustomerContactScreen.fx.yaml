@@ -551,7 +551,7 @@
                                                         OnSelect: |-
                                                             =Set(var_editCustomerInfo, true);
                                                             Set(var_editAccountBehaviour, true);
-                                                            Navigate(ContactEditScreen, ScreenTransition.Fade, {
+                                                            Navigate(ContactEdit, ScreenTransition.Fade, {
                                                                 _V_Customer_New: false
                                                             });
                                                             //Reset(UploadedImage1_2);
