@@ -38065,6 +38065,1046 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 729,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 722,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 768,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 761,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 1019,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 1012,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 1058,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 1051,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Container7_35.AddIcon_Concepts_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 886,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 879,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 924,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 917,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 989,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 982,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Heading_Container_3.Icon5_11"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 203,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 196,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 238,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 231,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Delete_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 447,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 440,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 486,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 479,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 737,
+                  "snippet": {
+                    "text": "btn_ClearData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_ClearData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 32,
+                  "charOffset": 730,
+                  "snippet": {
+                    "text": "Select(btn_ClearData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 23,
+                  "charOffset": 776,
+                  "snippet": {
+                    "text": "btn_SaveData_customer_1"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "btn_SaveData_customer_1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 769,
+                  "snippet": {
+                    "text": "Select(btn_SaveData_customer_1)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Total_Concepts_3.'3rd_3'.Button8_6"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Select"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Component1_30.Container14_18.Container21_18.TextInput2_24.AccessibleLabel"
                 }
               ],
@@ -76404,6 +77444,336 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Customer_Edit_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.'Customer Basic Details Container_3'.'Heading Container_5'.Container5_5.Container4_12.Container8_26.Icon3_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 18
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_36.Name_of_Concept_Resto_Input_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_36.Name_of_Concept_Resto_Input_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_36.Name_of_Concept_Resto_Input_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_37.'#_of_doors_input_3'.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_37.'#_of_doors_input_3'.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_37.'#_of_doors_input_3'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_38.ConceptRemarks_input_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_38.ConceptRemarks_input_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Records_Container_3.All_Concepts_3.Container9_16.Container7_38.ConceptRemarks_input_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App._C_AllColors"
                 }
               ],
@@ -76957,6 +78327,36 @@
                 "member": "OnSelect",
                 "module": "CustomerScreen",
                 "type": "CustomerScreen.Main_Container.Body_Container.'Body_Container without Sidebar'.'Concepts_PrimaryContact_ContactDetails Container'.Inner_Container.Concepts_Container.Container9_9.Container7_47.Concepts_DownArrow"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 25
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen.ScreenContainer9.MainSectionContainer9.MainContainerSection.BodyContainer.'ContainerWithoutSidebar'''.ContainerWithoutCustomerList.UpperContainer.Concepts_Container_3.Container9_15.Container7_112.Concepts_DownArrow_3"
               }
             }
           ],
@@ -79479,6 +80879,36 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 29
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "CustomerContactScreen._V_InactiveCustomer"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "CustomerContactScreen._V_InactiveCustomer",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_V_InactiveCustomer",
+                "module": "CustomerContactScreen",
+                "type": "CustomerContactScreen"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 23
         },
         {
           "locations": [
