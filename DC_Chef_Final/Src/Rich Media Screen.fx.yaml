@@ -1,0 +1,2601 @@
+"'Rich Media Screen' As screen.'layout_Offline_ver1.0'":
+    Fill: =RGBA(255,255,255,1)
+    LoadingSpinnerColor: =RGBA(211, 66, 9, 1)
+    OnVisible: |-
+        =Set(
+            _V_RecipesContainer,
+            false
+        );
+        Set(
+            _V_ProductsContainer,
+            true
+        );
+        Set(
+            _V_PromotionsContainer,
+            false
+        );
+        Set(
+            _V_Sell_in_Docket,
+            false
+        );
+        Set(
+            _V_Videos,
+            false
+        );
+        UpdateContext({_V_clearFilter_SKUS: true});
+        Set(
+            idx,
+            1
+        )
+
+    ScreenContainer4 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer4 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =75
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =16
+            PaddingRight: =16
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Visible: =false
+            ZIndex: =2
+
+            AppName4 As label:
+                BorderColor: =RGBA(131, 24, 75, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                ContentLanguage: ="Add the name of your app"
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =75
+                LayoutMinWidth: =280
+                PaddingLeft: =10
+                Size: =16
+                Text: ="Add the name of your app"
+                Tooltip: ="Add the name of your app"
+                Width: =280
+                X: =1
+                ZIndex: =3
+
+            "'Offline sync Icon4' As icon.Globe":
+                AccessibleLabel: ="Offline sync status icon"
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(131, 24, 75, 1)
+                Color: =RGBA(131, 24, 75, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Icon: |-
+                    =Switch(Connection.Sync,
+                       ConnectionSync.Connected, Icon.Globe, 
+                       ConnectionSync.ConnectedWithWarning, Icon.GlobeWarning,
+                       ConnectionSync.ConnectedPendingUpsync, Icon.GlobeChangesPending,
+                       ConnectionSync.ConnectedError, Icon.GlobeError,
+                       ConnectionSync.ConnectedRefresh, Icon.GlobeRefresh,
+                       ConnectionSync.NotConnected, Icon.GlobeNotConnected, 
+                       ConnectionSync.NotConnectedWithWarning, Icon.GlobeWarning,
+                       ConnectionSync.NotConnectedPendingUpsync, Icon.GlobeChangesPending,
+                       ConnectionSync.NotConnectedSyncError, Icon.GlobeError)
+                LayoutMinHeight: =32
+                OnSelect: |-
+                    =Switch(Connection.Sync,
+                       ConnectionSync.Connected, Notify("Your device is connected to the network, and your app is ready to work offline.",NotificationType.Success), 
+                       ConnectionSync.ConnectedWithWarning, Notify(Connection.LastSyncMessage,NotificationType.Warning),
+                       ConnectionSync.ConnectedPendingUpsync, Notify("Some data on your device must be synchronized with the server.",NotificationType.Warning),
+                       ConnectionSync.ConnectedError, Notify(Connection.LastSyncMessage,NotificationType.Error),
+                       ConnectionSync.ConnectedRefresh, Notify("Your app is currently synchronizing data with the server.",NotificationType.Information),
+                       ConnectionSync.NotConnected, Notify("Your device is not connected to the network, but you can keep using this app.",NotificationType.Success), 
+                       ConnectionSync.NotConnectedWithWarning, Notify(Connection.LastSyncMessage,NotificationType.Warning),
+                       ConnectionSync.NotConnectedPendingUpsync, Notify("Some data on your device must be synchronized with the server. Reconnect to the network to synchronize.",NotificationType.Warning),
+                       ConnectionSync.NotConnectedSyncError, Notify(Connection.LastSyncMessage,NotificationType.Error))
+                TabIndex: =0
+                Tooltip: =If(Connection.Connected,"Connected","Offline")
+                Width: =32
+                ZIndex: =4
+
+        MainSectionContainer4 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =20
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =5
+
+            "'Main Header_RichMedia_1' As 'Main Header'":
+                Header: ="Rich Media"
+                Height: =Parent.Height/11
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+
+            Container15 As groupContainer.horizontalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =3
+
+                "'Side Bar Component_9' As 'Side Bar Component'":
+                    AlignInContainer: =AlignInContainer.Start
+                    Height: =Parent.Height
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    Width: =Parent.Width*1.5/15
+
+                cont_inner As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =0
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    ZIndex: =2
+
+                    "'Cont_buttons & Searchbar' As groupContainer.horizontalAutoLayoutContainer":
+                        AlignInContainer: =AlignInContainer.Center
+                        DropShadow: =DropShadow.Semilight
+                        FillPortions: =0
+                        Height: =70
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =15
+                        PaddingRight: =15
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width-20
+                        ZIndex: =1
+
+                        btn_Products As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =If(_V_ProductsContainer,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If(_V_ProductsContainer,RGBA(211, 66, 9, 1),RGBA(253,207,180,1))
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |
+                                =Set(
+                                    _V_RecipesContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_ProductsContainer,
+                                    true
+                                );
+                                Set(
+                                    _V_PromotionsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_Sell_in_Docket,
+                                    false
+                                );
+                                Set(
+                                    _V_Videos,
+                                    false
+                                );
+                            Size: =10
+                            Text: ="Products"
+                            Width: =110
+                            ZIndex: =1
+
+                        btn_Recipes As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =If(_V_RecipesContainer,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If(_V_RecipesContainer,RGBA(211, 66, 9, 1),RGBA(253,207,180,1))
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |
+                                =Set(
+                                    _V_ProductsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_RecipesContainer,
+                                    true
+                                );
+                                Set(
+                                    _V_PromotionsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_Sell_in_Docket,
+                                    false
+                                );
+                                Set(
+                                    _V_Videos,
+                                    false
+                                );
+                            Size: =10
+                            Text: ="Recipes"
+                            Width: =110
+                            ZIndex: =2
+
+                        btn_Promotions As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =If(_V_PromotionsContainer,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If(_V_PromotionsContainer,RGBA(211, 66, 9, 1),RGBA(253,207,180,1))
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |-
+                                =Set(
+                                    _V_RecipesContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_ProductsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_PromotionsContainer,
+                                    true
+                                );
+                                Set(
+                                    _V_Sell_in_Docket,
+                                    false
+                                );
+                                Set(
+                                    _V_Videos,
+                                    false
+                                );
+                                Set(
+                                    _V_tabView,
+                                    true
+                                );
+                                Set(
+                                    _V_totalImage,
+                                    CountRows(
+                                        Distinct(
+                                            PromotionRichMedia_Test_Library,
+                                            ID
+                                        )
+                                    )
+                                )
+                            Size: =10
+                            Text: ="Promotions"
+                            Width: =110
+                            ZIndex: =3
+
+                        "'btn_Product Benefit' As button":
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =If(_V_Sell_in_Docket,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If(_V_Sell_in_Docket,RGBA(211, 66, 9, 1),RGBA(253,207,180,1))
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |
+                                =Set(
+                                    _V_RecipesContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_ProductsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_PromotionsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_Sell_in_Docket,
+                                    true
+                                );
+                                Set(
+                                    _V_Videos,
+                                    false
+                                );
+                            Size: =10
+                            Text: ="Sell in Docket"
+                            Width: =120
+                            ZIndex: =4
+
+                        btn_Videos As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =If(_V_Videos,RGBA(255, 255, 255, 1),RGBA(0,0,0,1))
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =If(_V_Videos,RGBA(211, 66, 9, 1),RGBA(253,207,180,1))
+                            FontWeight: =FontWeight.Semibold
+                            Height: =35
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |
+                                =Set(
+                                    _V_RecipesContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_ProductsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_PromotionsContainer,
+                                    false
+                                );
+                                Set(
+                                    _V_Sell_in_Docket,
+                                    false
+                                );
+                                Set(
+                                    _V_Videos,
+                                    true
+                                );
+                            Size: =10
+                            Text: ="Videos"
+                            Width: =110
+                            ZIndex: =5
+
+                        lbl_blank_2 As label:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(131, 24, 75, 1)
+                            BorderStyle: =BorderStyle.None
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            LayoutMinWidth: =0
+                            Size: =13
+                            Text: =""
+                            Width: =50
+                            ZIndex: =6
+
+                        Button10 As button:
+                            AlignInContainer: =AlignInContainer.Center
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Fill: =RGBA(211, 66, 9, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =30
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            OnSelect: |-
+                                =UpdateContext({_V_clearFilter_SKUS: true})
+                            Size: =10
+                            Text: ="Clear Filter"
+                            Visible: =_V_ProductsContainer
+                            Width: =80
+                            ZIndex: =7
+
+                        Search_component As Component1_30:
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: =50
+                            LayoutMinHeight: =640
+                            LayoutMinWidth: =640
+                            Visible: =_V_ProductsContainer
+                            Width: =200
+                            ZIndex: =8
+
+                        cb_SKUtype As combobox:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(214, 221, 224, 1)
+                            ChevronBackground: =RGBA(211, 66, 9, 1)
+                            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                            ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            FillPortions: =1
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 211, 205, 1)
+                            InputTextPlaceholder: ="Search by SKU type"
+                            Items: =Choices(Type_SKU)
+                            LayoutMinWidth: =0
+                            PaddingLeft: =12
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(131, 24, 75, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices(Type_SKU,cb_SKUtype.SearchText)
+                            SelectionFill: =RGBA(211, 66, 9, 1)
+                            SelectMultiple: =false
+                            Size: =10
+                            Visible: =_V_ProductsContainer
+                            Width: =200
+                            ZIndex: =9
+
+                        cb_dishCategory_3 As combobox:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(224, 86, 6, 1)
+                            ChevronBackground: =RGBA(211, 66, 9, 1)
+                            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                            ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            FillPortions: =1
+                            Height: =34
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 211, 205, 1)
+                            InputTextPlaceholder: ="Search by Category"
+                            Items: =Choices('Dish Category (Related Dishes)')
+                            LayoutMinWidth: =0
+                            PaddingLeft: =12
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(131, 24, 75, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices('Dish Category (Related Dishes)',cb_dishCategory_3.SearchText)
+                            SelectionFill: =RGBA(211, 66, 9, 1)
+                            SelectMultiple: =false
+                            Size: =10
+                            Visible: =_V_RecipesContainer
+                            Width: =180
+                            ZIndex: =10
+
+                        cb_dishType As combobox:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(224, 86, 6, 1)
+                            ChevronBackground: =RGBA(211, 66, 9, 1)
+                            ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                            ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                            ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                            ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            FillPortions: =1
+                            Height: =34
+                            HoverColor: =RGBA(0, 0, 0, 1)
+                            HoverFill: =RGBA(255, 211, 205, 1)
+                            InputTextPlaceholder: ="Search by Type"
+                            Items: =Choices('Type of Dish Choices')
+                            LayoutMinWidth: =0
+                            PaddingLeft: =12
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(131, 24, 75, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =Choices('Type of Dish Choices',cb_dishType.SearchText)
+                            SelectionFill: =RGBA(211, 66, 9, 1)
+                            SelectMultiple: =false
+                            Size: =10
+                            Visible: =_V_RecipesContainer
+                            Width: =180
+                            ZIndex: =11
+
+                        Container32 As groupContainer.manualLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            DropShadow: =DropShadow.Light
+                            Height: =34
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =150
+                            PaddingRight: =5
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =_V_RecipesContainer
+                            Width: =
+                            ZIndex: =12
+
+                            TextInput8 As text:
+                                BorderColor: =RGBA(224, 86, 6, 1)
+                                BorderThickness: =2
+                                Color: =RGBA(0, 0, 0, 1)
+                                Default: =""
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                FocusedBorderThickness: =4
+                                Height: =Parent.Height
+                                HintText: ="Search by DishName"
+                                HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                HoverColor: =RGBA(0, 0, 0, 1)
+                                HoverFill: =RGBA(255, 211, 205, 1)
+                                Size: =10
+                                Visible: =_V_RecipesContainer
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                            Icon10 As icon.Search:
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                Color: =RGBA(131, 24, 75, 1)
+                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                DisabledColor: =RGBA(244, 244, 244, 1)
+                                Height: =20
+                                Icon: =Icon.Search
+                                Width: =20
+                                X: =145
+                                Y: =7.5
+                                ZIndex: =2
+
+                        Icon11 As icon.Tablet:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(131, 24, 75, 1)
+                            Color: =RGBA(131, 24, 75, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =30
+                            Icon: =Icon.Tablet
+                            OnSelect: =Set(_V_tabView,true)
+                            Tooltip: ="Tab View"
+                            Visible: =!_V_tabView && _V_PromotionsContainer
+                            Width: =30
+                            ZIndex: =13
+
+                        Icon12 As icon.OptionsList:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =RGBA(131, 24, 75, 1)
+                            Color: =RGBA(131, 24, 75, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(244, 244, 244, 1)
+                            Height: =30
+                            Icon: =Icon.OptionsList
+                            OnSelect: =Set(_V_tabView,false)
+                            Tooltip: ="List View"
+                            Visible: =_V_tabView && _V_PromotionsContainer
+                            Width: =30
+                            ZIndex: =14
+
+                    cont_Products As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutGap: =20
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =_V_ProductsContainer
+                        Width: =Parent.Width-10
+                        ZIndex: =2
+
+                        cont_gal As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
+                            FillPortions: =0
+                            Height: =Parent.Height-20
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width/3.1
+                            ZIndex: =1
+
+                            gal_masterSKUs As gallery.variableTemplateHeightGallery:
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                DelayItemLoading: =true
+                                Items: |-
+                                    =If(
+                                        _V_clearFilter_SKUS,
+                                        Filter(
+                                            SKUS,
+                                            And(
+                                                Or(
+                                                    IsBlank(Search_component.TypedText),
+                                                    Search_component.TypedText in ulchef_name
+                                                ),
+                                                Or(
+                                                    IsBlank(cb_SKUtype.SelectedItems),
+                                                    IsEmpty(cb_SKUtype.SelectedItems),
+                                                    Type in cb_SKUtype.SelectedItems
+                                                )
+                                            )
+                                        ),
+                                        Filter(
+                                            SKUS,
+                                            Name in col_SelectedDish_SKUs[@ulchef_name],
+                                            And(
+                                                Or(
+                                                    IsBlank(Search_component.TypedText),
+                                                    Search_component.TypedText in ulchef_name
+                                                ),
+                                                Or(
+                                                    IsBlank(cb_SKUtype.SelectedItems),
+                                                    IsEmpty(cb_SKUtype.SelectedItems),
+                                                    Type in cb_SKUtype.SelectedItems
+                                                )
+                                            )
+                                        )
+                                    )
+                                    //col_SelectedDish_SKUs
+                                    //Filter(SKUS,Name in col_SelectedDish_SKUs[@ulchef_name])
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateFill: |-
+                                    =//RGBA(214, 221, 224, 0.5)
+                                    /*If(ThisItem.'Pack Size'<=2,RGBA(166,255,153,0.5),(ThisItem.'Pack Size'<=4 && ThisItem.'Pack Size'>2),RGBA(180,214,250,0.5),ThisItem.'Pack Size'>4,RGBA(253,207,180,0.5))*/
+                                    //Color.LightGray
+                                    If(ThisItem.IsSelected,Color.LightGray,RGBA(0,0,0,0.05))
+                                TemplatePadding: =7.5
+                                TemplateSize: =180
+                                ZIndex: =1
+
+                                gal_tmplt As groupContainer.horizontalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =Parent.TemplateHeight
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.TemplateWidth
+                                    ZIndex: =1
+
+                                    cont_SKUdetails As groupContainer.verticalAutoLayoutContainer:
+                                        AlignInContainer: =AlignInContainer.Start
+                                        FillPortions: =0
+                                        Height: =Parent.Height
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =10
+                                        PaddingTop: =15
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width/2 + 30
+                                        ZIndex: =1
+
+                                        lbl_SKUName_2 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Bold
+                                            Height: =Parent.Height/7
+                                            PaddingLeft: =15
+                                            Size: =12
+                                            Text: =ThisItem.Name
+                                            Width: =Parent.Width
+                                            ZIndex: =1
+
+                                        blank As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height/7
+                                            LayoutMinHeight: =0
+                                            PaddingLeft: =15
+                                            Size: =10
+                                            Text: =
+                                            Width: =Parent.Width
+                                            ZIndex: =2
+
+                                        lbl_PackSize As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height/7
+                                            PaddingBottom: =2
+                                            PaddingLeft: =15
+                                            Size: =10
+                                            Text: ="Pack Size  " & ThisItem.'Pack Size'
+                                            VerticalAlign: =VerticalAlign.Bottom
+                                            Width: =Parent.Width
+                                            ZIndex: =3
+
+                                        lbl_CasePrice As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height/7
+                                            PaddingLeft: =15
+                                            Size: =10
+                                            Text: ="Case Price  " & ThisItem.'Case Price'
+                                            Width: =Parent.Width
+                                            ZIndex: =4
+
+                                        lbl_Piece As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height/7
+                                            PaddingLeft: =15
+                                            PaddingTop: =2
+                                            Size: =10
+                                            Text: ="Piece  "& ThisItem.'Piece Price'
+                                            VerticalAlign: =VerticalAlign.Top
+                                            Width: =Parent.Width
+                                            ZIndex: =5
+
+                                        blank_1 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height/7
+                                            LayoutMinHeight: =0
+                                            PaddingLeft: =15
+                                            Size: =10
+                                            Text: =
+                                            Width: =Parent.Width
+                                            ZIndex: =6
+
+                                        cont_RVPVT As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.Start
+                                            FillPortions: =0
+                                            Height: =Parent.Height/6
+                                            LayoutAlignItems: =LayoutAlignItems.Center
+                                            LayoutGap: =10
+                                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                                            LayoutMinHeight: =100
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width
+                                            ZIndex: =7
+
+                                            btn_R As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                DisplayMode: =DisplayMode.View
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =10
+                                                Text: ="R"
+                                                Width: =25
+                                                ZIndex: =1
+
+                                            btn_V As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                DisplayMode: =DisplayMode.View
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =10
+                                                Text: ="V"
+                                                Width: =25
+                                                ZIndex: =2
+
+                                            btn_P As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                DisplayMode: =DisplayMode.View
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =10
+                                                Text: ="P"
+                                                Width: =25
+                                                ZIndex: =3
+
+                                            btn_V_1 As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                DisplayMode: =DisplayMode.View
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =10
+                                                Text: ="V"
+                                                Width: =25
+                                                ZIndex: =4
+
+                                            btn_T As button:
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                DisabledFill: =RGBA(244, 244, 244, 1)
+                                                DisplayMode: =DisplayMode.View
+                                                Fill: =RGBA(211, 66, 9, 1)
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height-10
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                Size: =10
+                                                Text: ="T"
+                                                Width: =25
+                                                ZIndex: =5
+
+                                    cont_SKUImage As groupContainer.verticalAutoLayoutContainer:
+                                        FillPortions: =0
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =30
+                                        PaddingLeft: =5
+                                        PaddingRight: =5
+                                        PaddingTop: =5
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width-cont_SKUdetails.Width-10
+                                        ZIndex: =2
+
+                                        Image12_1 As image:
+                                            BorderThickness: =0.2
+                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                            DisabledFill: =RGBA(244, 244, 244, 1)
+                                            Height: =Parent.Height/1.5
+                                            Image: =If(IsBlank(ThisItem.Photo),SampleImage,ThisItem.Photo)
+                                            ImagePosition: =ImagePosition.Fill
+                                            Width: =Parent.Width-10
+                                            ZIndex: =1
+
+                        cont_galSelectedItem As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
+                            FillPortions: =0
+                            Height: =Parent.Height-20
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width - cont_gal.Width-30
+                            ZIndex: =2
+
+                            cont_SelectedSKUDetail As groupContainer.verticalAutoLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                X: =40
+                                Y: =40
+                                ZIndex: =1
+
+                                cont_SelectedSKUName As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    FillPortions: =0
+                                    Height: =40
+                                    LayoutGap: =10
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingRight: =20
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    lbl_sku_name As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        BorderStyle: =BorderStyle.None
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        Fill: =RGBA(247, 116, 38, 1)
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Semibold
+                                        PaddingLeft: =15
+                                        Size: =13
+                                        Text: =gal_masterSKUs.Selected.Name 
+                                        Width: =Parent.Width-17
+                                        ZIndex: =1
+
+                                    Button9_1 As button:
+                                        AlignInContainer: =AlignInContainer.Center
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Fill: =RGBA(211, 66, 9, 1)
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =30
+                                        HoverColor: =RGBA(255, 255, 255, 1)
+                                        HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                        LayoutMinWidth: =0
+                                        OnSelect: |
+                                            =ClearCollect(
+                                                col_SelectedSKU_Recipes,
+                                                Distinct(
+                                                    Filter(
+                                                        'Related SKUS',
+                                                        Name = gal_masterSKUs.Selected.Name
+                                                    ),
+                                                    'Dish (ulchef_dishtxt)'
+                                                )
+                                            );
+                                            Set(
+                                                _V_RecipesContainer,
+                                                true
+                                            );
+                                            Set(
+                                                _V_ProductsContainer,
+                                                false
+                                            );
+                                            UpdateContext({_V_clearFilter_Dishes:false});
+                                        RadiusBottomLeft: =5
+                                        RadiusBottomRight: =5
+                                        RadiusTopLeft: =5
+                                        RadiusTopRight: =5
+                                        Size: =12
+                                        Text: ="View Recipes"
+                                        Width: =120
+                                        ZIndex: =2
+
+                                cont_SKUSetails As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    "'cont_SKUImage & button' As groupContainer.verticalAutoLayoutContainer":
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        FillPortions: =0
+                                        Height: =Parent.Height
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutGap: =100
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =5
+                                        PaddingLeft: =5
+                                        PaddingRight: =5
+                                        PaddingTop: =5
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width/2
+                                        ZIndex: =1
+
+                                        Image13_1 As image:
+                                            AlignInContainer: =AlignInContainer.Stretch
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                            DisabledFill: =RGBA(244, 244, 244, 1)
+                                            Height: =Parent.Height/1.5
+                                            Image: =If(IsBlank(gal_masterSKUs.Selected.Photo),SampleImage,gal_masterSKUs.Selected.Photo)
+                                            ImagePosition: =ImagePosition.Fill
+                                            ZIndex: =1
+
+                                    cont_SKU_Ingradients As groupContainer.verticalAutoLayoutContainer:
+                                        LayoutDirection: =LayoutDirection.Vertical
+                                        LayoutGap: =2
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =0
+                                        LayoutMode: =LayoutMode.Auto
+                                        PaddingBottom: =25
+                                        PaddingTop: =15
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        ZIndex: =2
+
+                                        "'lbl_Product Benefits' As label":
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Fill: =RGBA(253, 207, 180, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            PaddingLeft: =10
+                                            Size: =12
+                                            Text: ="Product Benefits"
+                                            Width: =Parent.Width-18
+                                            ZIndex: =1
+
+                                        "'lbl_Product Benefits_value' As label":
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            PaddingLeft: =10
+                                            Size: =13
+                                            Text: ="..."
+                                            Width: =Parent.Width
+                                            ZIndex: =2
+
+                                        "'lbl_Product Specification' As label":
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Fill: =RGBA(253, 207, 180, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            PaddingLeft: =10
+                                            Size: =12
+                                            Text: ="Product Specification"
+                                            Width: =Parent.Width-18
+                                            ZIndex: =3
+
+                                        "'lbl_Product Description' As label":
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Fill: =RGBA(253, 207, 180, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            PaddingLeft: =10
+                                            Size: =12
+                                            Text: ="Product Description"
+                                            Width: =Parent.Width-18
+                                            ZIndex: =4
+
+                                        Blank_2 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            LayoutMinHeight: =0
+                                            PaddingLeft: =10
+                                            Size: =13
+                                            Text: =""
+                                            Width: =Parent.Width
+                                            ZIndex: =5
+
+                                        lbl_Ingradients_ As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Fill: =RGBA(253, 207, 180, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            PaddingLeft: =10
+                                            Size: =12
+                                            Text: ="Ingradients"
+                                            Width: =Parent.Width-18
+                                            ZIndex: =6
+
+                                        Blank_3 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            Height: =10
+                                            LayoutMinHeight: =0
+                                            PaddingLeft: =10
+                                            Size: =13
+                                            Text: =""
+                                            Width: =Parent.Width
+                                            ZIndex: =7
+
+                                        cont_packSize As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: |-
+                                                =//RGBA(214, 221, 224, 0.5)
+                                                RGBA(214,221,224,0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =8
+
+                                            "'lbl_Packing Size_' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Packing Size:    " 
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: =gal_masterSKUs.Selected.'Pack Size'
+                                                Width: =0
+                                                ZIndex: =2
+
+                                        cont_productID As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =9
+
+                                            lbl_prodID As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Product ID:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_1 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =2
+
+                                        cont_CasePrice As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =10
+
+                                            "'lbl_Case Price_' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Case Price:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_2 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: |-
+                                                    ="₱ "& Text(gal_masterSKUs.Selected.'Case Price',"#,0.00")
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_PiecePrice As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =11
+
+                                            "'lbl_Piece Price_' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Piece Price:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_3 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: |-
+                                                    ="₱ "& Text(gal_masterSKUs.Selected.'Piece Price',"#,0.00")
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_Type As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =12
+
+                                            lbl_Category As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Type:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_4 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: =gal_masterSKUs.Selected.Type
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_ShelfLife As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =13
+
+                                            "'lbl_Shelf Life' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Shelf Life:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_5 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =2
+
+                                        cont_PalletConfiguration As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =14
+
+                                            "'lbl_Pallet Configuration' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Pallet Configuration:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_9 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_Barcode As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =15
+
+                                            "'lbl_Bar Code' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Bar Code:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_10 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_ProdClaims As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =16
+
+                                            "'lbl_Product Claims' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Product Claims:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_11 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =3
+
+                                        cont_ProdClaims_1 As groupContainer.horizontalAutoLayoutContainer:
+                                            AlignInContainer: =AlignInContainer.SetByContainer
+                                            Fill: =RGBA(214, 221, 224, 0.3)
+                                            LayoutMinHeight: =0
+                                            LayoutMinWidth: =250
+                                            LayoutMode: =LayoutMode.Auto
+                                            RadiusBottomLeft: =4
+                                            RadiusBottomRight: =4
+                                            RadiusTopLeft: =4
+                                            RadiusTopRight: =4
+                                            Width: =Parent.Width-20
+                                            ZIndex: =17
+
+                                            "'lbl_Nutrional Content' As label":
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                FontWeight: =FontWeight.Semibold
+                                                Height: =Parent.Height
+                                                PaddingLeft: =15
+                                                Size: =10
+                                                Text: |-
+                                                    ="Nutrional Content:    "
+                                                Width: =Parent.Width
+                                                ZIndex: =1
+
+                                            Label21_12 As label:
+                                                BorderColor: =RGBA(131, 24, 75, 1)
+                                                Color: =RGBA(0, 0, 0, 1)
+                                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                                FillPortions: =1
+                                                Height: =Parent.Height
+                                                LayoutMinWidth: =0
+                                                Size: =10
+                                                Text: ="..."
+                                                Width: =0
+                                                ZIndex: =2
+
+                    cont_Recipes As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutGap: =20
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =_V_RecipesContainer
+                        Width: =Parent.Width-10
+                        ZIndex: =3
+
+                        cont_gal_1 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
+                            FillPortions: =0
+                            Height: =Parent.Height-20
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width/2.5
+                            ZIndex: =1
+
+                            Gal_Dishes As gallery.variableTemplateHeightGallery:
+                                AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                DelayItemLoading: =true
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Items: |-
+                                    =If(_V_clearFilter_Dishes,Filter(
+                                        'Related Dishes',
+                                        And(
+                                            Or(
+                                                IsBlank(cb_dishCategory_3.SelectedItems),
+                                                IsEmpty(cb_dishCategory_3.SelectedItems),
+                                                ulchef_dishcategory in cb_dishCategory_3.SelectedItems
+                                            ),
+                                            Or(
+                                                IsBlank(cb_dishType.SelectedItems),
+                                                IsEmpty(cb_dishType.SelectedItems),
+                                                ulchef_typeofdish in cb_dishType.SelectedItems
+                                            ),
+                                            Or(
+                                                IsBlank(TextInput8.Text),
+                                                TextInput8.Text in ulchef_name
+                                            )
+                                        )
+                                    ),
+                                    Filter(
+                                        'Related Dishes',
+                                        And(
+                                            Or(
+                                                IsBlank(cb_dishCategory_3.SelectedItems),
+                                                IsEmpty(cb_dishCategory_3.SelectedItems),
+                                                ulchef_dishcategory in cb_dishCategory_3.SelectedItems
+                                            ),
+                                            Or(
+                                                IsBlank(cb_dishType.SelectedItems),
+                                                IsEmpty(cb_dishType.SelectedItems),
+                                                ulchef_typeofdish in cb_dishType.SelectedItems
+                                            ),
+                                            Or(
+                                                IsBlank(TextInput8.Text),
+                                                TextInput8.Text in ulchef_name
+                                            )
+                                        )
+                                    ))
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =0
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateFill: =If(ThisItem.IsSelected,Color.LightGray,RGBA(0, 0, 0, 0.05))
+                                TemplatePadding: =20
+                                TemplateSize: =180
+                                Transition: =Transition.Pop
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                cont_template As groupContainer.horizontalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =Parent.TemplateHeight
+                                    LayoutGap: =20
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =24
+                                    PaddingLeft: =15
+                                    PaddingTop: =24
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.TemplateWidth
+                                    ZIndex: =1
+
+                                    Image4_25 As image:
+                                        AlignInContainer: =AlignInContainer.Start
+                                        BorderColor: =RGBA(106, 122, 127, 1)
+                                        BorderThickness: =0.5
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =Parent.Height-50
+                                        Image: =If(IsBlank(ThisItem.'Main Dish Photo'),SampleImage,ThisItem.'Main Dish Photo')
+                                        ImagePosition: =ImagePosition.Fill
+                                        Width: =Parent.Width/2.2
+                                        ZIndex: =1
+
+                                    Label18 As label:
+                                        Align: =Align.Center
+                                        AlignInContainer: =AlignInContainer.Center
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FillPortions: =1
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =Parent.Height
+                                        OnSelect: |
+                                            =
+                                        PaddingLeft: =0
+                                        Text: =ThisItem.'Dish Name'
+                                        X: =40
+                                        Y: =40
+                                        ZIndex: =2
+
+                        cont_galSelectedItem_1 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
+                            FillPortions: =0
+                            Height: =Parent.Height-20
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width - cont_gal_1.Width-30
+                            ZIndex: =2
+
+                            "'cont_dishname & Button' As groupContainer.horizontalAutoLayoutContainer":
+                                AlignInContainer: =AlignInContainer.Start
+                                FillPortions: =0
+                                Height: =60
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =20
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                lbl_Dishname As label:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height-10
+                                    PaddingLeft: =20
+                                    Size: =12
+                                    Text: =Gal_Dishes.Selected.'Dish Name'
+                                    ZIndex: =1
+
+                                "'btn_View Products' As button":
+                                    AlignInContainer: =AlignInContainer.Center
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Fill: =RGBA(211, 66, 9, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =35
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                    OnSelect: |-
+                                        =ClearCollect(
+                                            col_SelectedDish_SKUs,
+                                            Filter(
+                                                'Related SKUS',
+                                                'Related Dish'.'Related Dish' = Gal_Dishes.Selected.'Related Dish'
+                                            )
+                                        );
+                                        Set(_V_RecipesContainer,false);
+                                        Set(_V_ProductsContainer,true);
+                                        UpdateContext({_V_clearFilter_SKUS:false})
+                                    Size: =12
+                                    Text: ="View Products"
+                                    ZIndex: =2
+
+                            cont_dishPhoto As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =Parent.Height/2 
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                PaddingLeft: =10
+                                PaddingRight: =10
+                                PaddingTop: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =2
+
+                                Image11_2 As image:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =Parent.Height-20
+                                    Image: =If(IsBlank(Gal_Dishes.Selected.'Main Dish Photo'),SampleImage,Gal_Dishes.Selected.'Main Dish Photo')
+                                    ImagePosition: =ImagePosition.Fill
+                                    Width: =Parent.Width-20
+                                    ZIndex: =1
+
+                            cont_dishDetails As groupContainer.verticalAutoLayoutContainer:
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =0
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =3
+
+                                cont_Ingradients As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    FillPortions: =0
+                                    Height: =Parent.Height/7
+                                    LayoutGap: =10
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    lbl_Ingradients As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =13
+                                        Text: ="Ingredients"
+                                        Width: =Parent.Width/3
+                                        ZIndex: =1
+
+                                    ip_Ingradients As text:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        Default: ="..."
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Height: =Parent.Height
+                                        HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                        HoverColor: =RGBA(0, 0, 0, 1)
+                                        HoverFill: =RGBA(255, 211, 205, 1)
+                                        LayoutMinWidth: =0
+                                        Size: =13
+                                        ZIndex: =2
+
+                                cont_Preparation As groupContainer.horizontalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    FillPortions: =0
+                                    Height: =Parent.Height/7
+                                    LayoutGap: =10
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    lbl_Preparation As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =13
+                                        Text: ="Preparation"
+                                        Width: =Parent.Width/3
+                                        ZIndex: =1
+
+                                    ip_Preparation As text:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        Default: ="..."
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Height: =Parent.Height
+                                        HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                        HoverColor: =RGBA(0, 0, 0, 1)
+                                        HoverFill: =RGBA(255, 211, 205, 1)
+                                        LayoutMinWidth: =0
+                                        Size: =13
+                                        ZIndex: =2
+
+                                "'con_UFS Products Used' As groupContainer.horizontalAutoLayoutContainer":
+                                    AlignInContainer: =AlignInContainer.Start
+                                    FillPortions: =0
+                                    Height: =Parent.Height/7
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutGap: =10
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.Width
+                                    ZIndex: =3
+
+                                    "'lbl_UFS Products Used' As label":
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        BorderStyle: =BorderStyle.None
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FontWeight: =FontWeight.Semibold
+                                        Height: =Parent.Height
+                                        PaddingLeft: =10
+                                        Size: =13
+                                        Text: ="UFS Products Used"
+                                        Width: =Parent.Width/3
+                                        ZIndex: =1
+
+                                    "'ip_UFS Products Used' As text":
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        BorderStyle: =BorderStyle.None
+                                        BorderThickness: =2
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        Default: =""
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        FillPortions: =1
+                                        FocusedBorderThickness: =4
+                                        Height: =Parent.Height
+                                        HoverBorderColor: =RGBA(131, 24, 75, 1)
+                                        HoverColor: =RGBA(0, 0, 0, 1)
+                                        HoverFill: =RGBA(255, 211, 205, 1)
+                                        LayoutMinWidth: =0
+                                        Size: =13
+                                        ZIndex: =2
+
+                                cont_skuGal As groupContainer.verticalAutoLayoutContainer:
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    ZIndex: =4
+
+                                    gal_Products As gallery.variableTemplateHeightGallery:
+                                        AlignInContainer: =AlignInContainer.Start
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        DelayItemLoading: =true
+                                        Items: |-
+                                            =If(
+                                                !IsBlank(Gal_Dishes.Selected.'Related Dish'),
+                                                Filter(
+                                                    'Related SKUS',
+                                                    'Related Dish'.'Related Dish' = Gal_Dishes.Selected.'Related Dish'
+                                                )
+                                            )
+                                        Layout: =Layout.Vertical
+                                        LayoutMinHeight: =0
+                                        LayoutMinWidth: =320
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplateFill: =RGBA(214,221,224,0.3)
+                                        TemplateSize: =30
+                                        Width: =Parent.Width
+                                        ZIndex: =1
+
+                                        lbl_ProductName As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.TemplateHeight
+                                            OnSelect: =Select(Parent)
+                                            PaddingLeft: =15
+                                            Size: =10
+                                            Text: =ThisItem.Name
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =1
+
+                    cont_Promotions As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        DropShadow: =DropShadow.Light
+                        LayoutGap: =20
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =20
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =_V_PromotionsContainer
+                        Width: =Parent.Width-10
+                        ZIndex: =4
+
+                        cont_innerPromotion As groupContainer.manualLayoutContainer:
+                            Height: =Parent.Height
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            PaddingBottom: =50
+                            PaddingLeft: =50
+                            PaddingRight: =50
+                            PaddingTop: =50
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =_V_tabView
+                            ZIndex: =1
+
+                            cont_rightImage As groupContainer.manualLayoutContainer:
+                                Fill: =RGBA(255, 255, 255, 1)
+                                Height: =443
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                X: =cont_leftImage.Width
+                                Y: =74
+                                ZIndex: =1
+
+                                gal_rightlmage As gallery.galleryHorizontal:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DelayItemLoading: =true
+                                    Height: =403
+                                    Items: |-
+                                        =If(
+                                            idx + 2 = 5,
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                1
+                                            ),
+                                            idx + 2 = 6,
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                2
+                                            ),
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                idx+2
+                                            )
+                                        )
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    OnSelect: =Set(_V_popImage, true);
+                                    ShowScrollbar: =false
+                                    TemplateSize: |-
+                                        =//If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+                                        Parent.Width
+                                    Width: =500
+                                    Y: =33
+                                    ZIndex: =1
+
+                                    Image16 As image:
+                                        BorderThickness: =1
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =377
+                                        Image: =ThisItem.Thumbnail.Medium
+                                        ImagePosition: =ImagePosition.Fill
+                                        OnSelect: |-
+                                            =If(
+                                                idx >= _V_totalImage,
+                                                Set(
+                                                    idx,
+                                                    1
+                                                ),
+                                                Set(
+                                                    idx,
+                                                    idx + 1
+                                                )
+                                            );
+                                            Set(_V_SelectedImage_1,gal_rightlmage.Selected.Thumbnail.Medium);
+                                            Set(_V_popImage,true)
+                                        Width: =491
+                                        ZIndex: =1
+
+                            cont_leftImage As groupContainer.manualLayoutContainer:
+                                Height: =Parent.Height
+                                PaddingLeft: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =592
+                                ZIndex: =2
+
+                                gal_leftImage As gallery.galleryHorizontal:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DelayItemLoading: =true
+                                    Height: =593
+                                    Items: |
+                                        =
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                idx
+                                            )
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    OnSelect: =Set(_V_popImage, true);
+                                    ShowScrollbar: =false
+                                    TemplateSize: |-
+                                        =//If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+                                        Parent.Width
+                                    Width: =502
+                                    X: =90
+                                    ZIndex: =1
+
+                                    Image16_1 As image:
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =367
+                                        Image: =ThisItem.Thumbnail.Medium
+                                        ImagePosition: =ImagePosition.Fill
+                                        OnSelect: |-
+                                            =If(
+                                                idx <= 1,
+                                                Set(
+                                                    idx,
+                                                    _V_totalImage
+                                                ),
+                                                Set(
+                                                    idx,
+                                                    idx - 1
+                                                )
+                                            );
+                                            Set(_V_SelectedImage_1,gal_leftImage.Selected.Thumbnail.Medium);
+                                            Set(_V_popImage,true)
+                                        Width: =508
+                                        X: =Image16.X
+                                        Y: =117
+                                        ZIndex: =1
+
+                            cont_middle As groupContainer.manualLayoutContainer:
+                                Height: =523
+                                PaddingLeft: =50
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =425
+                                X: =367
+                                Y: =37
+                                ZIndex: =3
+
+                                gal_PopImage As gallery.galleryHorizontal:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DelayItemLoading: =true
+                                    Height: =523
+                                    Items: |-
+                                        =If(
+                                            idx + 1 = 5,
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                1
+                                            ),
+                                            Index(
+                                                PromotionRichMedia_Test_Library,
+                                                idx+1
+                                            )
+                                        )
+                                        //PromotionRichMedia_Test_Library
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    OnSelect: =Set(_V_popImage, true);
+                                    TemplatePadding: =10
+                                    TemplateSize: |-
+                                        =//If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+                                        Parent.Width-20
+                                    Transition: =Transition.Pop
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                    Image16_2 As image:
+                                        BorderColor: =RGBA(255, 191, 0, 1)
+                                        BorderThickness: =1
+                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                        DisabledFill: =RGBA(244, 244, 244, 1)
+                                        Height: =503
+                                        Image: =ThisItem.Thumbnail.Medium
+                                        ImagePosition: =ImagePosition.Fill
+                                        OnSelect: |-
+                                            =Set(_V_SelectedImage_1,gal_PopImage.Selected.Thumbnail.Medium);
+                                            Set(_V_popImage,true)
+                                        Width: =Parent.TemplateWidth
+                                        ZIndex: =1
+
+                            "'cont_left & right arrow' As groupContainer.horizontalAutoLayoutContainer":
+                                Fill: =RGBA(255, 250, 250, 0)
+                                Height: =Parent.Height/16
+                                LayoutGap: =10
+                                LayoutJustifyContent: =LayoutJustifyContent.Center
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                PaddingLeft: =200
+                                PaddingRight: =200
+                                PaddingTop: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =1194
+                                ZIndex: =4
+
+                                icon_LeftArrow As icon.ChevronLeft:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(21, 68, 18, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    Height: =30
+                                    Icon: =Icon.ChevronLeft
+                                    OnSelect: |-
+                                        =If(
+                                            idx <= 1,
+                                            Set(
+                                                idx,
+                                                _V_totalImage
+                                            ),
+                                            Set(
+                                                idx,
+                                                idx - 1
+                                            )
+                                        )
+                                    ZIndex: =1
+
+                                Label19_1 As label:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Size: =13
+                                    Text: =""
+                                    ZIndex: =2
+
+                                Label22 As label:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingLeft: =0
+                                    Size: =10
+                                    Text: =If(idx-1=0,_V_totalImage,idx-1)
+                                    Width: =15
+                                    ZIndex: =3
+
+                                Label22_1 As label:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    PaddingLeft: =0
+                                    Size: =13
+                                    Text: =idx
+                                    Width: =15
+                                    ZIndex: =4
+
+                                Label22_2 As label:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    PaddingLeft: =0
+                                    Size: =10
+                                    Text: =If(idx+1=_V_totalImage+1,"1",idx+1)
+                                    Width: =15
+                                    ZIndex: =5
+
+                                Label19 As label:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Size: =13
+                                    Text: =""
+                                    ZIndex: =6
+
+                                icon_RightArrow As icon.ChevronRight:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(21, 68, 18, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    Height: =30
+                                    Icon: =Icon.ChevronRight
+                                    OnSelect: |-
+                                        =If(
+                                            idx >= _V_totalImage,
+                                            Set(
+                                                idx,
+                                                1
+                                            ),
+                                            Set(
+                                                idx,
+                                                idx + 1
+                                            )
+                                        )
+                                    ZIndex: =7
+
+                            Container36 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Light
+                                Height: =593
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Visible: =_V_popImage
+                                Width: =656
+                                X: =255
+                                ZIndex: =5
+
+                                Image15 As image:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =Parent.Height
+                                    Image: |-
+                                        =//gal_PopImage.Selected.Thumbnail.Medium
+                                        _V_SelectedImage_1
+                                    ImagePosition: =ImagePosition.Fill
+                                    Width: =Parent.Width
+                                    ZIndex: =1
+
+                                Icon13 As icon.CancelBadge:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(255, 255, 255, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    FocusedBorderThickness: =0
+                                    Height: =32
+                                    Icon: =Icon.CancelBadge
+                                    OnSelect: =Set(_V_popImage,false)
+                                    Width: =32
+                                    X: =614
+                                    Y: =10
+                                    ZIndex: =2
+
+                        cont_ListView As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.Light
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =0
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =!_V_tabView
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                            Gallery9 As gallery.variableTemplateHeightGallery:
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                DelayItemLoading: =true
+                                Items: =PromotionRichMedia_Test_Library
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplateFill: =RGBA(0, 0, 0, 0.2)
+                                TemplateSize: =200
+                                ZIndex: =1
+
+                                Image17 As image:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =Parent.TemplateHeight
+                                    Image: =ThisItem.Thumbnail.Medium
+                                    ImagePosition: =ImagePosition.Fill
+                                    OnSelect: =Select(Parent)
+                                    Width: =Parent.TemplateWidth/3.5
+                                    ZIndex: =1
+
+                                Icon14 As icon.Information:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(131, 24, 75, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(244, 244, 244, 1)
+                                    Height: =30
+                                    Icon: =Icon.Information
+                                    OnSelect: =Select(Parent)
+                                    Width: =30
+                                    X: =600
+                                    Y: =85
+                                    ZIndex: =2
+
+                    "'cont_Product Benefit' As groupContainer.horizontalAutoLayoutContainer":
+                        AlignInContainer: =AlignInContainer.Center
+                        LayoutGap: =20
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =_V_Sell_in_Docket
+                        Width: =Parent.Width-10
+                        ZIndex: =5
+
+                        cont_galSelectedItem_2 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.Semibold
+                            FillPortions: =0
+                            Height: =Parent.Height-20
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width-10
+                            ZIndex: =2
+
+                            gal_products As gallery.variableTemplateHeightGallery:
+                                AlignInContainer: =AlignInContainer.Start
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                DelayItemLoading: =true
+                                Items: =SKUS
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =0
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =8
+                                TemplateSize: =235
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                cont_pdfs As groupContainer.horizontalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.Light
+                                    Height: =190
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.TemplateWidth-5
+                                    Y: =45
+                                    ZIndex: =2
+
+                                lbl_productName As label:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Fill: =RGBA(230, 235, 237, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    OnSelect: =Select(Parent)
+                                    PaddingLeft: =10
+                                    Size: =13
+                                    Text: =ThisItem.Name
+                                    Width: =Parent.TemplateWidth/3
+                                    ZIndex: =4
+
+                    cont_Videos As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =20
+                        PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Visible: =_V_Videos
+                        Width: =Parent.Width-10
+                        ZIndex: =6
+
+                        cont_FeaturedVideo As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =0.1
+                            DropShadow: =DropShadow.Semibold
+                            Fill: =RGBA(250, 223, 142, 1)
+                            FillPortions: =0
+                            Height: =Parent.Height/3.5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width-20
+                            ZIndex: =1
+
+                            cont_left As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =15
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                Width: =Parent.Width/2
+                                ZIndex: =1
+
+                                Label28 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Bold
+                                    Height: =Parent.Height/4
+                                    PaddingLeft: =20
+                                    Size: =13
+                                    Text: ="Featured Video"
+                                    ZIndex: =1
+
+                                Label28_1 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =Parent.Height/4
+                                    PaddingLeft: =10
+                                    Size: =11
+                                    Text: ="FOODTRENDS presents Dish"
+                                    VerticalAlign: =VerticalAlign.Bottom
+                                    ZIndex: =2
+
+                                Label28_2 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    Color: =RGBA(0, 0, 0, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =Parent.Height/4
+                                    PaddingLeft: =10
+                                    Size: =11
+                                    Text: ="Innovation"
+                                    VerticalAlign: =VerticalAlign.Top
+                                    ZIndex: =3
+
+                                Button13 As button:
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Fill: =RGBA(211, 66, 9, 1)
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =30
+                                    HoverColor: =RGBA(255, 255, 255, 1)
+                                    HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                    Size: =12
+                                    Text: ="Play"
+                                    Width: =80
+                                    ZIndex: =4
+
+                            Container63 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingBottom: =10
+                                PaddingLeft: =10
+                                PaddingRight: =35
+                                PaddingTop: =10
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =2
+
+                                Image14 As image:
+                                    BorderColor: =RGBA(131, 24, 75, 1)
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
+                                    Height: =Parent.Height-20
+                                    ImagePosition: =ImagePosition.Fill
+                                    Width: =Self.Height+20
+                                    ZIndex: =2
+
+                        Gallery7_2 As gallery.galleryHorizontal:
+                            BorderColor: =RGBA(131, 24, 75, 1)
+                            DelayItemLoading: =true
+                            Items: =CustomGallerySample
+                            LayoutMinHeight: =287
+                            LayoutMinWidth: =320
+                            LoadingSpinner: =LoadingSpinner.Data
+                            TemplateFill: =RGBA(214,221,224,0.5)
+                            TemplatePadding: =15
+                            TemplateSize: |-
+                                =//If(Self.Layout = Layout.Horizontal, Min(320, Self.Width - 60), Min(320, Self.Height - 60))
+                                390
+                            Transition: =Transition.Pop
+                            ZIndex: =2
+
+                            Label15_4 As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(131, 24, 75, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Fill: =RGBA(255, 255, 255, 1)
+                                FontWeight: =FontWeight.Semibold
+                                Height: =60
+                                OnSelect: =Select(Parent)
+                                PaddingTop: =10
+                                Size: =13
+                                Text: =ThisItem.SampleHeading
+                                VerticalAlign: =VerticalAlign.Top
+                                Width: =Parent.TemplateWidth
+                                ZIndex: =1
+
