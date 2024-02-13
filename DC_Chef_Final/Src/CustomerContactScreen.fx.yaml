@@ -1861,3 +1861,14 @@
                                                 Width: =Parent.Width
                                                 ZIndex: =1
 
+                                    BottomContainer As groupContainer.horizontalAutoLayoutContainer:
+                                        DropShadow: =DropShadow.Light
+                                        LayoutMinHeight: =100
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        ZIndex: =2
+
