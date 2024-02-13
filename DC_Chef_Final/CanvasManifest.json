@@ -157,6 +157,7 @@
     "Menu Matrix Offline Screen",
     "Rich Media Offline Screen",
     "RoutePlanningScreen",
-    "Screen2"
+    "CustomerContactScreen",
+    "ContactEdit"
   ]
 }
