@@ -146,7 +146,7 @@
 
                     ContainerWithoutSidebar As groupContainer.horizontalAutoLayoutContainer:
                         DropShadow: =DropShadow.Light
-                        Height: =pare
+                        Height: =Parent.Height
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
@@ -5885,7 +5885,7 @@
                                             =//false
                                             Set(var_editCustomerInfo,false);
                                             Set(var_editAccountBehaviour,false);
-                                            Navigate(CustomerScreen_1);
+                                            Navigate(CustomerContactScreen);
                                         PaddingBottom: =10
                                         PaddingTop: =10
                                         RadiusBottomLeft: =5
@@ -6125,7 +6125,7 @@
                                             );
                                             
                                             
-                                            Navigate(CustomerScreen);
+                                            Navigate(CustomerContactScreen);
                                         PaddingBottom: =10
                                         PaddingTop: =10
                                         RadiusBottomLeft: =5

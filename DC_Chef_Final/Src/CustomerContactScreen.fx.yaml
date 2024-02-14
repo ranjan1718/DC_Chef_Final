@@ -264,7 +264,7 @@
                                                     _V_SelectedCustomer, ThisItem
                                                 );
                                                 Set(
-                                                    _V_PrimaryContact,
+                                                    _V_PrimaryContact1,
                                                     LookUp(
                                                         _C_Contacts, Contact=ThisItem.'Primary Contact'.Contact
                                                     )
@@ -285,7 +285,7 @@
                                                     _V_SelectedCustomer, ThisItem
                                                 );
                                                 Set(
-                                                    _V_PrimaryContact,
+                                                    _V_PrimaryContact1,
                                                     LookUp(
                                                         _C_Contacts, Contact=ThisItem.'Primary Contact'.Contact
                                                     )
@@ -327,7 +327,7 @@
                                     OnSelect: |-
                                         =Set(var_editCustomerInfo, true);
                                         Set(var_editAccountBehaviour, true);
-                                        Navigate(ContactEditScreen, ScreenTransition.Fade, {
+                                        Navigate(ContactEdit, ScreenTransition.Fade, {
                                             _V_Customer_New: true
                                         });
                                     Size: =11
@@ -1667,7 +1667,7 @@
                                                 FontWeight: =FontWeight.Semibold
                                                 Height: =Parent.Height-5
                                                 HoverColor: =RGBA(255, 255, 255, 1)
-                                                HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
+                                                HoverFill: =//ColorFade(RGBA(211, 66, 9, 1), -20%)
                                                 OnSelect: |
                                                     =If(
                                                         Connection.Connected,
