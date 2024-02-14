@@ -141,6 +141,7 @@
       "ulchef_region": "region",
       "ulchef_registered_name": "registered_name",
       "ulchef_relateddish_Customer_ulchef_customer": "Related Dishes",
+      "ulchef_sap_cust_name": "sap_cust_name",
       "ulchef_sap_cust_name_2": "sap_cust_name_2",
       "ulchef_sap_id": "SAP_ID",
       "ulchef_seatingcapacity": "Seating Capacity",

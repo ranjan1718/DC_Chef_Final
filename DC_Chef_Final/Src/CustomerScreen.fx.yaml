@@ -112,7 +112,7 @@ CustomerScreen As screen:
                             BorderColor: =RGBA(131, 24, 75, 1)
                             DelayItemLoading: =true
                             Items: |-
-                                =Filter(_C_Customers, Component1_1.TypedText in Name || Component1_1.TypedText in 'Mother Group (ulchef_mothergroupslt)')
+                                =Filter(Customers, Component1_1.TypedText in Name || Component1_1.TypedText in 'Mother Group (ulchef_mothergroupslt)')
                                 //Customers
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =0
@@ -150,7 +150,7 @@ CustomerScreen As screen:
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     FontWeight: =FontWeight.Bold
-                                    Height: =19
+                                    Height: =30
                                     OnSelect: |
                                         =Set(
                                             _V_SelectedCustomer, ThisItem
@@ -172,6 +172,7 @@ CustomerScreen As screen:
                                     Color: =RGBA(0, 0, 0, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     FontWeight: =FontWeight.Semibold
+                                    Height: =20
                                     OnSelect: |
                                         =Set(
                                             _V_SelectedCustomer, ThisItem
@@ -185,7 +186,7 @@ CustomerScreen As screen:
                                         //Refresh(Concepts);
                                     PaddingTop: =0
                                     Size: =10
-                                    Text: =ThisItem.ulchef_mothergroupslt
+                                    Text: =ThisItem.'Mother Group (ulchef_mothergroupslt)'
                                     VerticalAlign: =VerticalAlign.Top
                                     Width: =Parent.Width
                                     ZIndex: =2

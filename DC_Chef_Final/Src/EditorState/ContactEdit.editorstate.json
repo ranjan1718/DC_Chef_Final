@@ -34417,7 +34417,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerWithoutSidebar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -34615,7 +34615,7 @@
       "MetaDataIDKey": "",
       "Name": "ContainerWithSideBar",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -90185,7 +90185,7 @@
       "MetaDataIDKey": "",
       "Name": "Main Header_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -101886,7 +101886,7 @@
       "MetaDataIDKey": "",
       "Name": "Side Bar Component_13",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
