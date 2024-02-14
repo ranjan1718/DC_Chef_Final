@@ -1790,7 +1790,7 @@
                                                             =If(
                                                                 IsBlank(ComboBox4_2.Selected) || IsBlank(Dropdown4.Selected),
                                                                 DisplayMode.Disabled,
-                                                                ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4),
+                                                                ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -1871,7 +1871,7 @@
                                                             =If(
                                                                 IsBlank(ComboBox4_2.Selected.Name),
                                                                 DisplayMode.Disabled,
-                                                                ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4),
+                                                                ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -2146,7 +2146,7 @@
                                                 =If(
                                                     IsBlank(ComboBox4_2.Selected.Name),
                                                     DisplayMode.Disabled,
-                                                    ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4),
+                                                    ComboBox4_2.Selected.Name = "Other" && IsBlank(TextInput4_4.Text),
                                                     DisplayMode.Disabled,
                                                     DisplayMode.Edit
                                                 )
@@ -2400,7 +2400,7 @@
                                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                                     DisabledFill: =RGBA(244, 244, 244, 1)
-                                                    DisplayMode: =If(IsBlank(ComboBox3_10) || IsBlank(TextInput1_1),DisplayMode.Disabled, DisplayMode.Edit)
+                                                    DisplayMode: =If(IsBlank(ComboBox3_10.SelectedItems) || IsBlank(TextInput1_1.Text),DisplayMode.Disabled, DisplayMode.Edit)
                                                     Fill: =RGBA(0, 176, 80, 1)
                                                     FontWeight: =FontWeight.Semibold
                                                     Height: =28
