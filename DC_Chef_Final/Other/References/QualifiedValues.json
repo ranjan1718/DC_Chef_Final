@@ -1,6 +1,11 @@
 {
   "QualifiedValues": [
     {
+      "Kind": "default.cds_bulkdeletefailure_forms",
+      "Namespace": "Bulk Delete Failures (Forms)",
+      "Values": {}
+    },
+    {
       "Kind": "default.cds_ulchef_callobjective_forms",
       "Namespace": "Call Objectives (Forms)",
       "Values": {
@@ -111,6 +116,13 @@
       "Namespace": "Related SKUS (Forms)",
       "Values": {
         "Information": "7106c794-12d1-4b07-a2fa-e9f5d44209f0"
+      }
+    },
+    {
+      "Kind": "default.cds_ulchef_richmediavideos_forms",
+      "Namespace": "Rich Media Videos (Forms)",
+      "Values": {
+        "Information": "0e3031f8-78e5-4723-bf86-fc42f1928657"
       }
     },
     {
