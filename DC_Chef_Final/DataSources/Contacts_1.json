@@ -24,6 +24,10 @@
       "statecode": "Status",
       "statuscode": "Status Reason",
       "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "ulchef_armstrong_2_customers_id": "Armstrong_2_customers_id ",
+      "ulchef_armstrong_2_customers_name": "Armstrong_2_customers_name",
+      "ulchef_armstrong2salespersonid": "Armstrong 2 Sales Person ID",
+      "ulchef_channelname": "Channel Name",
       "ulchef_contact_AsyncOperations": "System Jobs",
       "ulchef_contact_BulkDeleteFailures": "Bulk Delete Failures",
       "ulchef_contact_DuplicateBaseRecord": "Duplicate Records (ulchef_contact_DuplicateBaseRecord)",
@@ -33,6 +37,7 @@
       "ulchef_contact_ProcessSession": "Process Sessions",
       "ulchef_contact_SyncErrors": "Sync Errors",
       "ulchef_contactid": "Contact",
+      "ulchef_contactname": "Contact name",
       "ulchef_contactphoto": "Contact Photo",
       "ulchef_contactphotoid": "ulchef_contactphotoId",
       "ulchef_Customer": "Customer",
@@ -40,18 +45,25 @@
       "ulchef_CustomerLookup": "CustomerLookup",
       "ulchef_decisionlevel": "Decision Level",
       "ulchef_email": "Email",
+      "ulchef_extension": "Extension",
       "ulchef_facebook": "Facebook",
+      "ulchef_firstname": "First Name",
       "ulchef_ig": "IG",
       "ulchef_image": "Image",
       "ulchef_imageid": "ulchef_ImageId",
       "ulchef_isprimarycontact": "IsPrimaryContact",
+      "ulchef_lastname": "Last Name",
       "ulchef_levelofinfluence": "Level of Influence",
       "ulchef_linkedin": "Linked In",
       "ulchef_mobilenumber": "Mobile Number",
       "ulchef_name": "Name",
       "ulchef_phone": "Phone",
       "ulchef_position": "Position",
+      "ulchef_primary_contact_id": "Primary_contact_id",
+      "ulchef_primarycontact": "Primary Contact",
       "ulchef_remarks": "Remarks",
+      "ulchef_salesmanagername": "Sales Manager Name",
+      "ulchef_salespersonname": "Sales Person Name",
       "ulchef_ulchef_contact": "Ulchef_Contact",
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number"
@@ -130,6 +142,26 @@
     },
     "OptionSetTypeKey": "BooleanType",
     "RelatedColumnInvariantName": "ulchef_isprimarycontact",
+    "RelatedEntityName": "Contacts_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Primary Contact (Contacts_1)",
+    "Name": "ulchef_contact_ulchef_primarycontact",
+    "OptionSetInfoNameMapping": {
+      "444670000": "Yes",
+      "444670001": "No"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ulchef_primarycontact",
+        "OptionSetReferenceEntityName": "Contacts_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "ulchef_primarycontact",
     "RelatedEntityName": "Contacts_1",
     "Type": "OptionSetInfo"
   },
