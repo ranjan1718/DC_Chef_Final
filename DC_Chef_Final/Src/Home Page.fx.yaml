@@ -204,7 +204,7 @@
             Image: =customer
             OnSelect: |-
                 =true;
-                Navigate(CustomerScreen, ScreenTransition.Fade, {
+                Navigate(CustomerContactScreen, ScreenTransition.Fade, {
                     _V_Contact_Edit_Or_New: ""
                 })
             Width: =136
@@ -264,7 +264,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =143
             Image: =routeplanning
-            OnSelect: =Navigate('Route Planning Screen')
+            OnSelect: =Navigate(RoutePlanningScreen)
             Width: =143
             X: =141
             Y: =400

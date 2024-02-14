@@ -19212,7 +19212,14 @@
         },
         "DisabledFill",
         "PressedFill",
-        "HoverFill",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ColorFade(RGBA(211, 66, 9, 1), -20%)",
+          "InvariantPropertyName": "HoverFill",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Font",
         "FontWeight",
         "Align",
