@@ -576,13 +576,13 @@
                             HoverColor: =RGBA(0, 0, 0, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             InputTextPlaceholder: ="Search by Category"
-                            Items: =Choices('Dish Category (Related Dishes)')
+                            Items: =Choices('Dish Category (Dishes)')
                             LayoutMinWidth: =0
                             PaddingLeft: =12
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(131, 24, 75, 1)
                             SearchFields: =["Value"]
-                            SearchItems: =Choices('Dish Category (Related Dishes)',cb_dishCategory_6.SearchText)
+                            SearchItems: =Choices('Dish Category (Dishes)',cb_dishCategory_6.SearchText)
                             SelectionFill: =RGBA(211, 66, 9, 1)
                             SelectMultiple: =false
                             Size: =8
@@ -750,8 +750,7 @@
                                             )
                                         ),
                                         Filter(
-                                            SKUS,
-                                            Name in col_SelectedDish_SKUs[@ulchef_name],
+                                            col_test,
                                             And(
                                                 Or(
                                                     IsBlank(Search_component_1.TypedText),
@@ -765,8 +764,8 @@
                                             )
                                         )
                                     )
-                                    //col_SelectedDish_SKUs
-                                    //Filter(SKUS,Name in col_SelectedDish_SKUs[@ulchef_name])
+                                    //col_SelectedDish_SKUs_1_1
+                                    //Filter(SKUS,Name in col_SelectedDish_SKUs_1_1[@ulchef_name])
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
                                 LayoutMinWidth: =320
@@ -815,7 +814,7 @@
                                             FontWeight: =FontWeight.Bold
                                             Height: =Parent.Height/5
                                             PaddingLeft: =15
-                                            Size: =12
+                                            Size: =10
                                             Text: =ThisItem.Name
                                             Width: =Parent.Width
                                             ZIndex: =1
@@ -842,8 +841,8 @@
                                             Height: =Parent.Height/7
                                             PaddingBottom: =2
                                             PaddingLeft: =15
-                                            Size: =10
-                                            Text: ="Pack Size  " & ThisItem.'Pack Size'
+                                            Size: =8
+                                            Text: ="Pack Size  " & ThisItem.'Packing Size'
                                             VerticalAlign: =VerticalAlign.Bottom
                                             Width: =Parent.Width
                                             ZIndex: =3
@@ -855,8 +854,8 @@
                                             FontWeight: =FontWeight.Semibold
                                             Height: =Parent.Height/7
                                             PaddingLeft: =15
-                                            Size: =10
-                                            Text: ="Case Price  " & ThisItem.'Case Price'
+                                            Size: =8
+                                            Text: ="Case Price  " & ThisItem.'Quantity Case'& " * " & RoundUp(ThisItem.Price,2)
                                             Width: =Parent.Width
                                             ZIndex: =4
 
@@ -868,8 +867,8 @@
                                             Height: =Parent.Height/7
                                             PaddingLeft: =15
                                             PaddingTop: =2
-                                            Size: =10
-                                            Text: ="Piece  "& ThisItem.'Piece Price'
+                                            Size: =8
+                                            Text: ="Price  "& RoundUp(ThisItem.Price,2)
                                             VerticalAlign: =VerticalAlign.Top
                                             Width: =Parent.Width
                                             ZIndex: =5
@@ -1835,12 +1834,12 @@
                                 Fill: =RGBA(255, 255, 255, 1)
                                 Items: |-
                                     =If(_V_clearFilter_Dishes,Filter(
-                                        'Related Dishes',
-                                        And(
+                                        Dishes,
+                                            And(
                                             Or(
                                                 IsBlank(cb_dishCategory_6.SelectedItems),
                                                 IsEmpty(cb_dishCategory_6.SelectedItems),
-                                                ulchef_dishcategory in cb_dishCategory_6.SelectedItems
+                                                'Dish Category' in cb_dishCategory_6.SelectedItems
                                             ),
                                             Or(
                                                 IsBlank(cb_dishType_1.SelectedItems),
@@ -1853,12 +1852,12 @@
                                             )
                                         )
                                     ),
-                                    Filter('Related Dishes',Text(gal_masterSKUs_1.Selected.'SKU Number') in Contain_SKU_Numbers,
+                                    Filter('Dishes',Text(gal_masterSKUs_1.Selected.'SKU Number') in ulchef_skunumbers,
                                         And(
                                             Or(
                                                 IsBlank(cb_dishCategory_6.SelectedItems),
                                                 IsEmpty(cb_dishCategory_6.SelectedItems),
-                                                ulchef_dishcategory in cb_dishCategory_6.SelectedItems
+                                                'Dish Category' in cb_dishCategory_6.SelectedItems
                                             ),
                                             Or(
                                                 IsBlank(cb_dishType_1.SelectedItems),
@@ -1921,7 +1920,7 @@
                                         OnSelect: |
                                             =
                                         PaddingLeft: =0
-                                        Text: =ThisItem.'Dish Name'
+                                        Text: =ThisItem.Name
                                         X: =40
                                         Y: =40
                                         ZIndex: =2
@@ -1967,7 +1966,7 @@
                                     Height: =Parent.Height-10
                                     PaddingLeft: =20
                                     Size: =12
-                                    Text: =Gal_Dishes_1.Selected.'Dish Name'
+                                    Text: =Gal_Dishes_1.Selected.Name
                                     ZIndex: =1
 
                                 "'btn_View Products_1' As button":
@@ -1981,13 +1980,18 @@
                                     HoverColor: =RGBA(255, 255, 255, 1)
                                     HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
                                     OnSelect: |-
-                                        =ClearCollect(
-                                            col_SelectedDish_SKUs,
+                                        =/*ClearCollect(
+                                            col_SelectedDish_SKUs_1_1,
                                             Filter(
-                                                'Related SKUS',
-                                                'Related Dish'.'Related Dish' = Gal_Dishes_1.Selected.'Related Dish'
+                                                'SKUS',
+                                                'SKU Number' in Gal_Dishes_1.Selected.'Sku Numbers'
                                             )
-                                        );
+                                        );*/
+                                        ClearCollect(col_test,Filter(
+                                                'SKUS',
+                                                'SKU Number' in Gal_Dishes_1.Selected.'Sku Numbers'
+                                            ));
+                                        
                                         Set(_V_RecipesContainer,false);
                                         Set(_V_ProductsContainer,true);
                                         UpdateContext({_V_clearFilter_SKUS:false})
@@ -1996,6 +2000,7 @@
                                     ZIndex: =2
 
                             cont_dishPhoto_1 As groupContainer.verticalAutoLayoutContainer:
+                                ContentLanguage: =
                                 FillPortions: =0
                                 Height: =Parent.Height/2 
                                 LayoutDirection: =LayoutDirection.Vertical
@@ -2191,11 +2196,11 @@
                                         DelayItemLoading: =true
                                         Items: |-
                                             =If(
-                                                !IsBlank(Gal_Dishes_1.Selected.'Related Dish'),
-                                                Filter(
-                                                    'Related SKUS',
-                                                    'Related Dish'.'Related Dish' = Gal_Dishes_1.Selected.'Related Dish'
-                                                )
+                                                !IsBlank(Gal_Dishes_1.Selected.'Dish'),
+                                               Filter(
+                                                    'SKUS',
+                                                    'SKU Number' in Gal_Dishes_1.Selected.'Sku Numbers'
+                                                ) 
                                             )
                                         Layout: =Layout.Vertical
                                         LayoutMinHeight: =0
@@ -2666,374 +2671,237 @@
                                     Y: =9
                                     ZIndex: =1
 
-                            Form1 As form:
-                                BorderColor: =RGBA(131, 24, 75, 1)
-                                DataSource: ='Promotion Files'
-                                DefaultMode: =FormMode.New
-                                LayoutMinHeight: =250
-                                LayoutMinWidth: =400
-                                Visible: =false
-                                ZIndex: =2
+                                "'cont_PDF/Image_details' As groupContainer.verticalAutoLayoutContainer":
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    RadiusBottomLeft: =4
+                                    RadiusBottomRight: =4
+                                    RadiusTopLeft: =4
+                                    RadiusTopRight: =4
+                                    Width: =Parent.TemplateWidth-Image22.Width-20 
+                                    X: =Image22.X+Image22.Width+20 
+                                    ZIndex: =2
 
-                                File_DataCard1 As typedDataCard.fileEditCard:
-                                    BorderColor: =RGBA(131, 24, 75, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="ulchef_file"
-                                    Default: |-
-                                        =If(!IsBlank(ThisItem.File.FileName), Table({DisplayName: ThisItem.File.FileName, Value: ThisItem.File.Value}), Blank())
-                                    DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@'Promotion Files'],DataSourceInfo.DisplayName,"ulchef_file")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue6.Attachments
-                                    Width: =396
-                                    X: =1
-                                    Y: =0
-                                    ZIndex: =1
-
-                                    DataCardKey6 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =34
-                                        Size: =13
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue6 As attachments:
-                                        AddAttachmentText: ="Upload file"
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        BorderThickness: =2
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        DisabledFill: =RGBA(244, 244, 244, 1)
-                                        DisplayMode: =Parent.DisplayMode
-                                        FocusedBorderThickness: =4
-                                        Height: =170
-                                        HoverColor: =RGBA(0, 0, 0, 1)
-                                        HoverFill: =RGBA(255, 211, 205, 1)
-                                        IsInDataCard: =true
-                                        ItemColor: =RGBA(255, 255, 255, 1)
-                                        ItemFill: =RGBA(211, 66, 9, 1)
-                                        ItemHoverColor: =RGBA(0, 0, 0, 1)
-                                        ItemHoverFill: =RGBA(255, 211, 205, 1)
-                                        Items: =Parent.Default
-                                        MaxAttachments: =1
-                                        MaxAttachmentsText: =""
-                                        NoAttachmentsText: ="There is no file."
-                                        PaddingBottom: =5
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        PaddingRight: =5
-                                        PaddingTop: =5
-                                        PressedColor: =RGBA(255, 255, 255, 1)
-                                        PressedFill: =RGBA(131, 24, 75, 1)
-                                        Tooltip: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage5 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(168, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue6.Y + DataCardValue6.Height
-                                        ZIndex: =3
-
-                                    StarVisible5 As label:
-                                        Align: =Align.Center
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =DataCardKey6.Height
-                                        Size: =13
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey6.Y
-                                        ZIndex: =4
-
-                                Author_DataCard1 As typedDataCard.comboBoxEditCard:
-                                    BorderColor: =RGBA(131, 24, 75, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="ulchef_Author"
-                                    Default: =ThisItem.Author
-                                    DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@'Promotion Files'],DataSourceInfo.DisplayName,"ulchef_Author")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue7.Selected
-                                    Width: =396
-                                    X: =2
-                                    Y: =0
-                                    ZIndex: =1
-
-                                    DataCardKey7 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =34
-                                        Size: =13
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue7 As combobox:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        ChevronBackground: =RGBA(211, 66, 9, 1)
-                                        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                                        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-                                        ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
-                                        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                                        DefaultSelectedItems: =Parent.Default
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        DisabledFill: =RGBA(244, 244, 244, 1)
-                                        DisplayFields: =["fullname"]
-                                        DisplayMode: =Parent.DisplayMode
-                                        HoverColor: =RGBA(0, 0, 0, 1)
-                                        HoverFill: =RGBA(255, 211, 205, 1)
-                                        Items: =Choices([@'Promotion Files'].ulchef_Author)
-                                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                                        PressedColor: =RGBA(255, 255, 255, 1)
-                                        PressedFill: =RGBA(131, 24, 75, 1)
-                                        SearchFields: =["fullname"]
-                                        SearchItems: =Search(Choices([@'Promotion Files'].ulchef_Author),DataCardValue7.SearchText,"fullname")
-                                        SelectionFill: =RGBA(211, 66, 9, 1)
-                                        SelectMultiple: =false
-                                        Size: =13
-                                        Tooltip: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey7.Y + DataCardKey7.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage6 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(168, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue7.Y + DataCardValue7.Height
-                                        ZIndex: =3
-
-                                    StarVisible6 As label:
-                                        Align: =Align.Center
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =DataCardKey7.Height
-                                        Size: =13
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey7.Y
-                                        ZIndex: =4
-
-                                Description_DataCard1 As typedDataCard.textualMultiLineEditCard:
-                                    BorderColor: =RGBA(131, 24, 75, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="ulchef_description"
-                                    Default: =ThisItem.Description
-                                    DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@'Promotion Files'],DataSourceInfo.DisplayName,"ulchef_description")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    Required: =false
-                                    Update: =DataCardValue8.Text
-                                    Width: =396
-                                    X: =0
-                                    Y: =1
-                                    ZIndex: =1
-
-                                    DataCardKey8 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =34
-                                        Size: =13
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
-                                        ZIndex: =1
-
-                                    DataCardValue8 As text:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        BorderThickness: =2
+                                    Label24 As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
                                         Color: =RGBA(0, 0, 0, 1)
-                                        Default: =Parent.Default
-                                        DelayOutput: =true
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                         DisabledColor: =RGBA(166, 166, 166, 1)
-                                        DisabledFill: =RGBA(244, 244, 244, 1)
-                                        DisplayMode: =Parent.DisplayMode
-                                        FocusedBorderThickness: =4
-                                        Height: =80
-                                        HoverBorderColor: =RGBA(131, 24, 75, 1)
-                                        HoverColor: =RGBA(0, 0, 0, 1)
-                                        HoverFill: =RGBA(255, 211, 205, 1)
-                                        Mode: =TextMode.MultiLine
-                                        PaddingLeft: =5
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        RadiusTopLeft: =0
-                                        RadiusTopRight: =0
+                                        FillPortions: =1
+                                        LayoutMinHeight: =0
+                                        OnSelect: |-
+                                            =If(
+                                                Last(
+                                                    Split(
+                                                        ThisItem.Name,
+                                                        "."
+                                                    )
+                                                ).Value = "pdf",
+                                                UpdateContext({lcl_open_PDFViewer:true}),
+                                                UpdateContext({lcl_open_ImageViewer:true})
+                                            )
                                         Size: =13
-                                        Tooltip: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey8.Y + DataCardKey8.Height + 5
-                                        ZIndex: =2
-
-                                    ErrorMessage7 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(168, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue8.Y + DataCardValue8.Height
-                                        ZIndex: =3
-
-                                    StarVisible7 As label:
-                                        Align: =Align.Center
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =DataCardKey8.Height
-                                        Size: =13
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey8.Y
-                                        ZIndex: =4
-
-                                Name_DataCard1 As typedDataCard.textualEditCard:
-                                    BorderColor: =RGBA(131, 24, 75, 1)
-                                    BorderStyle: =BorderStyle.Solid
-                                    DataField: ="ulchef_name"
-                                    Default: =ThisItem.Name
-                                    DisplayMode: =Parent.DisplayMode
-                                    DisplayName: =DataSourceInfo([@'Promotion Files'],DataSourceInfo.DisplayName,"ulchef_name")
-                                    Fill: =RGBA(0, 0, 0, 0)
-                                    Height: =50
-                                    MaxLength: =DataSourceInfo([@'Promotion Files'], DataSourceInfo.MaxLength, "ulchef_name")
-                                    Required: =true
-                                    Update: =DataCardValue4.Text
-                                    Width: =396
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =3
-
-                                    DataCardKey4 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =34
-                                        Size: =13
-                                        Text: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        Wrap: =false
-                                        X: =30
-                                        Y: =10
+                                        Text: =""
+                                        Width: =Parent.Width 
                                         ZIndex: =1
 
-                                    DataCardValue4 As text:
-                                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                        BorderThickness: =2
-                                        Color: =RGBA(0, 0, 0, 1)
-                                        Default: =Parent.Default
-                                        DelayOutput: =true
-                                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        DisabledFill: =RGBA(244, 244, 244, 1)
-                                        DisplayMode: =Parent.DisplayMode
-                                        FocusedBorderThickness: =4
-                                        HoverBorderColor: =RGBA(131, 24, 75, 1)
-                                        HoverColor: =RGBA(0, 0, 0, 1)
-                                        HoverFill: =RGBA(255, 211, 205, 1)
-                                        MaxLength: =Parent.MaxLength
-                                        PaddingLeft: =5
-                                        RadiusBottomLeft: =0
-                                        RadiusBottomRight: =0
-                                        RadiusTopLeft: =0
-                                        RadiusTopRight: =0
-                                        Size: =13
-                                        Tooltip: =Parent.DisplayName
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                                    "'cont_File Name' As groupContainer.verticalAutoLayoutContainer":
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        FillPortions: =0
+                                        Height: =Parent.Height/8
+                                        LayoutMinHeight: =0
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width 
                                         ZIndex: =2
 
-                                    ErrorMessage4 As label:
-                                        AutoHeight: =true
-                                        Color: =RGBA(168, 0, 0, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        FontWeight: =FontWeight.Semibold
-                                        Height: =10
-                                        Live: =Live.Assertive
-                                        PaddingBottom: =0
-                                        PaddingLeft: =0
-                                        PaddingRight: =0
-                                        PaddingTop: =0
-                                        Text: =Parent.Error
-                                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                        Width: =Parent.Width - 60
-                                        X: =30
-                                        Y: =DataCardValue4.Y + DataCardValue4.Height
-                                        ZIndex: =3
+                                        Label7 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: |-
+                                                ="File Name: "
+                                            ZIndex: =1
 
-                                    StarVisible4 As label:
-                                        Align: =Align.Center
-                                        Color: =RGBA(131, 24, 75, 1)
-                                        DisabledColor: =RGBA(166, 166, 166, 1)
-                                        Height: =DataCardKey4.Height
-                                        Size: =13
-                                        Text: ="*"
-                                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                        Width: =30
-                                        Wrap: =false
-                                        Y: =DataCardKey4.Y
+                                        Label7_4 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: =ThisItem.File.FileName
+                                            ZIndex: =2
+
+                                    "'cont_File Name_2' As groupContainer.verticalAutoLayoutContainer":
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        FillPortions: =0
+                                        Height: =Parent.Height/8
+                                        LayoutMinHeight: =0
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width 
                                         ZIndex: =4
+
+                                        Label7_8 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: |-
+                                                ="Decription: "
+                                            ZIndex: =1
+
+                                        Label7_17 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: =ThisItem.Description
+                                            ZIndex: =2
+
+                                    "'cont_File Name_3' As groupContainer.verticalAutoLayoutContainer":
+                                        AlignInContainer: =AlignInContainer.SetByContainer
+                                        FillPortions: =0
+                                        Height: =Parent.Height/8
+                                        LayoutMinHeight: =0
+                                        LayoutMinWidth: =250
+                                        LayoutMode: =LayoutMode.Auto
+                                        RadiusBottomLeft: =4
+                                        RadiusBottomRight: =4
+                                        RadiusTopLeft: =4
+                                        RadiusTopRight: =4
+                                        Width: =Parent.Width 
+                                        ZIndex: =5
+
+                                        Label7_18 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: |-
+                                                ="Author: "
+                                            ZIndex: =1
+
+                                        Label7_19 As label:
+                                            BorderColor: =RGBA(131, 24, 75, 1)
+                                            Color: =RGBA(0, 0, 0, 1)
+                                            DisabledColor: =RGBA(166, 166, 166, 1)
+                                            FillPortions: =1
+                                            FontWeight: =FontWeight.Semibold
+                                            Height: =Parent.Height 
+                                            OnSelect: |-
+                                                =If(
+                                                    Last(
+                                                        Split(
+                                                            ThisItem.Name,
+                                                            "."
+                                                        )
+                                                    ).Value = "pdf",
+                                                    UpdateContext({lcl_open_PDFViewer:true}),
+                                                    UpdateContext({lcl_open_ImageViewer:true})
+                                                )
+                                            Size: =10
+                                            Text: =ThisItem.Author.'Full Name'
+                                            ZIndex: =2
+
+                                    Label23 As label:
+                                        BorderColor: =RGBA(131, 24, 75, 1)
+                                        Color: =RGBA(0, 0, 0, 1)
+                                        DisabledColor: =RGBA(166, 166, 166, 1)
+                                        FillPortions: =1
+                                        LayoutMinHeight: =0
+                                        OnSelect: |-
+                                            =If(
+                                                Last(
+                                                    Split(
+                                                        ThisItem.Name,
+                                                        "."
+                                                    )
+                                                ).Value = "pdf",
+                                                UpdateContext({lcl_open_PDFViewer:true}),
+                                                UpdateContext({lcl_open_ImageViewer:true})
+                                            )
+                                        Size: =13
+                                        Text: =""
+                                        Width: =Parent.Width 
+                                        ZIndex: =6
 
                         cont_innerPromotion_2 As groupContainer.manualLayoutContainer:
                             Height: =Parent.Height
@@ -3535,7 +3403,7 @@
                                     Icon: =Icon.ChevronRight
                                     OnSelect: |-
                                         =If(
-                                            currIdx >= CountRows('Promotion Files'), //_V_totalImage,
+                                            currIdx >= 10, //CountRows('Promotion Files'), //_V_totalImage,
                                             Set(
                                                 currIdx,
                                                 1

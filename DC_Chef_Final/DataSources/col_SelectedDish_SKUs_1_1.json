@@ -3,7 +3,7 @@
     "IsComponentScoped": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "col_SelectedDish_SKUs",
+    "Name": "col_SelectedDish_SKUs_1_1",
     "Type": "CollectionDataSourceInfo"
   }
 ]

@@ -638,7 +638,7 @@
                                         ),
                                         Filter(
                                             SKUS,
-                                            Name in col_SelectedDish_SKUs[@ulchef_name],
+                                            Name in col_SelectedDish_SKUs_1_1[@ulchef_name],
                                             And(
                                                 Or(
                                                     IsBlank(Search_component.TypedText),
@@ -652,8 +652,8 @@
                                             )
                                         )
                                     )
-                                    //col_SelectedDish_SKUs
-                                    //Filter(SKUS,Name in col_SelectedDish_SKUs[@ulchef_name])
+                                    //col_SelectedDish_SKUs_1_1
+                                    //Filter(SKUS,Name in col_SelectedDish_SKUs_1_1[@ulchef_name])
                                 Layout: =Layout.Vertical
                                 LayoutMinHeight: =287
                                 LayoutMinWidth: =320
@@ -1719,7 +1719,7 @@
                                     HoverFill: =ColorFade(RGBA(211, 66, 9, 1), -20%)
                                     OnSelect: |-
                                         =ClearCollect(
-                                            col_SelectedDish_SKUs,
+                                            col_SelectedDish_SKUs_1_1,
                                             Filter(
                                                 'Related SKUS',
                                                 'Related Dish'.'Related Dish' = Gal_Dishes.Selected.'Related Dish'
