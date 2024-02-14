@@ -37,6 +37,7 @@
       "ulchef_contactphotoid": "ulchef_contactphotoId",
       "ulchef_Customer": "Customer",
       "ulchef_customer_PrimaryContact_ulchef_contact": "Customers",
+      "ulchef_CustomerLookup": "CustomerLookup",
       "ulchef_decisionlevel": "Decision Level",
       "ulchef_email": "Email",
       "ulchef_facebook": "Facebook",
