@@ -1852,7 +1852,7 @@
                                             )
                                         )
                                     ),
-                                    Filter('Dishes',Text(gal_masterSKUs_1.Selected.'SKU Number') in ulchef_skunumbers,
+                                    Filter(Dishes,Text(gal_masterSKUs_1.Selected.'SKU Number') in ulchef_skunumbers,
                                         And(
                                             Or(
                                                 IsBlank(cb_dishCategory_6.SelectedItems),
@@ -1988,7 +1988,7 @@
                                             )
                                         );*/
                                         ClearCollect(col_test,Filter(
-                                                'SKUS',
+                                                SKUS,
                                                 'SKU Number' in Gal_Dishes_1.Selected.'Sku Numbers'
                                             ));
                                         
@@ -2196,9 +2196,9 @@
                                         DelayItemLoading: =true
                                         Items: |-
                                             =If(
-                                                !IsBlank(Gal_Dishes_1.Selected.'Dish'),
+                                                !IsBlank(Gal_Dishes_1.Selected.Dish),
                                                Filter(
-                                                    'SKUS',
+                                                    SKUS,
                                                     'SKU Number' in Gal_Dishes_1.Selected.'Sku Numbers'
                                                 ) 
                                             )
