@@ -456,7 +456,7 @@ Cust_EditInfo As screen:
                 ChevronDisabledFill: =RGBA(244, 244, 244, 1)
                 ChevronHoverBackground: =ColorFade(RGBA(211, 66, 9, 1), -20%)
                 ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                DefaultSelectedItems: =TerritoryDropDown
+                DefaultSelectedItems: =TerritoryDropDown.SelectedText
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)

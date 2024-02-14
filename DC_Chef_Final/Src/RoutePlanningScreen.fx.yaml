@@ -4994,7 +4994,7 @@
                                                     WeekNum('Scheduled Call Date') >= WeekNum(Today()) && Text('Call Status')="Scheduled"
                                             ))
                                             */
-                                            Label19_34 - Label19_35
+                                            Label19_34.Text - Label19_35.Text
                                             
                                         Width: =Parent.Width/2
                                         ZIndex: =83
@@ -5463,7 +5463,7 @@
                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                             DisabledFill: =RGBA(244, 244, 244, 1)
                             Height: =Parent.Height
-                            Image: =If(IsBlank(AddMediaButton2_20),SampleImage,AddMediaButton2_20.Media)
+                            Image: =If(IsBlank(AddMediaButton2_20.Media),SampleImage,AddMediaButton2_20.Media)
                             LayoutMinHeight: =0
                             LayoutMinWidth: =0
                             OnSelect: =true

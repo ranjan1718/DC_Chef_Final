@@ -22,11 +22,6 @@
     "TableName": "ulchef_incall",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2093429\\\"\",\"savedqueryid\":\"aff49b51-5cd2-4db8-b7b8-0d3266bea186\",\"name\":\"Active InCalls\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2093465\\\"\",\"savedqueryid\":\"307788ca-ab8a-4be9-b5d3-5f3b439349a9\",\"name\":\"InCall Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2093441\\\"\",\"savedqueryid\":\"a4ba33f1-94c1-408b-9f90-5fb7a108f5a8\",\"name\":\"Inactive InCalls\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2093477\\\"\",\"savedqueryid\":\"011bb34d-e88c-481b-9e9d-7124277136fc\",\"name\":\"InCall Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2093453\\\"\",\"savedqueryid\":\"b5ede295-15c9-4db2-a139-8c4c85d1ffef\",\"name\":\"InCall Associated View\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

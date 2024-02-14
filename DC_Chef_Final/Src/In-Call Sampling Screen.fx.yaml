@@ -3322,7 +3322,7 @@
                                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisabledFill: =RGBA(244, 244, 244, 1)
-                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16),DisplayMode.Disabled,  DisplayMode.Edit)
+                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16.Text),DisplayMode.Disabled,  DisplayMode.Edit)
                                             Fill: =RGBA(211, 66, 9, 1)
                                             FontWeight: =FontWeight.Bold
                                             Height: =28
@@ -3833,9 +3833,9 @@
                                                         DisplayFields: =["ulchef_name"]
                                                         DisplayMode: |-
                                                             =If(
-                                                                IsBlank(Dropdown2_1.Selected.Name) || IsBlank(Dropdown3_3) || IsBlank(Dropdown4_2),
+                                                                IsBlank(Dropdown2_1.Selected.Name) || IsBlank(Dropdown3_3.SelectedText) || IsBlank(Dropdown4_2.SelectedText),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11),
+                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -3910,7 +3910,7 @@
                                                             =If(
                                                                 IsBlank(Dropdown2_1.Selected.Name),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11),
+                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -4015,9 +4015,9 @@
                                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                                         DisplayMode: |-
                                                             =If(
-                                                                IsBlank(Dropdown2_1.Selected.Name) || IsBlank(Dropdown3_3) || IsBlank(Dropdown4_2),
+                                                                IsBlank(Dropdown2_1.Selected.Name) || IsBlank(Dropdown3_3.SelectedText) || IsBlank(Dropdown4_2.SelectedText),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11),
+                                                                Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -4406,7 +4406,7 @@
                                                         DisplayMode.Edit,
                                                         IsBlank(Dropdown2_1.Selected.Name),
                                                         DisplayMode.Disabled,
-                                                        Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11),
+                                                        Dropdown2_1.Selected.Name = "Other" && IsBlank(TextInput4_11.Text),
                                                         DisplayMode.Disabled,
                                                         DisplayMode.Edit
                                                     )
@@ -4643,9 +4643,9 @@
                                                         DisplayFields: =["ulchef_name"]
                                                         DisplayMode: |-
                                                             =If(
-                                                                IsBlank(Dropdown2.Selected.Name) || IsBlank(Dropdown3_2) || IsBlank(Dropdown4_1),
+                                                                IsBlank(Dropdown2.Selected.Name) || IsBlank(Dropdown3_2.SelectedText) || IsBlank(Dropdown4_1.SelectedText),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6),
+                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -4718,11 +4718,11 @@
                                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                                         DisplayMode: |-
                                                             =If(
-                                                                !IsBlank(TextInput4_7),
+                                                                !IsBlank(TextInput4_7.Text),
                                                                 DisplayMode.Edit,
                                                                 IsBlank(Dropdown2.Selected.Name),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6),
+                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -4827,9 +4827,9 @@
                                                         DisabledFill: =RGBA(244, 244, 244, 1)
                                                         DisplayMode: |-
                                                             =If(
-                                                                IsBlank(Dropdown2.Selected.Name) || IsBlank(Dropdown3_2) || IsBlank(Dropdown4_1),
+                                                                IsBlank(Dropdown2.Selected.Name) || IsBlank(Dropdown3_2.SelectedText) || IsBlank(Dropdown4_1.SelectedText),
                                                                 DisplayMode.Disabled,
-                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6),
+                                                                Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6.Text),
                                                                 DisplayMode.Disabled,
                                                                 DisplayMode.Edit
                                                             )
@@ -5185,7 +5185,7 @@
                                                     DisplayMode.Edit,
                                                     IsBlank(Dropdown2.Selected.Name),
                                                     DisplayMode.Disabled,
-                                                    Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6),
+                                                    Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6.Text),
                                                     DisplayMode.Disabled,
                                                     DisplayMode.Edit
                                                 )
@@ -5455,7 +5455,7 @@
                                                         DisplayMode.Edit,
                                                         IsBlank(Dropdown2.Selected.Name),
                                                         DisplayMode.Disabled,
-                                                        Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6),
+                                                        Dropdown2.Selected.Name = "Other" && IsBlank(TextInput4_6.Text),
                                                         DisplayMode.Disabled,
                                                         DisplayMode.Edit
                                                     )
@@ -5523,7 +5523,7 @@
                                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisabledFill: =RGBA(244, 244, 244, 1)
-                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16),DisplayMode.Disabled,DisplayMode.Edit)
+                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16.Text),DisplayMode.Disabled,DisplayMode.Edit)
                                             Fill: =RGBA(189, 23, 25, 1)
                                             FontWeight: =FontWeight.Semibold
                                             Height: =28
@@ -6954,7 +6954,7 @@
                                             DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                             DisabledColor: =RGBA(166, 166, 166, 1)
                                             DisabledFill: =RGBA(244, 244, 244, 1)
-                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16),DisplayMode.Disabled,DisplayMode.Edit)
+                                            DisplayMode: =If(_V_SelectedCallAssessment = "" || IsBlank(_V_SelectedCallAssessment) || IsBlank(ComboBox3_13.Selected) || IsBlank(TextInput1_16.Text),DisplayMode.Disabled,DisplayMode.Edit)
                                             Fill: =RGBA(189, 23, 25, 1)
                                             FontWeight: =FontWeight.Semibold
                                             Height: =28

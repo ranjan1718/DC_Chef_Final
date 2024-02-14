@@ -363,7 +363,7 @@
         Text: |-
             =//"Select DC Chef"
             //LookUp(Contacts,Email=User().Email).u
-        Visible: =If(IsBlank(TerritoryDropDown),true,false)
+        Visible: =If(IsBlank(TerritoryDropDown.SelectedText),true,false)
         Width: =283
         X: =24
         Y: =107

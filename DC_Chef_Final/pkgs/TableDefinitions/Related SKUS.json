@@ -22,11 +22,6 @@
     "TableName": "ulchef_skuincall",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2110084\\\"\",\"savedqueryid\":\"6155cb33-5377-4c5b-a911-42e3e03454e9\",\"name\":\"SKU-InCall Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2110060\\\"\",\"savedqueryid\":\"393ead9f-46f6-4a1f-949b-57b77081a8df\",\"name\":\"SKU-InCall Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"2110036\\\"\",\"savedqueryid\":\"0654a1e6-0d93-46c7-930f-71011d9a5651\",\"name\":\"Active SKU-InCalls\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2110072\\\"\",\"savedqueryid\":\"ff9d00ce-48fb-495a-a342-72bbad922f74\",\"name\":\"SKU-InCall Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2110048\\\"\",\"savedqueryid\":\"764edc94-25a1-45f3-979d-7dff8eec5348\",\"name\":\"Inactive SKU-InCalls\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

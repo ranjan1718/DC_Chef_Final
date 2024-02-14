@@ -5629,7 +5629,7 @@
                                                                                     'Linked In': 'LinkedIn Input_3'.Text,
                                                                                     Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                                     Image:UploadedImage1_6.Image,
-                                                                                    Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
+                                                                                    Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'.Text),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
                                                                                     'Decision Level':cmbDecisionLevel_3.SelectedItems,
                                                                                     'Level of Influence': cmbLevelOfInfluence_3.Selected.Value
                                                                                 }
@@ -5682,7 +5682,7 @@
                                                                                     'Linked In': 'LinkedIn Input_3'.Text,
                                                                                     Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                                     Image:UploadedImage1_6.Image,
-                                                                                    Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
+                                                                                    Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'.Text),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
                                                                                     'Decision Level':cmbDecisionLevel_3.SelectedItems,
                                                                                     'Level of Influence': cmbLevelOfInfluence_3.Selected.Value
                                                                                 }
@@ -5749,7 +5749,7 @@
                                                                                         'Linked In': 'LinkedIn Input_3'.Text,
                                                                                         Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                                         Image:UploadedImage1_6.Image,
-                                                                                        Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
+                                                                                        Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'.Text),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
                                                                                         'Decision Level':cmbDecisionLevel_3.SelectedItems,
                                                                                         'Level of Influence': cmbLevelOfInfluence_3.Selected.Value,
                                                                                         createofflineRequired: true
@@ -5804,7 +5804,7 @@
                                                                                         'Linked In': 'LinkedIn Input_3'.Text,
                                                                                         Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                                         Image:UploadedImage1_6.Image,
-                                                                                        Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
+                                                                                        Position:If(ComboBox2_3.Selected.Value="Others" && !IsBlank('Position Input_3'.Text),'Position Input_3'.Text,ComboBox2_3.Selected.Value),
                                                                                         'Decision Level':cmbDecisionLevel_3.SelectedItems,
                                                                                         'Level of Influence': cmbLevelOfInfluence_3.Selected.Value,
                                                                                         updateofflineRequired: true

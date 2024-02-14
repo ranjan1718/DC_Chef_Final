@@ -22,11 +22,6 @@
     "TableName": "contact",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1732831\\\"\",\"savedqueryid\":\"00000000-0000-0000-00aa-000000666400\",\"name\":\"Contacts Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"1732835\\\"\",\"savedqueryid\":\"00000000-0000-0000-00aa-000010001003\",\"name\":\"My Active Contacts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1732836\\\"\",\"savedqueryid\":\"00000000-0000-0000-00aa-000010001004\",\"name\":\"Active Contacts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1732848\\\"\",\"savedqueryid\":\"00000000-0000-0000-00aa-000010001033\",\"name\":\"Inactive Contacts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1732855\\\"\",\"savedqueryid\":\"00000000-0000-0000-00aa-000010001210\",\"name\":\"Contact Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"1733334\\\"\",\"savedqueryid\":\"0a8fa653-4147-4282-bf6b-168cfa839803\",\"name\":\"Contacts: Influenced Deals That We Won\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1734229\\\"\",\"savedqueryid\":\"ab582fb0-a846-453e-ad88-77f75ce91264\",\"name\":\"My Connections\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1734316\\\"\",\"savedqueryid\":\"a2d479c5-53e3-4c69-addd-802327e67a0d\",\"name\":\"Contacts Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1734632\\\"\",\"savedqueryid\":\"0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105\",\"name\":\"All Contacts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1734792\\\"\",\"savedqueryid\":\"927e6cd8-b3ed-4c20-a154-b8bd8a86d172\",\"name\":\"Contacts: No Campaign Activities in Last 3 Months\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1735131\\\"\",\"savedqueryid\":\"9c241a33-ca0b-4e50-ae92-db780d5b2a12\",\"name\":\"Contacts: Responded to Campaigns in Last 6 Months\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1735281\\\"\",\"savedqueryid\":\"73bc2d9b-4e0e-424c-8839-ed59d6817e3a\",\"name\":\"Active Contacts Subgrid View\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1735444\\\"\",\"savedqueryid\":\"eda26f1e-dbcc-40ad-91f2-ff2878d1d8d8\",\"name\":\"Entitlement Contacts\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

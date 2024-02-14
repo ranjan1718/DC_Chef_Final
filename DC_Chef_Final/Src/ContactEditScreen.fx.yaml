@@ -2254,7 +2254,7 @@ ContactEditScreen As screen:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
-                                    DisplayFields: =["ulchef_name"]
+                                    DisplayFields: =["fullname"]
                                     FillPortions: =1
                                     Height: =Parent.Height-5
                                     HoverColor: =RGBA(0, 0, 0, 1)
@@ -2266,7 +2266,7 @@ ContactEditScreen As screen:
                                     PaddingLeft: =12
                                     PressedColor: =RGBA(255, 255, 255, 1)
                                     PressedFill: =RGBA(131, 24, 75, 1)
-                                    SearchFields: =["ulchef_name"]
+                                    SearchFields: =["fullname"]
                                     SearchItems: =[]
                                     SelectionFill: =RGBA(211, 66, 9, 1)
                                     SelectMultiple: =false
@@ -4077,7 +4077,7 @@ ContactEditScreen As screen:
                                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                                     DisabledColor: =RGBA(166, 166, 166, 1)
                                     DisabledFill: =RGBA(244, 244, 244, 1)
-                                    DisplayFields: =["ulchef_name"]
+                                    DisplayFields: =["fullname"]
                                     FillPortions: =1
                                     Height: =Parent.Height-5
                                     HoverColor: =RGBA(0, 0, 0, 1)
@@ -4089,7 +4089,7 @@ ContactEditScreen As screen:
                                     PaddingLeft: =12
                                     PressedColor: =RGBA(255, 255, 255, 1)
                                     PressedFill: =RGBA(131, 24, 75, 1)
-                                    SearchFields: =["ulchef_name"]
+                                    SearchFields: =["fullname"]
                                     SearchItems: =[]
                                     SelectionFill: =RGBA(211, 66, 9, 1)
                                     SelectMultiple: =false
