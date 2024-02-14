@@ -22,11 +22,6 @@
     "TableName": "ulchef_distributor",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1761255\\\"\",\"savedqueryid\":\"5d7096b6-a9ae-4038-a56e-51e14deca5ad\",\"name\":\"Inactive Distributors\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1761243\\\"\",\"savedqueryid\":\"456ef6e1-94dd-4f10-8205-a391d276fc46\",\"name\":\"Active Distributors\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1761291\\\"\",\"savedqueryid\":\"5ec3e065-8754-487d-aafb-a6f8aeb4118e\",\"name\":\"Distributor Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"1761279\\\"\",\"savedqueryid\":\"86526c40-9719-4888-9f58-d65c84e89580\",\"name\":\"Distributor Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1761267\\\"\",\"savedqueryid\":\"6c8b696c-aac7-499f-a7d8-e770246ce817\",\"name\":\"Distributor Associated View\",\"querytype\":2}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

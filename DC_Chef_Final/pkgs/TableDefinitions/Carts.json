@@ -22,11 +22,6 @@
     "TableName": "ulchef_cart",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"2101215\\\"\",\"savedqueryid\":\"49ffdb9d-975b-4f44-a96f-028f26b4299b\",\"name\":\"Cart Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"2101191\\\"\",\"savedqueryid\":\"f6acb881-3f5b-4834-b7eb-04783355f2cb\",\"name\":\"Inactive Carts\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"2101203\\\"\",\"savedqueryid\":\"44662539-c402-4b5d-81a1-0eb0e122d8ec\",\"name\":\"Cart Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"2101227\\\"\",\"savedqueryid\":\"4d1f908f-72e4-44df-b417-4b405131530d\",\"name\":\"Cart Advanced Find View\",\"querytype\":1},{\"@odata.etag\":\"W/\\\"2101179\\\"\",\"savedqueryid\":\"37445bdb-f73d-4d15-b959-65563205614e\",\"name\":\"Active Carts\",\"querytype\":0}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

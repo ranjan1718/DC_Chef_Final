@@ -4874,7 +4874,7 @@
                                                     WeekNum('Scheduled Call Date') >= WeekNum(Today()) && Text('Call Status')="Scheduled"
                                             ))
                                             */
-                                            Label19_25 - Label19_26
+                                            Label19_25.Text - Label19_26.Text
                                             
                                         Width: =Parent.Width/2
                                         ZIndex: =83

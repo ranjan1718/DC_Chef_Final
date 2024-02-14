@@ -22,11 +22,6 @@
     "TableName": "ulchef_menu",
     "Views": "{\"@odata.context\":\"https://org9213e845.crm11.dynamics.com/api/data/v9.0/$metadata#savedqueries(savedqueryid,name,querytype)\",\"value\":[{\"@odata.etag\":\"W/\\\"1775422\\\"\",\"savedqueryid\":\"95f52d18-542d-4f72-a445-0a3f28a84201\",\"name\":\"Menu Associated View\",\"querytype\":2},{\"@odata.etag\":\"W/\\\"1775398\\\"\",\"savedqueryid\":\"9c5ec181-d035-4ad4-995d-3fd6bd706827\",\"name\":\"Active Menus\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1775434\\\"\",\"savedqueryid\":\"fae6a4d6-03e1-4b76-925f-879ca5642597\",\"name\":\"Menu Lookup View\",\"querytype\":64},{\"@odata.etag\":\"W/\\\"1775410\\\"\",\"savedqueryid\":\"37869522-7ce2-4c49-9aee-d028d0fc9619\",\"name\":\"Inactive Menus\",\"querytype\":0},{\"@odata.etag\":\"W/\\\"1775446\\\"\",\"savedqueryid\":\"4ca1e785-481e-4998-ab74-fc79be223a88\",\"name\":\"Menu Advanced Find View\",\"querytype\":1}]}"
   },
-  "UnusedDataSources": {
-    "Contacts_1": {
-      "entitySetName": "ulchef_contacts",
-      "logicalName": "ulchef_contact"
-    }
-  },
+  "UnusedDataSources": {},
   "webApiVersion": "v9.0"
 }

@@ -5464,7 +5464,7 @@ CustomerScreen As screen:
                                                                 'Linked In': 'LinkedIn Input'.Text,
                                                                 Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                 Image:UploadedImage1_3.Image,
-                                                                Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'),'Position Input'.Text,ComboBox2.Selected.Value),
+                                                                Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'.Text),'Position Input'.Text,ComboBox2.Selected.Value),
                                                                 'Decision Level':cmbDecisionLevel.SelectedItems,
                                                                 'Level of Influence': cmbLevelOfInfluence.Selected.Value
                                                             }
@@ -5517,7 +5517,7 @@ CustomerScreen As screen:
                                                                 'Linked In': 'LinkedIn Input'.Text,
                                                                 Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                 Image:UploadedImage1_3.Image,
-                                                                Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'),'Position Input'.Text,ComboBox2.Selected.Value),
+                                                                Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'.Text),'Position Input'.Text,ComboBox2.Selected.Value),
                                                                 'Decision Level':cmbDecisionLevel.SelectedItems,
                                                                 'Level of Influence': cmbLevelOfInfluence.Selected.Value
                                                             }
@@ -5584,7 +5584,7 @@ CustomerScreen As screen:
                                                                     'Linked In': 'LinkedIn Input'.Text,
                                                                     Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                     Image:UploadedImage1_3.Image,
-                                                                    Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'),'Position Input'.Text,ComboBox2.Selected.Value),
+                                                                    Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'.Text),'Position Input'.Text,ComboBox2.Selected.Value),
                                                                     'Decision Level':cmbDecisionLevel.SelectedItems,
                                                                     'Level of Influence': cmbLevelOfInfluence.Selected.Value,
                                                                     createofflineRequired: true
@@ -5639,7 +5639,7 @@ CustomerScreen As screen:
                                                                     'Linked In': 'LinkedIn Input'.Text,
                                                                     Customer: LookUp(Customers, Customer = _V_SelectedCustomer.Customer),
                                                                     Image:UploadedImage1_3.Image,
-                                                                    Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'),'Position Input'.Text,ComboBox2.Selected.Value),
+                                                                    Position:If(ComboBox2.Selected.Value="Others" && !IsBlank('Position Input'.Text),'Position Input'.Text,ComboBox2.Selected.Value),
                                                                     'Decision Level':cmbDecisionLevel.SelectedItems,
                                                                     'Level of Influence': cmbLevelOfInfluence.Selected.Value,
                                                                     updateofflineRequired: true
