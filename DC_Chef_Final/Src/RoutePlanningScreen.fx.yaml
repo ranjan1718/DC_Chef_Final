@@ -5425,7 +5425,9 @@
                         RadiusBottomRight: =4
                         RadiusTopLeft: =4
                         RadiusTopRight: =4
-                        Visible: =If(ComboBox4_6.Selected.Value="Sick"|| ComboBox4_6.Selected.Value="Vacation",true,false)
+                        Visible: |-
+                            =//If(ComboBox4_6.Selected.Value="Sick"|| ComboBox4_6.Selected.Value="Vacation",true,false)
+                            false
                         Width: =Parent.Width
                         ZIndex: =2
 
@@ -5757,7 +5759,7 @@
                                     Remarks:TextInput1_20.Text,
                                     Usetr:LookUp(_C_All_User,'Full Name'= User().FullName),
                                     UserName:LookUp(_C_All_User,'Full Name'= User().FullName).'Full Name',
-                                    EventImage:Image7_9.Image,
+                                    //EventImage:Image7_9.Image,
                                     'Created By':LookUp(_C_All_User,'Full Name'= User().FullName)
                                    
                                 }
@@ -5771,8 +5773,8 @@
                                     Remarks:First(_C_All_Special_Events).Remarks,
                                     Usetr:First(_C_All_Special_Events).Usetr,
                                     UserName:LookUp(_C_All_User,'Full Name'= User().FullName).'Full Name',
-                                    Name:User().FullName,
-                                    EventImage:Image7_9.Image
+                                    Name:User().FullName
+                                   // EventImage:Image7_9.Image
                                    
                                 }
                             );
